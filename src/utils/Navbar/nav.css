@@ -1,0 +1,174 @@
+
+.navlink-link {
+  text-decoration: none;
+  color: black;
+  transition-duration: 400ms;
+}
+
+.navlink-link-downarrow {
+  padding-left: 2px;
+  font-weight: bold;
+  color: black;
+  font-size: 10px;
+  transition: 400ms;
+}
+
+.navlink-Box:hover .navlink-link-downarrow {
+  color: white;
+  transform: rotateX(180deg);
+}
+.navlink-Box:hover .navlink-link {
+  color: white;
+}
+/* .navlink-link:hover .navlink-link-downarrow {
+  color: white;
+  transform: rotateX(180deg);
+}
+.navlink-link:hover {
+  color: white;
+} */
+
+.mainNavLInks {
+  transition-duration: 500ms;
+  text-decoration: none;
+  color: grey;
+}
+
+.mainNavLInks:hover {
+  color: #ffcd00;
+}
+.mainNavLInks1 {
+  text-decoration: none;
+  color: black;
+}
+.mainNavLInks1:hover {
+  color: #ffcd00;
+}
+.mainNavLInks1 .main2 {
+  color: #ffcd00;
+}
+.popperLinks {
+  text-decoration: none;
+  color: #454545;
+}
+.popperLinks:hover {
+  color: #0e0e0e;
+}
+.fade-in-animation {
+  opacity: 0;
+  transform: scale(0.8);
+  animation-name: fade-in;
+  animation-duration: 0.8s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+#map-container {
+  position: relative;
+}
+
+#map-container iframe {
+  width: 100%;
+  position: absolute;
+  background-color: #454545;
+}
+
+.btn_hover {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.btn_hover:hover {
+  color: #0e0e0e;
+}
+
+.item {
+  min-height: 20rem;
+  min-width: 10rem;
+  padding: 30px;
+}
+.item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  pointer-events: none;
+}
+.inner-carousel {
+  display: flex;
+}
+.carousel {
+  /* cursor: grab; */
+  user-select: none;
+  overflow: hidden;
+}
+.donate-btn:hover .btn_hover {
+  color: black;
+}
+
+.parent:hover .child {
+  transform: scale(1.7);
+  opacity: 0.3;
+}
+.parent:hover .child2 {
+  position: absolute;
+  bottom: 40%;
+  left: 35%;
+  transition: all 0.5s ease-in-out;
+}
+.parent:hover .child1 {
+  opacity: 0;
+}
+.parent:hover .child3 {
+  position: absolute;
+  top: 45%;
+  left: -78%;
+  color: #0e0e0e;
+}
+.footerLinks {
+  color: #ffcd00;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  transform: scale(1);
+  width: 100px;
+}
+.footerLinks:hover {
+  color: #fff;
+  transform: scale(1.2) translateX(10px);
+  /* transform:translateX(10px) */
+}
+
+
+.content-box {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+/* Animation when the class 'show-animation' is applied */
+.content-box.show-animation {
+  
+  animation: slideUp 2s ease forwards;
+}
+
+/* Keyframes */
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
