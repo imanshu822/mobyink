@@ -7,14 +7,28 @@ import Nav from "../../../utils/Navbar/Nav";
 const TabLineSection = () => {
   return (
     <>
-      <Stack>
+      <Stack position="relative">
+        {/* Blue overlay */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(13, 110, 253, 0.5)", // Semi-transparent blue
+            zIndex: 2, // Ensure it's above the video
+          }}
+        ></div>
+
+        {/* Video */}
         <video
           style={{
             position: "absolute",
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            zIndex: "1",
+            zIndex: 1, // Ensure video is below the overlay
           }}
           autoPlay
           loop
@@ -22,9 +36,12 @@ const TabLineSection = () => {
         >
           <source src={bannerVideo} type="video/mp4" />
         </video>
+
         <Nav />
-        <Stack zIndex={1}>
+
+        <Stack zIndex={3}>
           <Stack
+            zIndex={3}
             margin={"0 97px"}
             width={"57%"}
             height={"90vh"}

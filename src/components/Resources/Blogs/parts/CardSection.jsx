@@ -2,12 +2,12 @@ import { Stack, Typography, Button, Box } from "@mui/material";
 import React, { useState } from "react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { Link } from "react-router-dom";
-import service1 from "../../../assests/service1.webp";
-import service2 from "../../../assests/service2.webp";
-import service3 from "../../../assests/service3.webp";
-import service4 from "../../../assests/service4.webp";
-import service5 from "../../../assests/service5.webp";
-import service6 from "../../../assests/service6.webp";
+import service1 from "../../../../assests/service1.webp";
+import service2 from "../../../../assests/service2.webp";
+import service3 from "../../../../assests/service3.webp";
+import service4 from "../../../../assests/service4.webp";
+import service5 from "../../../../assests/service5.webp";
+import service6 from "../../../../assests/service6.webp";
 const CardSection = () => {
   // Define an array of blog data objects
   const [showAllBlogs, setShowAllBlogs] = useState(false);
@@ -265,7 +265,7 @@ const CardSection = () => {
       <Stack width={"80%"} margin={"0 auto"}>
         <Stack>
           <Typography fontSize={"40px"} textAlign={"center"}>
-            Featured Case Studies
+            Blogs
           </Typography>
         </Stack>
         <Stack
@@ -366,7 +366,7 @@ const CardSection = () => {
               variant="contained"
               onClick={handleShowMoreBlogs}
             >
-              Show More Studies
+              Show More Blogs
             </Typography>
           </Stack>
         )}

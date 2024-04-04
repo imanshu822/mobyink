@@ -6,11 +6,14 @@ import Steps from "./parts/Steps";
 import ShappingTheFuture from "./parts/ShappingTheFuture";
 import CardSection from "./parts/CardSection";
 import SharkTankClients from "./parts/SharkTankClients";
+// import ThreeSection from './parts/ThreeSection'
 import ScrollingImages from "./parts/ScrollingImages";
 import LatestInsights from "./parts/LatestInsights";
-import LetsConnect from "./parts/LetsConnect";
 import Footer from "../../utils/Footer";
-import ParallaxEffect from "./parts/ParallaxEffect";
+import LetsConnect from "./parts/LetsConnect";
+import ServiceType from "./parts/ParallaxEffect";
+import ScrollingSection from "../Services/ScrollingSection";
+import GoToTop from "../../utils/GoToTop";
 const Home = () => {
   return (
     <Stack width={"100%"} height={"100%"} bgcolor={"#F5F7FF"}>
@@ -20,11 +23,13 @@ const Home = () => {
       <ShappingTheFuture />
       <CardSection />
       <SharkTankClients />
+      {/* <ScrollingSection /> */}
       <ScrollingImages />
       <LatestInsights />
-      <ParallaxEffect />
+      {/* <ServiceType /> */}
       <LetsConnect />
       <Footer />
+      <GoToTop />
     </Stack>
   );
 };
