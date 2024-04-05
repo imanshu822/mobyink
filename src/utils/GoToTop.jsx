@@ -47,10 +47,7 @@ const GoToTop = () => {
               zIndex: "1000",
             }}
           >
-            <FaWhatsappSquare
-              size={50}
-              color="linear-gradient(45deg, #E5FFCC, #1EBEA5, #00E676, #D0E9EA, #EDF8F5, #ffffff)"
-            />
+            <FaWhatsappSquare size={50} color="#25D366" />
           </Stack>
           <Stack
             borderRadius={"5px"}

@@ -1,14 +1,16 @@
 import { Stack, Typography } from "@mui/material";
 import React, { useState } from "react";
 import bgImg from "../../../assests/asset 27.svg";
+
 const LetsConnect = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    budget: "",
-    message: "",
+    Name: "",
+    Email: "",
+    Phone: "",
+    Budget: "",
+    Message: "",
   });
+  const [message, setMessage] = useState(""); // State variable for the message
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,10 +20,36 @@ const LetsConnect = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
-    console.log(formData);
-  };
+    const formDatab = new FormData(e.target);
+    fetch(
+      "https://script.google.com/macros/s/AKfycbyMr8veKnjMwXB_vJJ1zaOvw7EEePfkd53-_Vq7-j6-sdHAOytPsto7nVLRNH2nuNjE/exec",
+      {
+        method: "POST",
+        body: formDatab,
+      }
+    )
+      .then((res) => res.text()) // Parse response as text
+      .then((data) => {
+        console.log(data); // Log the response data
+        setMessage(
+          "Your message has been sent to our team. We will connect with you soon."
+        ); // Set the success message
+        setFormData({
+          // Clear the form fields
+          Name: "",
+          Email: "",
+          Phone: "",
+          Budget: "",
+          Message: "",
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+        setMessage("An error occurred. Please try again later."); // Set the error message
+      });
+  }
 
   return (
     <Stack width={"100%"} margin={"0 auto"}>
@@ -89,45 +117,45 @@ const LetsConnect = () => {
               <input
                 type="text"
                 id="name"
-                name="name"
+                name="Name"
                 placeholder="Your Name"
-                value={formData.name}
+                value={formData.Name}
                 onChange={handleChange}
                 style={styles.input}
               />
               <input
                 type="email"
                 id="email"
-                name="email"
+                name="Email"
                 placeholder="Your Email"
-                value={formData.email}
+                value={formData.Email}
                 onChange={handleChange}
                 style={styles.input}
               />
               <input
                 type="number"
                 id="phone"
-                name="phone"
+                name="Phone"
                 placeholder="Phone Number"
-                value={formData.phone}
+                value={formData.Phone}
                 onChange={handleChange}
                 style={styles.input}
               />
               <input
                 type="number"
                 id="budget"
-                name="budget"
+                name="Budget"
                 placeholder="What is your budget?"
-                value={formData.budget}
+                value={formData.Budget}
                 onChange={handleChange}
                 style={styles.input}
               />
               <textarea
                 id="message"
-                name="message"
+                name="Message"
                 rows={7}
                 placeholder="Your Message"
-                value={formData.message}
+                value={formData.Message}
                 onChange={handleChange}
                 style={styles.input}
               />
@@ -141,6 +169,18 @@ const LetsConnect = () => {
                 </Stack>
               </Stack>
             </form>
+            {message && (
+              <Typography
+                color="white"
+                textAlign="center"
+                mt={2}
+                variant="subtitle1"
+                fontWeight="bold"
+                fontStyle="italic"
+              >
+                {message}
+              </Typography>
+            )}
           </Stack>
         </Stack>
       </Stack>
