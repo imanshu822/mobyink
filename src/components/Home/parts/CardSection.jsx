@@ -52,7 +52,9 @@ const CardSection = () => {
   return (
     <>
       <Stack
-      pt={10}
+        pt={{
+          xs: 3,
+        }}
         width={"85%"}
         height={"100%"}
         direction={{
@@ -87,7 +89,10 @@ const CardSection = () => {
               <Stack p={"40px"} boxSizing={"border-box"} gap={10}>
                 <Link to={cardContent1.Link} style={{ textDecoration: "none" }}>
                   <Typography
-                    variant="h2"
+                    fontSize={{
+                      xs: "36px",
+                      lg: "42px",
+                    }}
                     fontWeight={"bold"}
                     color={"white"}
                     sx={{
@@ -142,7 +147,10 @@ const CardSection = () => {
               <Stack p={"40px"} boxSizing={"border-box"} gap={10} mt={3}>
                 <Link to={cardContent2.Link} style={{ textDecoration: "none" }}>
                   <Typography
-                    variant="h2"
+                    fontSize={{
+                      xs: "36px",
+                      lg: "42px",
+                    }}
                     fontWeight={"bold"}
                     color={"white"}
                     sx={{

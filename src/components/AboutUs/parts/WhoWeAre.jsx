@@ -6,14 +6,27 @@ const WhoWeAre = () => {
   return (
     <>
       <Stack width={"100%"} mt={10} boxSizing={"border-box"}>
-        <Stack width={"80%"} margin={"0 auto"}>
+        <Stack
+          width={{
+            xs: "95%",
+            xl: "80%",
+          }}
+          margin={"0 auto"}
+        >
           <Stack
             justifyContent={"center"}
             gap={1}
             mb={7}
             boxSizing={"border-box"}
           >
-            <Typography variant="h3" fontWeight={"bold"} textAlign={"center"}>
+            <Typography
+              fontSize={{
+                xs: "30px",
+                lg: "40px",
+              }}
+              fontWeight={"bold"}
+              textAlign={"center"}
+            >
               Who We Are?
             </Typography>
             <Typography
@@ -24,8 +37,21 @@ const WhoWeAre = () => {
               Providing you with the best Digital Marketing Solutions
             </Typography>
           </Stack>
-          <Stack direction={"row"}>
-            <Stack width={"50%"} gap={2}>
+          <Stack
+            direction={{
+              xs: "column",
+              lg: "row",
+            }}
+            gap={3}
+          >
+            <Stack
+              width={{
+                xs: "95%",
+                lg: "50%",
+              }}
+              margin={"0 auto"}
+              gap={2}
+            >
               <Typography
                 lineHeight={2}
                 color={"#767a86"}
@@ -55,7 +81,11 @@ const WhoWeAre = () => {
               </Typography>
             </Stack>
             <Stack
-              width={"50%"}
+              width={{
+                xs: "95%",
+                lg: "50%",
+              }}
+              margin={"0 auto"}
               justifyContent={"center"}
               alignItems={"center"}
             >

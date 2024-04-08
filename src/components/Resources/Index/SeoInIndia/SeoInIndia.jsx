@@ -9,6 +9,7 @@ import BottomResult from "./parts/BottomResult";
 import ImgSection3 from "./parts/ImgSection3";
 import ContactFaq from "./parts/ContactFaq";
 import Footer from "../../../../utils/Footer";
+import GoToTop from "../../../../utils/GoToTop";
 const SeoInIndia = () => {
   return (
     <Stack width={"100%"} height={"100%"} bgcolor={"#F5F7FF"}>
@@ -20,6 +21,7 @@ const SeoInIndia = () => {
       <BottomResult />
       <ImgSection3 />
       <ContactFaq />
+      <GoToTop />
       <Footer />
     </Stack>
   );

@@ -104,6 +104,8 @@
 
 // export default ParallaxBackground;
 
+
+
 // import React from "react";
 // import {
 //   Box,
@@ -200,6 +202,7 @@
 
 // export default ParallaxBackground;
 
+
 // import React from "react";
 // import {
 //   Box,
@@ -280,6 +283,8 @@
 
 // export default ParallaxBackground;
 
+
+
 // import React from "react";
 // import {
 //   Box,
@@ -342,12 +347,15 @@
 //           </ImageContainer>
 //         </Section>
 //       ))}
-
+      
 //     </ThemeProvider>
 //   );
 // };
 
 // export default ParallaxBackground;
+
+
+
 
 // import React, { useState, useEffect } from "react";
 // import {
@@ -464,6 +472,11 @@
 
 // export default ParallaxBackground;
 
+
+
+
+
+
 import React, { useState, useEffect } from "react";
 import {
   Box,
@@ -524,7 +537,7 @@ const texts = [
   },
   {
     title: "Brand Product 3",
-    description: "avxzcascasca",
+    description:"avxzcascasca"
   },
 ];
 
@@ -533,46 +546,48 @@ const ParallaxBackground = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [visible, setVisible] = useState(true); // Control visibility to trigger transitions
 
-  //   useEffect(() => {
-  //     const handleScroll = () => {
-  //       const newIndex = Math.floor(window.scrollY / window.innerHeight);
-  //       if (newIndex !== activeIndex) {
-  //         setVisible(false); // First, hide the text
-  //         setTimeout(() => {
-  //           setActiveIndex(newIndex);
-  //           setVisible(true); // Then, after a delay, show the new text
-  //         }, 500); // This delay should match the CSS transition duration
-  //       }
-  //     };
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const newIndex = Math.floor(window.scrollY / window.innerHeight);
+//       if (newIndex !== activeIndex) {
+//         setVisible(false); // First, hide the text
+//         setTimeout(() => {
+//           setActiveIndex(newIndex);
+//           setVisible(true); // Then, after a delay, show the new text
+//         }, 500); // This delay should match the CSS transition duration
+//       }
+//     };
 
-  //     window.addEventListener("scroll", handleScroll);
-  //     return () => window.removeEventListener("scroll", handleScroll);
-  //   }, [activeIndex]);
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, [activeIndex]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // Determine the index of the section that is currently 50% visible from bottom to top
-      const newIndex = images.findIndex((_, index) => {
-        const sectionTop = window.innerHeight * index; // Top position of the current section
-        const sectionBottom = sectionTop + window.innerHeight; // Bottom position of the current section
-        const scrollMidPoint = window.scrollY + window.innerHeight / 2; // Middle point of the viewport while scrolling
 
-        // Check if the middle point of the viewport is within the current section
-        return scrollMidPoint >= sectionTop && scrollMidPoint <= sectionBottom;
-      });
 
-      if (newIndex !== activeIndex && newIndex !== -1) {
-        setVisible(false); // First, hide the text
-        setTimeout(() => {
-          setActiveIndex(newIndex);
-          setVisible(true); // Then, after a delay, show the new text
-        }, 500); // This delay should match the CSS transition duration
-      }
-    };
+useEffect(() => {
+  const handleScroll = () => {
+    // Determine the index of the section that is currently 50% visible from bottom to top
+    const newIndex = images.findIndex((_, index) => {
+      const sectionTop = window.innerHeight * index; // Top position of the current section
+      const sectionBottom = sectionTop + window.innerHeight; // Bottom position of the current section
+      const scrollMidPoint = window.scrollY + window.innerHeight / 2; // Middle point of the viewport while scrolling
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [activeIndex]);
+      // Check if the middle point of the viewport is within the current section
+      return scrollMidPoint >= sectionTop && scrollMidPoint <= sectionBottom;
+    });
+
+    if (newIndex !== activeIndex && newIndex !== -1) {
+      setVisible(false); // First, hide the text
+      setTimeout(() => {
+        setActiveIndex(newIndex);
+        setVisible(true); // Then, after a delay, show the new text
+      }, 500); // This delay should match the CSS transition duration
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [activeIndex]);
 
   const theme = createTheme({
     typography: {
@@ -599,7 +614,7 @@ const ParallaxBackground = () => {
       ))}
 
       {texts.map((text, index) => (
-        <Section top={`${index * 100}vh`} key={index} gap={"600vh"}>
+        <Section top={`${index * 100}vh`} key={index}>
           <TextContainer
             key={index}
             sx={{
@@ -610,15 +625,8 @@ const ParallaxBackground = () => {
                   : "translateY(-20px)",
             }}
           >
-            <Stack justifyContent={"center"} color={"white"}>
-              <Typography>{text.title}</Typography>
-              <Typography>{text.description}</Typography>
-              <Typography>{text.description}</Typography>
-              <Typography>{text.description}</Typography>
-              <Typography>{text.description}</Typography>
-              <Typography>{text.description}</Typography>
-              <Typography>{text.description}</Typography>
-            </Stack>
+            <Typography>{text.title}</Typography>
+            <Typography>{text.description}</Typography>
           </TextContainer>
         </Section>
       ))}

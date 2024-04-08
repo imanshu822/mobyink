@@ -5,6 +5,7 @@ import PortfoliosHeadingSection from "./parts/PortfoliosHeadingSection";
 import Footer from "../../../utils/Footer";
 import PortfoliosSection from "./parts/PortfoliosSection";
 import WantToMake from "./parts/WantToMake";
+import GoToTop from "../../../utils/GoToTop";
 const Portfolio = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const Portfolio = () => {
         <PortfoliosSection />
         <WantToMake />
         <Footer />
+        <GoToTop />
       </Stack>
     </>
   );

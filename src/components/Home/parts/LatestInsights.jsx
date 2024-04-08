@@ -1,10 +1,10 @@
-import { Stack, Typography } from '@mui/material'
-import React from 'react'
-import Insights1 from "../../../assests/Insights1.webp"
+import { Stack, Typography } from "@mui/material";
+import React from "react";
+import Insights1 from "../../../assests/Insights1.webp";
 import Insights2 from "../../../assests/Insights2.webp";
 import Insights3 from "../../../assests/Insights3.webp";
-import Button from '../../../utils/Button';
-import { Link } from 'react-router-dom';
+import Button from "../../../utils/Button";
+import { Link } from "react-router-dom";
 const LatestInsights = () => {
   const lists = [
     {
@@ -24,20 +24,44 @@ const LatestInsights = () => {
     },
   ];
   return (
-    <Stack alignItems={"center"} pt={10} gap={3}>
-      <Stack alignItems={"center"} width={"50%"}>
+    <Stack
+      alignItems={"center"}
+      pt={{
+        xs: 3,
+        lg: 10,
+      }}
+      gap={3}
+    >
+      <Stack
+        alignItems={"center"}
+        width={{
+          xs: "90%",
+          lg: "50%",
+        }}
+      >
         <Typography
           fontFamily={"Monstrate,sans-serif"}
           letterSpacing={2}
           color={"black"}
-          fontSize={"48px"}
+          fontSize={{
+            xs: "30px",
+            sm: "30px",
+            lg: "50px",
+          }}
           fontWeight={"bold"}
         >
-          Latest{" "}
-          <span style={{ fontSize: "48px", color: "#0d6efd" }}>Insight</span>
+          Latest <span style={{ color: "#0d6efd" }}>Insight</span>
         </Typography>
       </Stack>
-      <Stack direction={"row"} width={"83%"} gap={"24px"} pt={2}>
+      <Stack
+        direction={{
+          xs: "column",
+          lg: "row",
+        }}
+        width={"83%"}
+        gap={"24px"}
+        pt={2}
+      >
         {lists.map((d, index) => (
           <Stack
             bgcolor={"#0D6EFD"}
@@ -113,6 +137,6 @@ const LatestInsights = () => {
       </Typography>
     </Stack>
   );
-}
+};
 
-export default LatestInsights
+export default LatestInsights;

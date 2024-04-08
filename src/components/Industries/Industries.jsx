@@ -3,6 +3,7 @@ import React from "react";
 import TabLineSection from "./parts/TabLineSection";
 import IndustriesWeServe from "./parts/IndustriesWeServer";
 import Footer from "../../utils/Footer";
+import GoToTop from "../../utils/GoToTop";
 const Industries = () => {
   return (
     <>
@@ -10,6 +11,7 @@ const Industries = () => {
         <TabLineSection />
         <IndustriesWeServe />
         <Footer />
+        <GoToTop />
       </Stack>
     </>
   );

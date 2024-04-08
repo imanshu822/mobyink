@@ -30,14 +30,13 @@ const LetsConnect = () => {
         body: formDatab,
       }
     )
-      .then((res) => res.text()) // Parse response as text
+      .then((res) => res.text())
       .then((data) => {
-        console.log(data); // Log the response data
+        console.log(data);
         setMessage(
           "Your message has been sent to our team. We will connect with you soon."
-        ); // Set the success message
+        );
         setFormData({
-          // Clear the form fields
           Name: "",
           Email: "",
           Phone: "",
@@ -47,7 +46,7 @@ const LetsConnect = () => {
       })
       .catch((error) => {
         console.log(error);
-        setMessage("An error occurred. Please try again later."); // Set the error message
+        setMessage("An error occurred. Please try again later.");
       });
   }
 

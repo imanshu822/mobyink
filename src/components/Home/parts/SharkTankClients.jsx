@@ -3,16 +3,22 @@ import React from "react";
 import childImg from "../../../assests/asset 8.svg";
 import motherImg from "../../../assests/asset 9.svg";
 import deliveryBoy from "../../../assests/asset 10.svg";
+import { Link } from "react-router-dom";
 
 const SharkTankClients = () => {
   return (
     <Stack width={"100%"} bgcolor={"#F5F7FF"}>
       <Stack width={"90%"} m={"0 auto"} gap={3}>
-        <Stack width={"60%"} m={"0 auto"}>
+        <Stack
+          width={{
+            xs: "90%",
+            lg: "60%",
+          }}
+          m={"0 auto"}
+        >
           <Typography
             fontSize={{
-              xs: "14px",
-              sm: "18px",
+              xs: "30px",
               lg: "50px",
             }}
             fontWeight={"bold"}
@@ -299,22 +305,34 @@ const SharkTankClients = () => {
           </Stack>
         </Stack>
       </Stack>
-
-      <Typography
-        variant="p"
-        fontSize={"16px"}
-        fontWeight={"bold"}
-        lineHeight={"1.9"}
-        color={"#0D6EFD"}
-        sx={{
-          textDecoration: "underline",
-        }}
-        mt={4}
-        mb={4}
-        textAlign={"center"}
-      >
-        View All Projects
-      </Typography>
+      <Stack mt={4} mb={4}>
+        <Link
+          to="#"
+          style={{
+            textDecoration: "none",
+            display: "block",
+            margin: "0 auto",
+          }}
+        >
+          <Typography
+            variant="p"
+            fontSize={"16px"}
+            fontWeight={"bold"}
+            lineHeight={"1.9"}
+            color={"#0D6EFD"}
+            sx={{
+              textDecoration: "underline",
+              "&:hover": {
+                opacity: 0.8,
+                cursor: "pointer",
+              },
+            }}
+            textAlign={"center"}
+          >
+            View All Projects
+          </Typography>
+        </Link>
+      </Stack>
     </Stack>
   );
 };

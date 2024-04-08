@@ -8,6 +8,7 @@ import MeetOurFounder from "./parts/MeetOurFounder";
 import EmpoweringDigital from "./parts/EmpoweringDigital";
 import Footer from "../../utils/Footer";
 import ProductSlider from "./parts/ProductSlider";
+import GoToTop from "../../utils/GoToTop";
 const AboutUs = () => {
   return (
     <>
@@ -19,6 +20,7 @@ const AboutUs = () => {
         <EmpoweringDigital />
         <ProductSlider />
         <Footer />
+        <GoToTop />
       </Stack>
     </>
   );

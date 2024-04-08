@@ -48,20 +48,43 @@ const services = [
 
 const IndustriesWeServe = () => {
   return (
-    <Stack width={"100%"} mt={10} boxSizing={"border-box"}>
-      <Stack width={"87%"} margin={"0 auto"}>
+    <Stack
+      width={"100%"}
+      mt={{
+        xs: 5,
+        lg: 10,
+      }}
+      boxSizing={"border-box"}
+    >
+      <Stack
+        width={{
+          xs: "90%",
+          lg: "87%",
+        }}
+        margin={"0 auto"}
+      >
         <Stack
           justifyContent={"center"}
           gap={1}
           mb={7}
           boxSizing={"border-box"}
         >
-          <Typography variant="h3" fontWeight={"bold"} textAlign={"center"}>
+          <Typography
+            fontSize={{
+              xs: "28px",
+              lg: "36px",
+            }}
+            fontWeight={"bold"}
+            textAlign={"center"}
+          >
             Industries We Serve
           </Typography>
           <Typography
             margin={"0 auto"}
-            width={"70%"}
+            width={{
+              xs: "100%",
+              lg: "70%",
+            }}
             textAlign={"center"}
             color={"#767a86"}
             fontSize={"21px"}
@@ -72,14 +95,22 @@ const IndustriesWeServe = () => {
           </Typography>
         </Stack>
         <Stack
-          direction={"row"}
+          direction={{
+            xs: "column",
+            md: "row",
+            lg: "row",
+          }}
           justifyContent="space-between"
           flexWrap={"wrap"}
         >
           {services.map((service, index) => (
             <Stack
               key={index}
-              width={"30%"}
+              width={{
+                xs: "100%",
+                md: "48%",
+                lg: "30%",
+              }}
               padding={2}
               boxSizing={"border-box"}
               gap={2}

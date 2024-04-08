@@ -12,7 +12,10 @@ const CardSection = () => {
   // Define an array of blog data objects
   const [showAllBlogs, setShowAllBlogs] = useState(false);
   const [blogsToShow, setBlogsToShow] = useState(9);
-
+  const handleClick = () => {
+    // Scroll to the top of the page
+    window.scrollTo({ top: 0, behavior: "instant" });
+  };
   const blogData = [
     {
       id: 1,
@@ -280,9 +283,10 @@ const CardSection = () => {
             .map((blog) => (
               <Stack width={"30%"}>
                 <Link
-                  key={blog.id} // Add key prop to the Link component
-                  to={`/blog/${blog.id}`}
+                  key={blog.id}
+                  to={`/case-studies/${blog.id}`}
                   style={{ textDecoration: "none" }}
+                  onClick={handleClick}
                 >
                   <Stack
                     boxShadow={"0 0 10px 0 rgba(0,0,0,.15)"}

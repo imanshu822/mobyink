@@ -77,7 +77,7 @@ const Slider = () => {
             sm: "315px ",
             md: "600px",
             lg: "1018px",
-            xl:"1200px",
+            xl: "1200px",
           },
           top: {
             xs: "3%",
@@ -88,8 +88,8 @@ const Slider = () => {
             xs: "4%",
             sm: "4%",
             md: "4%",
-            lg:"4%",
-            xl:"4%",
+            lg: "4%",
+            xl: "4%",
           },
         }}
         top={"27%"}

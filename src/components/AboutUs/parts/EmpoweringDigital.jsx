@@ -6,18 +6,41 @@ import valuesImg from "../../../assests/asset 19.svg";
 
 const EmpoweringDigital = () => {
   return (
-    <Stack width={"100%"} mt={10} mb={10} boxSizing={"border-box"}>
-      <Stack width={"80%"} margin={"0 auto"}>
+    <Stack
+      width={"100%"}
+      mt={{
+        xs: 5,
+        lg: 10,
+      }}
+      mb={{
+        xs: 5,
+        lg: 10,
+      }}
+      boxSizing={"border-box"}
+    >
+      <Stack
+        width={{
+          xs: "90%",
+          lg: "80%",
+        }}
+        margin={"0 auto"}
+      >
         <Stack>
           <Typography
-            fontSize={"40px"}
+            fontSize={{
+              xs: "30px",
+              lg: "40px",
+            }}
             fontWeight={"bold"}
             textAlign={"center"}
           >
             Empowering Digital Journeys, Creating Tomorrow's Success Stories.​
           </Typography>
           <Typography
-            fontSize={"1.6rem"}
+            fontSize={{
+              xs: "21px",
+              lg: "24px",
+            }}
             textAlign={"center"}
             color={"#767a86"}
           >
@@ -25,14 +48,28 @@ const EmpoweringDigital = () => {
           </Typography>
         </Stack>
         <Stack
-          width={"75%"}
+          width={{
+            xs: "100%",
+            lg: "80%",
+          }}
           margin={"0 auto"}
           mt={10}
           boxSizing={"border-box"}
           gap={3}
         >
-          <Stack direction={"row"} justifyContent={"space-between"}>
-            <Stack width={"45%"}>
+          <Stack
+            direction={{
+              xs: "column",
+              lg: "row",
+            }}
+            justifyContent={"space-between"}
+          >
+            <Stack
+              width={{
+                xs: "100%",
+                lg: "45%",
+              }}
+            >
               <Box
                 component="img"
                 width={"100%"}
@@ -41,7 +78,10 @@ const EmpoweringDigital = () => {
               />
             </Stack>
             <Stack
-              width={"45%"}
+              width={{
+                xs: "100%",
+                lg: "45%",
+              }}
               gap={3}
               justifyContent={"center"}
               alignItems={"center"}
@@ -67,8 +107,19 @@ const EmpoweringDigital = () => {
               </Stack>
             </Stack>
           </Stack>
-          <Stack direction={"row-reverse"} justifyContent={"space-between"}>
-            <Stack width={"45%"}>
+          <Stack
+            direction={{
+              xs: "column",
+              lg: "row-reverse",
+            }}
+            justifyContent={"space-between"}
+          >
+            <Stack
+              width={{
+                xs: "100%",
+                lg: "45%",
+              }}
+            >
               <Box
                 component="img"
                 width={"100%"}
@@ -77,7 +128,10 @@ const EmpoweringDigital = () => {
               />
             </Stack>
             <Stack
-              width={"45%"}
+              width={{
+                xs: "100%",
+                lg: "45%",
+              }}
               gap={3}
               justifyContent={"center"}
               alignItems={"center"}
@@ -104,8 +158,19 @@ const EmpoweringDigital = () => {
               </Stack>
             </Stack>
           </Stack>
-          <Stack direction={"row"} justifyContent={"space-between"}>
-            <Stack width={"45%"}>
+          <Stack
+            direction={{
+              xs: "column",
+              lg: "row",
+            }}
+            justifyContent={"space-between"}
+          >
+            <Stack
+              width={{
+                xs: "100%",
+                lg: "45%",
+              }}
+            >
               <Box
                 component="img"
                 width={"100%"}
@@ -114,7 +179,10 @@ const EmpoweringDigital = () => {
               />
             </Stack>
             <Stack
-              width={"45%"}
+              width={{
+                xs: "100%",
+                lg: "45%",
+              }}
               gap={3}
               justifyContent={"center"}
               alignItems={"center"}

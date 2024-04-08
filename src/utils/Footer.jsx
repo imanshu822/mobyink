@@ -1,33 +1,39 @@
 import { Box, Stack, Typography } from "@mui/material";
+
 import React from "react";
-import indImg from "../assests/asset 20.svg";
+import indiaHqImg from "../assests/hq-india.svg";
+import canadaImg from "../assests/asset 20.svg";
+import dubaiImg from "../assests/hq-uae.svg";
+import usaImg from "../assests/hq-usa.svg";
+
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Link } from "react-router-dom";
 import { Translate } from "@mui/icons-material";
+
 const footerData1 = [
   {
     title: "HQ INDIA",
     address:
       "Above HDFC bank, opposite Nelam Multi Specialty Hospital, Sheer Sagar, Patrakar Colony, Jaipur",
-    img: indImg,
+    img: canadaImg,
   },
   {
     title: "CANADA",
     address: "177 Jameson avenue Toronto Ontario, m6k2y7 Canada",
-    img: indImg,
+    img: canadaImg,
   },
   {
     title: "DUBAI",
     address: "Dubai ,Bur Dubai, Shamma JUMA building office number 105 ,UAE",
-    img: indImg,
+    img: canadaImg,
   },
   {
     title: "USA",
     address: "New Jersey, United States of America",
-    img: indImg,
+    img: canadaImg,
   },
 ];
 
@@ -94,22 +100,30 @@ const socialMediaIcons = [
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <Stack mt={10}>
+    <Stack
+      mt={{
+        xs: 3,
+        lg: 10,
+      }}
+    >
       <Stack width={"90%"} margin={"0 auto"}>
         <Stack
           direction={"row"}
           flexWrap={"wrap"}
           justifyContent={"space-between"}
-          gap={4}
+          gap={{
+            xs: 2,
+            lg: 4,
+          }}
         >
           {footerData1.map((item, index) => (
             <Stack
               key={index}
               boxSizing={"border-box"}
               p={2}
+              margin={"0 auto"}
               width={{
-                xs: "100%",
-                sm: "50%",
+                xs: "90%",
                 md: "25%",
                 lg: "20%",
               }}
@@ -117,6 +131,7 @@ const Footer = () => {
             >
               <Stack p={1} width={"80%"} m={"0 auto"} boxSizing={"border-box"}>
                 <Box
+                  color={"black"}
                   component="img"
                   width={"100%"}
                   height={"100%"}
@@ -141,15 +156,26 @@ const Footer = () => {
         <Stack
           direction={"row"}
           justifyContent={"space-between"}
-          gap={10}
+          gap={{
+            xs: 2,
+            lg: 5,
+          }}
           p={2}
           pl={2}
           pr={2}
           boxSizing={"border-box"}
+          flexWrap={"wrap"}
         >
           {[services, technologies, industries, portfolio].map(
             (category, index) => (
-              <Stack key={index} width={"18%"}>
+              <Stack
+                key={index}
+                width={{
+                  xs: "100%",
+                  md: "45%",
+                  lg: "17%",
+                }}
+              >
                 <Stack
                   fontSize={"25px"}
                   fontWeight={"600"}
@@ -187,7 +213,13 @@ const Footer = () => {
             )
           )}
 
-          <Stack width={"18%"}>
+          <Stack
+            width={{
+              xs: "100%",
+              md: "45%",
+              lg: "18%",
+            }}
+          >
             <Stack
               fontSize={"25px"}
               fontWeight={"600"}
@@ -274,15 +306,28 @@ const Footer = () => {
         <Box width={"100%"} height={"2px"} bgcolor={"#BCBCBC"} />
         <Stack>
           <Stack
-            direction={"row"}
+            direction={{
+              xs: "column",
+              lg: "row",
+            }}
             justifyContent={"space-between"}
             pt={2}
             pb={2}
             boxSizing={"border-box"}
+            gap={{
+              xs: 4,
+              lg: "",
+            }}
           >
             <Stack
-              direction={"row"}
-              gap={4}
+              direction={{
+                xs: "column",
+                lg: "row",
+              }}
+              gap={{
+                xs: 2,
+                lg: 4,
+              }}
               justifyContent={"center"}
               alignItems={"center"}
             >
@@ -318,7 +363,19 @@ const Footer = () => {
                 </Link>
               ))}
             </Stack>
-            <Stack direction={"row"} gap={3} mr={7} alignItems={"center"}>
+            <Stack
+              direction={"row"}
+              gap={3}
+              mr={{
+                xs: 0,
+                lg: 7,
+              }}
+              alignItems={"center"}
+              justifyContent={{
+                xs: "center",
+                lg: "flex-end",
+              }}
+            >
               {socialMediaIcons.map((item, index) => (
                 <Link
                   key={index}

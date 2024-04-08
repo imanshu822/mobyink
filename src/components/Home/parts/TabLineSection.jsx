@@ -39,16 +39,36 @@ const TabLineSection = () => {
 
         <Nav />
 
+
         <Stack zIndex={3}>
           <Stack
             zIndex={3}
-            margin={"0 97px"}
-            width={"57%"}
+            margin={{
+              xxl: "0 97px",
+              xl: "0 97px",
+              lg: "0 97px",
+              sm: "0 auto",
+            }}
+            width={{
+              xxl: "60%",
+              xl: "60%",
+              lg: "60%",
+              sm: "90%",
+            }}
+
             height={"90vh"}
             gap={3}
             justifyContent={"center"}
           >
-            <Typography variant="h3" fontWeight={"bold"} color={"white"}>
+            <Typography
+              fontSize={{
+                xxl: "48px",
+                xl: "36px",
+                sm: "24px",
+              }}
+              fontWeight={"bold"}
+              color={"white"}
+            >
               Pioneering The Digital Frontier For Market Leaders
             </Typography>
             <Typography variant="h6" color={"white"}>

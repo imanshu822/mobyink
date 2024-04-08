@@ -28,17 +28,29 @@ const OurCulture = () => {
   return (
     <>
       <Stack width={"100%"} mt={10} mb={10} boxSizing={"border-box"}>
-        <Stack width={"80%"} margin={"0 auto"}>
+        <Stack
+          width={{
+            xs: "90%",
+            lg: "80%",
+          }}
+          margin={"0 auto"}
+        >
           <Stack>
             <Typography
-              fontSize={"40px"}
+              fontSize={{
+                xs: "30px",
+                lg: "40px",
+              }}
               fontWeight={"bold"}
               textAlign={"center"}
             >
               Our Vibrant Culture: The Heartbeat of Our Success
             </Typography>
             <Typography
-              fontSize={"1.6rem"}
+              fontSize={{
+                xs: "21px",
+                lg: "24px",
+              }}
               textAlign={"center"}
               color={"#767a86"}
             >

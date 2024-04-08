@@ -3,7 +3,6 @@
 // import dharan from "../../../assests/Dharan.jpg"
 // import dharan2 from "../../../assests/Ayudhi.jpg"
 
-
 // const ScrollingImages = () => {
 //   const [scrollY, setScrollY] = useState(0);
 
@@ -54,7 +53,6 @@
 //         duration: 1,
 //         stagger: 1,
 //       });
-     
 
 //       ScrollTrigger.create({
 //         trigger: ".gallery",
@@ -65,7 +63,6 @@
 //         scrub: true,
 //         markers: true,
 //       });
-
 
 //        gsap.set(".left", { opacity: 0 });
 //        const leftAnimation = gsap.to(".left", {
@@ -157,7 +154,7 @@
 
 import React, { useState } from "react";
 import "./ScrollingImages.css"; // CSS file for styles
-import Image3 from "../../../assests/1.jpg"
+import Image3 from "../../../assests/1.jpg";
 import Image2 from "../../../assests/2.jpg";
 import Image1 from "../../../assests/3.jpg";
 import Image4 from "../../../assests/4.jpg";
@@ -198,27 +195,50 @@ const ScrollingImages = () => {
   };
 
   return (
-    <Stack alignItems={"center"}>
-      <Stack alignItems={"center"} width={"50%"}>
+    <Stack
+      alignItems={"center"}
+      display={{
+        xs: "none",
+        lg: "block",
+      }}
+    >
+      <Stack
+        alignItems={"center"}
+        width={{
+          xs: "90%",
+          sm: "90%",
+          lg: "50%",
+        }}
+        margin={"0 auto"}
+      >
         <Typography
           fontFamily={"Monstrate,sans-serif"}
           letterSpacing={2}
           color={"black"}
-          fontSize={"48px"}
+          fontSize={{
+            xs: "30px",
+            sm: "30px",
+            lg: "50px",
+          }}
           fontWeight={"bold"}
         >
-          Our Journey{" "}
-          <span style={{ fontSize: "48px", color: "#0d6efd" }}>So Far</span>
+          Our Journey <span style={{ color: "#0d6efd" }}>So Far</span>
         </Typography>
       </Stack>
       <Stack
-      pt={5}
+        pt={5}
         direction={"row"}
         width={"90%"}
         className="container"
         justifyContent={"center"}
+        margin={"0 auto"}
       >
-        <Stack width={"100%"} direction={"row"} justifyContent={"center"} height={"100%"}>
+        <Stack
+          width={"100%"}
+          direction={"row"}
+          justifyContent={"center"}
+          height={"100%"}
+        >
           {lists.map((d, index) => (
             <div
               key={index}
@@ -227,7 +247,7 @@ const ScrollingImages = () => {
               style={{ backgroundImage: `url(${d.src})` }}
             >
               <Typography
-              pl={5}
+                pl={5}
                 color={"white"}
                 fontSize={"80px"}
                 fontWeight={"bold"}
@@ -236,7 +256,7 @@ const ScrollingImages = () => {
                 {d.Title}
               </Typography>
               <Typography
-              pl={5}
+                pl={5}
                 color={"white"}
                 fontSize={"25px"}
                 display={activeCard !== index ? "none" : "block"}

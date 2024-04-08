@@ -12,7 +12,7 @@ const ShappingTheFuture = () => {
       mb={{ xs: 5, lg: 10 }}
     >
       <Stack
-      justifyContent={"space-between"}
+        justifyContent={"space-between"}
         width={"85%"}
         margin={"0 auto"}
         direction={{
@@ -29,8 +29,8 @@ const ShappingTheFuture = () => {
           <Typography
             pb={3}
             fontSize={{
-              xs: "6px",
-              sm: "18px",
+              xs: "20px",
+              sm: "20px",
               lg: "42px",
             }}
             textAlign={{
@@ -50,11 +50,7 @@ const ShappingTheFuture = () => {
           }}
         >
           <Typography
-            fontSize={{
-              xs: "12px",
-              sm: "14px",
-              lg: "20px",
-            }}
+            variant="p"
             textAlign={{
               xs: "justify",
               lg: "left",

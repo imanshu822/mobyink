@@ -15,7 +15,9 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const services = [
   {
+
     link: "/Services/App-Marketing",
+
     title: "App Marketing",
     features: [
       {
@@ -38,6 +40,7 @@ const services = [
   },
   {
     title: "App Development",
+    link: "/Services/app-development",
     features: [
       {
         name: "iOS App Development Services",
@@ -64,6 +67,7 @@ const services = [
   },
   {
     title: "Graphic Designing",
+    link: "/Services/graphic-designing",
     features: [
       {
         name: "Banner Design and Logo Design",
@@ -89,6 +93,7 @@ const services = [
   },
   {
     title: "Website Development",
+    link: "/Services/website-development",
     features: [
       {
         name: "CMS development using WordPress, Shopify, and Wix",
@@ -114,6 +119,7 @@ const services = [
   },
   {
     title: "Pay Per Click Advertising",
+    link: "/Services/pay-per-click-advertising",
     features: [
       {
         name: "Google Ads",
@@ -139,6 +145,7 @@ const services = [
   },
   {
     title: "UI/UX Design & Prototype",
+    link: "/Services/ui-ux-design-prototype",
     features: [
       {
         name: "Custom Web Design",
@@ -164,6 +171,7 @@ const services = [
   },
   {
     title: "Social Media Management",
+    link: "/Services/social-media-management",
     features: [
       {
         name: "Strategy with Content Creation",
@@ -189,6 +197,7 @@ const services = [
   },
   {
     title: "Animation & Video Editing",
+    link: "/Services/animation-video-editing",
     features: [
       {
         name: "2D Animation",
@@ -213,7 +222,8 @@ const services = [
     ],
   },
   {
-    title: "Website Development",
+    title: "Search Engine Optimization",
+    link: "/Services/search-engine-optimization",
     features: [
       {
         name: "CMS development using WordPress, Shopify, and Wix",
@@ -268,42 +278,42 @@ const index = [
   },
   {
     title: "SEO Company Jaipur",
-    to: "/SEO/India",
+    to: "/SEO/Jaipur",
     windowScrollAmount: 200,
   },
   {
     title: "SEO Company Delhi",
-    to: "/SEO/India",
+    to: "/SEO/Delhi",
     windowScrollAmount: 300,
   },
   {
     title: "SEO Company Bangalore",
-    to: "/SEO/India",
+    to: "/SEO/Bangalore",
     windowScrollAmount: 400,
   },
   {
     title: "SEO Company Gurgaon",
-    to: "/SEO/India",
+    to: "/SEO/Gurgaon",
     windowScrollAmount: 500,
   },
   {
     title: "SEO Company Mumbai",
-    to: "/SEO/India",
+    to: "/SEO/Mumbai",
     windowScrollAmount: 600,
   },
   {
     title: "SEO Company Noida",
-    to: "/SEO/India",
+    to: "/SEO/Noida",
     windowScrollAmount: 700,
   },
   {
     title: "SEO Company Pune",
-    to: "/SEO/India",
+    to: "/SEO/Pune",
     windowScrollAmount: 800,
   },
   {
     title: "SEO Company Surat",
-    to: "/SEO/India",
+    to: "/SEO/Surat",
     windowScrollAmount: 900,
   },
 ];
@@ -320,19 +330,16 @@ const Nav = () => {
   };
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      const menuContainer = document.getElementById("menu-container");
-      if (menuContainer && !menuContainer.contains(event.target)) {
-        setMenuClick(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
+    if (menuClick) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = "unset";
     };
-  }, []);
+  }, [menuClick]);
 
   const handleMouseEnter = (linkId) => {
     setPopoverState((prevState) => ({
@@ -352,12 +359,15 @@ const Nav = () => {
     <>
       {/* for Desktop view */}
 
+
       <Stack
         position={"relative"}
         p={"0px 90px"}
         zIndex={5}
         backgroundColor={"transparent"}
       >
+
+
         <Stack
           mt={1}
           height={"80px"}
@@ -448,7 +458,7 @@ const Nav = () => {
                     onMouseEnter={() => handleMouseEnter(1)}
                     onMouseLeave={() => handleMouseLeave(1)}
                     sx={{
-                      width: isPopoverOpen(1) ? "100vw" : 0,
+                      width: isPopoverOpen(1) ? "100%" : 0,
                       opacity: isPopoverOpen(1) ? 1 : 0,
                       transition:
                         "height 0.2s ease-in, opacity 0.2s ease-in-out",
@@ -526,7 +536,7 @@ const Nav = () => {
                                   ?.features.map((feature, index) => (
                                     <Stack
                                       key={index}
-                                      width={"190px"}
+                                      width={"170px"}
                                       height={"100px"}
                                       p={2}
                                       alignItems={"center"}
@@ -918,11 +928,11 @@ const Nav = () => {
           >
             {menuClick ? (
               <RxCross2
-                style={{ color: "#052973", width: "32px", height: "32px" }}
+                style={{ color: "white", width: "32px", height: "32px" }}
               />
             ) : (
               <CgMenuRight
-                style={{ color: "#052973", width: "32px", height: "32px" }}
+                style={{ color: "white", width: "32px", height: "32px" }}
               />
             )}
           </Stack>
@@ -933,9 +943,9 @@ const Nav = () => {
           height={"100dvh"}
           width={"100%"}
           position={"fixed"}
-          gap={2}
+          overflow={"auto"}
           sx={{
-            top: 0,
+            top: 80,
             // bottom: 0,
             left: menuClick ? "0" : "-100%",
             // right: menuClick ? "0" : "-100%",
@@ -945,41 +955,8 @@ const Nav = () => {
             zIndex: "1000001",
           }}
         >
-          <Stack
-            margin={"10px auto"}
-            width={"100%"}
-            height={"40px"}
-            direction={"row"}
-            justifyContent={"end"}
-          >
-            <Stack
-              onClick={handleClick}
-              width={"32px"}
-              height={"32px"}
-              marginRight={"20px"}
-              marginTop={"15px"}
-              sx={{
-                display: {
-                  xs: "block",
-                  lg: "none",
-                },
-                "&:hover": {
-                  cursor: "pointer",
-                },
-              }}
-            >
-              {menuClick ? (
-                <RxCross2
-                  style={{ color: "#052973", width: "32px", height: "32px" }}
-                />
-              ) : (
-                <CgMenuRight
-                  style={{ color: "#052973", width: "32px", height: "32px" }}
-                />
-              )}
-            </Stack>
-          </Stack>
           <Accordion
+            disableGutters
             sx={{
               border: "none",
               boxShadow: "none",
@@ -988,7 +965,7 @@ const Nav = () => {
             <AccordionSummary expandIcon={<ArrowDropDownIcon />}>
               <Typography>
                 {" "}
-                <Link to="/Features" className="navlink-link">
+                <Link to="/" className="navlink-link">
                   <Box
                     display={"flex"}
                     justifyContent="center"
@@ -1003,161 +980,29 @@ const Nav = () => {
                         transition: "all 0.4s ease-in",
                       }}
                     >
-                      Features
+                      Services
                     </Typography>
                   </Box>
                 </Link>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Stack justifyContent={"center"} gap={1} marginLeft={"20px"}>
-                <Link to="/Features/Billing" className="popperLinks">
-                  <Typography sx={{}}>Billing Management</Typography>
-                </Link>
-                <Link to="/Features/Billing" className="popperLinks">
-                  <Typography sx={{}}>Billing Management</Typography>
-                </Link>
-                <Link to="/Features/Billing" className="popperLinks">
-                  <Typography sx={{}}>Billing Management</Typography>
-                </Link>
+              <Stack gap={1}>
+                {services.map((service, index) => (
+                  <Stack justifyContent={"center"} gap={1} marginLeft={"20px"}>
+                    <Link to={service.link} className="popperLinks">
+                      <Typography className="popperLinks" sx={{}}>
+                        {service.title}
+                      </Typography>
+                    </Link>
+                  </Stack>
+                ))}
               </Stack>
             </AccordionDetails>
           </Accordion>
+
           <Accordion
-            sx={{
-              border: "none",
-              boxShadow: "none",
-            }}
-          >
-            <AccordionSummary
-              expandIcon={<ArrowDropDownIcon />}
-              aria-controls="panel2-content"
-              id="panel2-header"
-            >
-              <Typography>
-                {" "}
-                <Link to="/Solutions" className="navlink-link">
-                  <Box
-                    display={"flex"}
-                    justifyContent="center"
-                    alignItems={"center"}
-                  >
-                    <Typography
-                      alignSelf="center"
-                      display="inline-block"
-                      fontSize={20}
-                      className="navlink"
-                      sx={{
-                        transition: "all 0.4s ease-in",
-                      }}
-                    >
-                      Solutions
-                    </Typography>
-                  </Box>
-                </Link>
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Stack justifyContent={"center"} gap={1} marginLeft={"20px"}>
-                <Link to="/Solutions/By-Industries" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    By Industries
-                  </Typography>
-                </Link>
-                <Link to="/Solutions/By-Size" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    By Size
-                  </Typography>
-                </Link>
-                <Link to="/Solutions/By-role" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    By Role
-                  </Typography>
-                </Link>
-                <Link to="/Solutions/By-usecases" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    By use cases
-                  </Typography>
-                </Link>
-              </Stack>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion
-            sx={{
-              border: "none",
-              boxShadow: "none",
-            }}
-          >
-            <AccordionSummary
-              expandIcon={<ArrowDropDownIcon />}
-              aria-controls="panel2-content"
-              id="panel2-header"
-            >
-              <Typography>
-                {" "}
-                <Link to="/Resources" className="navlink-link">
-                  <Box
-                    display={"flex"}
-                    justifyContent="center"
-                    alignItems={"center"}
-                  >
-                    <Typography
-                      alignSelf="center"
-                      display="inline-block"
-                      fontSize={20}
-                      fontFamily={"Work Sans"}
-                      className="navlink"
-                      sx={{
-                        transition: "all 0.4s ease-in",
-                      }}
-                    >
-                      Resources
-                    </Typography>
-                  </Box>
-                </Link>
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Stack justifyContent={"center"} gap={1} marginLeft={"20px"}>
-                <Link to="/Resources/BecomeAPartner" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Become A Partner
-                  </Typography>
-                </Link>
-                <Link to="/Resources/Career" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Career
-                  </Typography>
-                </Link>
-                <Link to="/Resources/Blog" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Blogs
-                  </Typography>
-                </Link>
-                <Link to="/Resources/CaseStudy" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Case Study
-                  </Typography>
-                </Link>
-                <Link to="/Resources/Testimonials" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Testimonials
-                  </Typography>
-                </Link>
-                <Link to="/Resources/Videos" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Videos
-                  </Typography>
-                </Link>
-                <Link to="/Resources/faq" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Faq
-                  </Typography>
-                </Link>
-              </Stack>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion
+            disableGutters
             sx={{
               border: "none",
               boxShadow: "none",
@@ -1166,7 +1011,7 @@ const Nav = () => {
             <AccordionSummary aria-controls="panel2-content" id="panel2-header">
               <Typography>
                 {" "}
-                <Link to="/Pricing" className="navlink-link">
+                <Link to="/about-us" className="navlink-link">
                   <Box
                     display={"flex"}
                     justifyContent="center"
@@ -1176,33 +1021,200 @@ const Nav = () => {
                       alignSelf="center"
                       display="inline-block"
                       fontSize={20}
-                      fontFamily={"Work Sans"}
                       className="navlink"
                       sx={{
                         transition: "all 0.4s ease-in",
                       }}
                     >
-                      Pricing
+                      About Us
                     </Typography>
                   </Box>
                 </Link>
               </Typography>
             </AccordionSummary>
           </Accordion>
+
+          <Accordion
+            disableGutters
+            sx={{
+              border: "none",
+              boxShadow: "none",
+            }}
+          >
+            <AccordionSummary aria-controls="panel2-content" id="panel2-header">
+              <Typography>
+                {" "}
+                <Link to="/industries" className="navlink-link">
+                  <Box
+                    display={"flex"}
+                    justifyContent="center"
+                    alignItems={"center"}
+                  >
+                    <Typography
+                      alignSelf="center"
+                      display="inline-block"
+                      fontSize={20}
+                      className="navlink"
+                      sx={{
+                        transition: "all 0.4s ease-in",
+                      }}
+                    >
+                      Industries
+                    </Typography>
+                  </Box>
+                </Link>
+              </Typography>
+            </AccordionSummary>
+          </Accordion>
+
+          <Accordion
+            disableGutters
+            sx={{
+              border: "none",
+              boxShadow: "none",
+            }}
+          >
+            <AccordionSummary aria-controls="panel2-content" id="panel2-header">
+              <Typography>
+                {" "}
+                <Link to="/case-studies" className="navlink-link">
+                  <Box
+                    display={"flex"}
+                    justifyContent="center"
+                    alignItems={"center"}
+                  >
+                    <Typography
+                      alignSelf="center"
+                      display="inline-block"
+                      fontSize={20}
+                      className="navlink"
+                      sx={{
+                        transition: "all 0.4s ease-in",
+                      }}
+                    >
+                      Case Studies
+                    </Typography>
+                  </Box>
+                </Link>
+              </Typography>
+            </AccordionSummary>
+          </Accordion>
+          <Accordion
+            disableGutters
+            sx={{
+              border: "none",
+              boxShadow: "none",
+              mt: 0,
+            }}
+          >
+            <AccordionSummary sx={{ mt: 0 }} expandIcon={<ArrowDropDownIcon />}>
+              <Typography>
+                {" "}
+                <Link to="/" className="navlink-link">
+                  <Box
+                    display={"flex"}
+                    justifyContent="center"
+                    alignItems={"center"}
+                  >
+                    <Typography
+                      alignSelf="center"
+                      display="inline-block"
+                      fontSize={20}
+                      className="navlink"
+                      sx={{
+                        transition: "all 0.4s ease-in",
+                      }}
+                    >
+                      Services
+                    </Typography>
+                  </Box>
+                </Link>
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Stack gap={1}>
+                <Accordion
+                  disableGutters
+                  sx={{
+                    border: "none",
+                    boxShadow: "none",
+                  }}
+                >
+                  <AccordionSummary
+                    sx={{
+                      padding: "0px",
+                      pl: "15px",
+                    }}
+                    expandIcon={<ArrowDropDownIcon />}
+                  >
+                    <Typography>
+                      {" "}
+                      <Link to="/" className="navlink-link">
+                        <Box
+                          display={"flex"}
+                          justifyContent="center"
+                          alignItems={"center"}
+                        >
+                          <Typography
+                            alignSelf="center"
+                            display="inline-block"
+                            className="navlink"
+                            marginLeft={"5px"}
+                            sx={{
+                              transition: "all 0.4s ease-in",
+                            }}
+                          >
+                            Index
+                          </Typography>
+                        </Box>
+                      </Link>
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Stack gap={1}>
+                      {index.map((service, index) => (
+                        <Stack
+                          justifyContent={"center"}
+                          gap={1}
+                          marginLeft={"20px"}
+                        >
+                          <Link to={service.to} className="popperLinks">
+                            <Typography className="popperLinks" sx={{}}>
+                              {service.title}
+                            </Typography>
+                          </Link>
+                        </Stack>
+                      ))}
+                    </Stack>
+                  </AccordionDetails>
+                </Accordion>
+                {resources.map((resource, index) => (
+                  <Stack justifyContent={"center"} gap={1} marginLeft={"20px"}>
+                    <Link to={resource.to} className="popperLinks">
+                      <Typography className="popperLinks" sx={{}}>
+                        {resource.title}
+                      </Typography>
+                    </Link>
+                  </Stack>
+                ))}
+              </Stack>
+            </AccordionDetails>
+          </Accordion>
           <Stack alignItems={"center"} margin={"10px auto"}>
-            <Link to={"/Login"}>
+            <Link to={"#"}>
               <Button
                 sx={{
                   width: "120px",
-                  borderRadius: "10px",
                   height: "5vh",
+
+                  backgroundColor: "#0D6EFD",
                   "&:hover": {
-                    backgroundColor: "#F15B25",
-                    color: "white",
+                    color: "black",
+                    border: "2px solid #0D6EFD",
                   },
                 }}
               >
-                Login
+                Get in Touch
               </Button>
             </Link>
           </Stack>
