@@ -6,9 +6,30 @@ import img3 from "../../../../../assests/seo_page_img_3.jpeg";
 const ImgSection = () => {
   return (
     <Stack width={"100%"} bgcolor={"#EBF9FD"}>
-      <Stack width={"80%"} margin={"0 auto"}>
-        <Stack direction={"row"} p={4} boxSizing={"border-box"} gap={5}>
-          <Stack width={"50%"}>
+      <Stack
+        width={{
+          xs: "95%",
+          lg: "80%",
+        }}
+        margin={"0 auto"}
+      >
+        <Stack
+          direction={{
+            xs: "column",
+            lg: "row",
+          }}
+          p={4}
+          margin={"0 auto"}
+          boxSizing={"border-box"}
+          gap={5}
+        >
+          <Stack
+            width={{
+              xs: "100%",
+              lg: "50%",
+            }}
+            margin={"0 auto"}
+          >
             <Box
               component="img"
               width={"100%"}
@@ -18,11 +39,20 @@ const ImgSection = () => {
               boxShadow={"7px -11px 25px 10px #FFF"}
             />
           </Stack>
-          <Stack width={"50%"}>
+          <Stack
+            width={{
+              xs: "100%",
+              lg: "50%",
+            }}
+          >
             <Typography
+              textAlign={"justify"}
               fontSize={"18px"}
               fontWeight={"300"}
-              pl={2}
+              pl={{
+                xs: 0,
+                lg: 2,
+              }}
               boxSizing={"border-box"}
             >
               As a well-known SEO company in Surat, we provide personalized

@@ -50,10 +50,20 @@ const Benefits = () => {
       width={"100%"}
       height={"100%"}
       bgcolor={"#F5F7FF"}
-      mt={10}
+      mt={{
+        xs: 5,
+        lg: 10,
+      }}
       boxSizing={"border-box"}
     >
-      <Stack width={"75%"} margin={"0 auto"} gap={3}>
+      <Stack
+        width={{
+          xs: "95%",
+          lg: "75%",
+        }}
+        margin={"0 auto"}
+        gap={3}
+      >
         <Stack>
           <Stack bgcolor={"white"} width={"100px"} borderRadius={"5px"}>
             <Typography p={0.5} textAlign={"center"}>
@@ -62,13 +72,23 @@ const Benefits = () => {
           </Stack>
         </Stack>
         <Stack>
-          <Typography variant="h3" fontWeight={"bold"} textAlign={"start"}>
+          <Typography
+            fontSize={{
+              xs: "35px",
+              lg: "48px",
+            }}
+            fontWeight={"bold"}
+            textAlign={"start"}
+          >
             Best-in-class benefits
           </Typography>
         </Stack>
         <Stack
           gap={3}
-          direction={"row"}
+          direction={{
+            xs: "column",
+            lg: "row",
+          }}
           flexWrap={"wrap"}
           justifyContent={"center"}
         >
@@ -76,8 +96,14 @@ const Benefits = () => {
             <Stack
               key={index}
               bgcolor={"white"}
-              width={"23%"}
-              height={"270px"}
+              width={{
+                xs: "100%",
+                lg: "23%",
+              }}
+              height={{
+                xs: "auto",
+                lg: "270px",
+              }}
               boxShadow={"rgba(0, 0, 0, 0.15) 0px 0px 10px 0px"}
             >
               <Stack padding={2} pt={5}>

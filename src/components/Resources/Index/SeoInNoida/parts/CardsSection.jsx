@@ -36,8 +36,25 @@ const cardsDetails = [
 ];
 const CardsSection = () => {
   return (
-    <Stack width={"100%"} mt={10} mb={10} boxSizing={"border-box"}>
-      <Stack width={"80%"} margin={"0 auto"}>
+    <Stack
+      width={"100%"}
+      mt={{
+        xs: 5,
+        lg: 10,
+      }}
+      mb={{
+        xs: 5,
+        lg: 10,
+      }}
+      boxSizing={"border-box"}
+    >
+      <Stack
+        width={{
+          xs: "90%",
+          lg: "80%",
+        }}
+        margin={"0 auto"}
+      >
         <Stack gap={2}>
           <Stack gap={2}>
             <Typography
@@ -65,9 +82,14 @@ const CardsSection = () => {
           >
             {cardsDetails.map((card, index) => (
               <Stack
-                width={"45%"}
+                width={{
+                  xs: "100%",
+                  lg: "30%",
+                }}
                 justifyContent={"start"}
-                height={"400px"}
+                height={{
+                  xs: "auto",
+                }}
                 alignItems={"start"}
                 borderRadius={"8px"}
                 bgcolor={"#FFF"}
@@ -87,7 +109,6 @@ const CardsSection = () => {
                   <Typography
                     fontWeight={"300"}
                     fontSize={"17px"}
-                    textAlign={"center"}
                     color={"#7A7A7A"}
                   >
                     {card.description}

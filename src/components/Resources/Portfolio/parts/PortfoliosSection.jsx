@@ -126,12 +126,17 @@ const PortfoliosSection = () => {
             margin={"0 auto"}
             width={"95%"}
             direction={"row"}
-            height={"60px"}
+            flexWrap={"wrap"}
+            height={"100%"}
             justifyContent={"center"}
           >
             {categories.map((category, index) => (
               <Stack
                 key={index}
+                width={{
+                  xs: "100%",
+                  lg: "auto",
+                }}
                 height={"100%"}
                 justifyContent={"center"}
                 bgcolor={selectedCategory === category ? "#0D6EFD" : "white"}
@@ -146,6 +151,7 @@ const PortfoliosSection = () => {
                 onClick={() => handleCategoryClick(category)}
               >
                 <Typography
+                  textAlign={"center"}
                   p={"14px 43px"}
                   boxSizing={"border-box"}
                   fontSize={"20px"}
@@ -160,7 +166,10 @@ const PortfoliosSection = () => {
         <Stack>
           <Stack>
             <Stack
-              width={"90%"}
+              width={{
+                xs: "100%",
+                lg: "90%",
+              }}
               margin={"0 auto"}
               direction={"row"}
               flexWrap={"wrap"}
@@ -171,7 +180,11 @@ const PortfoliosSection = () => {
                 <Stack
                   key={index}
                   mt={5}
-                  width={"30%"}
+                  width={{
+                    xs: "100%",
+                    md: "45%",
+                    lg: "30%",
+                  }}
                   boxShadow={"0 0 10px 0 rgba(0,0,0,.15)"}
                   sx={{
                     "&:hover": {

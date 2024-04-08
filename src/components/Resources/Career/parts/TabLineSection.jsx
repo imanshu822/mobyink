@@ -19,9 +19,15 @@ const TabLineSection = () => {
         <Nav />
         <Stack zIndex={1}>
           <Stack
-            margin={"0 110px"}
+            margin={{
+              xs: "0 auto",
+              lg: "0 110px",
+            }}
             ml={20}
-            width={"40%"}
+            width={{
+              xs: "90%",
+              lg: "40%",
+            }}
             height={"90vh"}
             gap={3}
             justifyContent={"center"}

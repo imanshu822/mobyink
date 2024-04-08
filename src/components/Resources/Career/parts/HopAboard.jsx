@@ -5,10 +5,44 @@ import { Link } from "react-router-dom";
 const HopAboard = () => {
   return (
     <Stack>
-      <Stack width={"80%"} margin={"0 auto"} mt={10} boxSizing={"border-box"}>
-        <Stack direction={"row"} p={3} boxSizing={"border-box"}>
-          <Stack width={"50%"} gap={3} pl={6}>
-            <Typography variant="h3" fontWeight={"bold"}>
+      <Stack
+        width={{
+          xs: "100%",
+          sm: "80%",
+        }}
+        margin={"0 auto"}
+        mt={{
+          xs: 5,
+          lg: 10,
+        }}
+        boxSizing={"border-box"}
+      >
+        <Stack
+          direction={{
+            xs: "column",
+            lg: "row",
+          }}
+          boxSizing={"border-box"}
+          gap={3}
+        >
+          <Stack
+            width={{
+              xs: "100%",
+              lg: "50%",
+            }}
+            gap={3}
+            pl={{
+              xs: 0,
+              lg: 5,
+            }}
+          >
+            <Typography
+              fontSize={{
+                xs: "35px",
+                lg: "48px",
+              }}
+              fontWeight={"bold"}
+            >
               Hop Aboard the Digital Wave! Dive into the World of Mobylnk
               Innovations-
             </Typography>
@@ -45,8 +79,24 @@ const HopAboard = () => {
               </Stack>
             </Link>
           </Stack>
-          <Stack width={"50%"} justifyContent={"center"} alignItems={"center"}>
-            <Stack p={2} width={"400px"} height={"400px"}>
+          <Stack
+            width={{
+              xs: "80%",
+              lg: "50%",
+            }}
+            justifyContent={"center"}
+            alignItems={"center"}
+            margin={"0 auto"}
+          >
+            <Stack
+              width={{
+                xs: "100%",
+                lg: "80%",
+              }}
+              height={{
+                xs: "100%",
+              }}
+            >
               <Box
                 component="img"
                 width={"100%"}

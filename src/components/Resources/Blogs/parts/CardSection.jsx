@@ -261,8 +261,21 @@ const CardSection = () => {
   };
 
   return (
-    <Stack width={"100%"} mt={10} boxSizing={"border-box"}>
-      <Stack width={"80%"} margin={"0 auto"}>
+    <Stack
+      width={"100%"}
+      mt={{
+        xs: 5,
+        lg: 10,
+      }}
+      boxSizing={"border-box"}
+    >
+      <Stack
+        width={{
+          xs: "90%",
+          lg: "80%",
+        }}
+        margin={"0 auto"}
+      >
         <Stack>
           <Typography fontSize={"40px"} textAlign={"center"}>
             Blogs
@@ -270,7 +283,10 @@ const CardSection = () => {
         </Stack>
         <Stack
           mt={5}
-          direction={"row"}
+          direction={{
+            xs: "column",
+            md: "row",
+          }}
           flexWrap={"wrap"}
           justifyContent={"center"}
           gap={5}
@@ -278,7 +294,13 @@ const CardSection = () => {
           {blogData
             .slice(0, showAllBlogs ? blogData.length : blogsToShow)
             .map((blog) => (
-              <Stack width={"30%"}>
+              <Stack
+                width={{
+                  xs: "100%",
+                  md: "45%",
+                  lg: "30%",
+                }}
+              >
                 <Link
                   key={blog.id} // Add key prop to the Link component
                   to={`/blog/${blog.id}`}

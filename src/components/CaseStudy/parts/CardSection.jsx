@@ -265,7 +265,13 @@ const CardSection = () => {
 
   return (
     <Stack width={"100%"} mt={10} boxSizing={"border-box"}>
-      <Stack width={"80%"} margin={"0 auto"}>
+      <Stack
+        width={{
+          xs: "90%",
+          lg: "80%",
+        }}
+        margin={"0 auto"}
+      >
         <Stack>
           <Typography fontSize={"40px"} textAlign={"center"}>
             Featured Case Studies
@@ -273,7 +279,11 @@ const CardSection = () => {
         </Stack>
         <Stack
           mt={5}
-          direction={"row"}
+          direction={{
+            xs: "column",
+            md: "row",
+            lg: "row",
+          }}
           flexWrap={"wrap"}
           justifyContent={"center"}
           gap={5}
@@ -281,7 +291,13 @@ const CardSection = () => {
           {blogData
             .slice(0, showAllBlogs ? blogData.length : blogsToShow)
             .map((blog) => (
-              <Stack width={"30%"}>
+              <Stack
+                width={{
+                  xs: "100%",
+                  md: "45%",
+                  lg: "30%",
+                }}
+              >
                 <Link
                   key={blog.id}
                   to={`/case-studies/${blog.id}`}

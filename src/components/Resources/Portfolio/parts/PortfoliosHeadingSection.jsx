@@ -15,11 +15,17 @@ const PortfoliosHeadingSection = () => {
             Portfolios
           </Typography>
           <Typography
-            width={"80%"}
+            width={{
+              xs: "100%",
+              lg: "80%",
+            }}
             margin={"0 auto"}
             textAlign={"center"}
             color={"#767a86"}
-            fontSize={"21px"}
+            fontSize={{
+              xs: "1.2rem",
+              lg: "1.5rem",
+            }}
           >
             Discover where cutting-edge technology intertwines with creative
             marketing genius. Our portfolio showcases a spectrum of success:

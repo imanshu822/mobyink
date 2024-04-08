@@ -4,9 +4,28 @@ import img3 from "../../../../../assests/seo_page_img_3.jpeg";
 const ImgSection = () => {
   return (
     <Stack width={"100%"} bgcolor={"#EBF9FD"}>
-      <Stack width={"80%"} margin={"0 auto"}>
-        <Stack direction={"row"} p={4} boxSizing={"border-box"} gap={5}>
-          <Stack width={"50%"}>
+      <Stack
+        width={{
+          xs: "95%",
+          lg: "80%",
+        }}
+        margin={"0 auto"}
+      >
+        <Stack
+          direction={{
+            xs: "column",
+            lg: "row",
+          }}
+          p={4}
+          boxSizing={"border-box"}
+          gap={5}
+        >
+          <Stack
+            width={{
+              xs: "100%",
+              lg: "50%",
+            }}
+          >
             <Box
               component="img"
               width={"100%"}
@@ -16,11 +35,20 @@ const ImgSection = () => {
               boxShadow={"2px 18px 25px 10px #E5E5E5"}
             />
           </Stack>
-          <Stack width={"50%"} gap={2}>
+          <Stack
+            width={{
+              xs: "100%",
+              lg: "50%",
+            }}
+            gap={2}
+          >
             <Typography
               fontSize={"20px"}
               fontWeight={"600"}
-              pl={2}
+              pl={{
+                xs: 0,
+                lg: 2,
+              }}
               boxSizing={"border-box"}
             >
               Why Choose us For SEO Services?
@@ -28,8 +56,12 @@ const ImgSection = () => {
             <Typography
               fontSize={"18px"}
               fontWeight={"300"}
-              pl={2}
+              pl={{
+                xs: 0,
+                lg: 2,
+              }}
               boxSizing={"border-box"}
+              textAlign={"justify"}
             >
               At Mobyink, the leading SEO company in Surat, we put your business
               goals first. Our strategies are tailored to fit your specific

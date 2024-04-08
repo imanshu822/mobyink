@@ -42,8 +42,14 @@ const TabLineSection = () => {
         <Stack zIndex={3}>
           <Stack
             zIndex={3}
-            margin={"0 97px"}
-            width={"57%"}
+            margin={{
+              xs: "0 auto",
+              lg: "0 97px",
+            }}
+            width={{
+              xs: "90%",
+              lg: "57%",
+            }}
             height={"90vh"}
             gap={3}
             justifyContent={"center"}

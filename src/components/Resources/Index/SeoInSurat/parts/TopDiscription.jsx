@@ -3,12 +3,30 @@ import React from "react";
 
 const TopDiscription = () => {
   return (
-    <Stack width={"100%"} mt={10} mb={10} boxSizing={"border-box"}>
-      <Stack width={"80%"} margin={"0 auto"} gap={3}>
+    <Stack
+      width={"100%"}
+      mt={{
+        xs: 5,
+        lg: 10,
+      }}
+      mb={{
+        xs: 5,
+        lg: 10,
+      }}
+      boxSizing={"border-box"}
+    >
+      <Stack
+        width={{
+          xs: "90%",
+          lg: "80%",
+        }}
+        margin={"0 auto"}
+        gap={3}
+      >
         <Typography textAlign={"center"} fontWeight={"300"} fontSize={"40px"}>
           How To Receive Maximal ROI Through Our SEO Services In Surat?
         </Typography>
-        <Typography textAlign={"center"} fontWeight={"300"} fontSize={"19px"}>
+        <Typography textAlign={"justify"} fontWeight={"300"} fontSize={"19px"}>
           A company’s website is a big investment. It helps the business grow by
           making people more aware of the brand, increasing sales, and boosting
           its reputation. Mobyink, the best SEO company in Surat, can help
@@ -16,7 +34,7 @@ const TopDiscription = () => {
           return on investment, is the difference between what a business spends
           on its website and what it earns from it.
         </Typography>
-        <Typography textAlign={"center"} fontWeight={"300"} fontSize={"19px"}>
+        <Typography textAlign={"justify"} fontWeight={"300"} fontSize={"19px"}>
           As a well-known SEO company in Surat, we provide personalized
           strategies to meet your business achievements, ensuring an exceptional
           client experience. Our effective tactics aim to surpass competitors on

@@ -4,19 +4,43 @@ import { Link } from "react-router-dom";
 
 const MobyinkIsPlace = () => {
   return (
-    <Stack width={"100%"} pt={10} boxSizing={"border-box"} bgcolor={"white"}>
-      <Stack width={"90%"} margin={"0 auto"}>
+    <Stack
+      width={"100%"}
+      pt={{
+        xs: 5,
+        lg: 10,
+      }}
+      boxSizing={"border-box"}
+      bgcolor={"white"}
+    >
+      <Stack
+        width={{
+          xs: "95%",
+          lg: "90%",
+        }}
+        margin={"0 auto"}
+      >
         <Stack
           justifyContent={"center"}
           mb={7}
           boxSizing={"border-box"}
           gap={3}
         >
-          <Typography variant="h3" fontWeight={"bold"} textAlign={"center"}>
+          <Typography
+            fontSize={{
+              xs: "35px",
+              lg: "48px",
+            }}
+            fontWeight={"bold"}
+            textAlign={"center"}
+          >
             Mobyink is place to Boost you career
           </Typography>
           <Typography
-            width={"80%"}
+            width={{
+              xs: "95%",
+              lg: "80%",
+            }}
             margin={"0 auto"}
             textAlign={"start"}
             color={"#767a86"}
@@ -31,7 +55,10 @@ const MobyinkIsPlace = () => {
             where your wellbeing matters just as much as your success.
           </Typography>
           <Typography
-            width={"80%"}
+            width={{
+              xs: "95%",
+              lg: "80%",
+            }}
             margin={"0 auto"}
             textAlign={"start"}
             color={"#767a86"}

@@ -19,19 +19,30 @@ const TabLineSection = () => {
         <Nav />
         <Stack zIndex={1}>
           <Stack
-            margin={"0 110px"}
+            margin={{
+              xs: "0 auto",
+              lg: "0 110px",
+            }}
             ml={20}
-            width={"40%"}
+            width={{
+              xs: "90%",
+              lg: "40%",
+            }}
             height={"90vh"}
             gap={3}
             justifyContent={"center"}
           >
-            <Typography variant="h3" fontWeight={"bold"} color={"white"}>
+            <Typography
+              fontSize={{
+                xs: "2rem",
+                lg: "3rem",
+              }}
+              fontWeight={"bold"}
+              color={"white"}
+            >
               Blogs
             </Typography>
-            <Typography variant="h6" color={"white"}>
-              Digital Success Stories
-            </Typography>
+            <Typography variant="h6" color={"white"}></Typography>
             <Link
               to="#"
               style={{

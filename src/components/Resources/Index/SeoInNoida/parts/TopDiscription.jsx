@@ -3,12 +3,30 @@ import React from "react";
 
 const TopDiscription = () => {
   return (
-    <Stack width={"100%"} mt={10} mb={10} boxSizing={"border-box"}>
-      <Stack width={"80%"} margin={"0 auto"} gap={3}>
+    <Stack
+      width={"100%"}
+      mt={{
+        xs: 5,
+        lg: 10,
+      }}
+      mb={{
+        xs: 5,
+        lg: 10,
+      }}
+      boxSizing={"border-box"}
+    >
+      <Stack
+        width={{
+          xs: "90%",
+          lg: "80%",
+        }}
+        margin={"0 auto"}
+        gap={3}
+      >
         <Typography textAlign={"center"} fontWeight={"300"} fontSize={"40px"}>
           Enhance Website Traffic and Sales with SEO Services in Noida
         </Typography>
-        <Typography textAlign={"center"} fontWeight={"300"} fontSize={"19px"}>
+        <Typography textAlign={"justify"} fontWeight={"300"} fontSize={"19px"}>
           Looking for the best SEO Company in Noida? Look no further than
           Mobyink, serving both small and large businesses in the area. With our
           proven track record and shared case studies, we stand as a reliable
@@ -17,7 +35,7 @@ const TopDiscription = () => {
           partnering with Mobyink, businesses can enhance their local presence
           and improve their rankings, leading to increased traffic and sales.
         </Typography>
-        <Typography textAlign={"center"} fontWeight={"300"} fontSize={"19px"}>
+        <Typography textAlign={"justify"} fontWeight={"300"} fontSize={"19px"}>
           If you have long-term marketing goals, Mobyink can help. Our
           comprehensive audit can identify your target audience and their needs,
           ensuring that your marketing efforts align with your objectives. With

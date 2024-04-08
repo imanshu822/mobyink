@@ -59,10 +59,19 @@ const ContactFaq = () => {
     <>
       <Stack>
         <Stack
-          width={"80%"}
+          width={{
+            xs: "90%",
+            lg: "80%",
+          }}
           margin={"0 auto"}
-          mt={10}
-          mb={10}
+          mt={{
+            xs: 5,
+            lg: 10,
+          }}
+          mb={{
+            xs: 5,
+            lg: 10,
+          }}
           boxSizing={"border-box"}
         >
           <Typography

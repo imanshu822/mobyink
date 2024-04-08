@@ -4,10 +4,29 @@ import Img1 from "../../../../assests/ad4.webp";
 import Img2 from "../../../../assests/ad3.webp";
 const Content = () => {
   return (
-    <Stack mt={10} width={"100%"}>
+    <Stack
+      mt={{
+        xs: 5,
+        lg: 10,
+      }}
+      width={"100%"}
+    >
       <Stack>
-        <Stack width={"80%"} margin={"0 auto"} gap={8}>
-          <Stack width={"90%"} margin={"0 auto"}>
+        <Stack
+          width={{
+            xs: "90%",
+            lg: "80%",
+          }}
+          margin={"0 auto"}
+          gap={8}
+        >
+          <Stack
+            width={{
+              xs: "100%",
+              lg: "90%",
+            }}
+            margin={"0 auto"}
+          >
             <Typography variant="h5" textAlign={"left"} color={"gray"}>
               Paysafe provides payment solutions that power the everyday. The
               multinational organisation operates multiple brands across the
@@ -15,8 +34,20 @@ const Content = () => {
               over 145 million customers of varying size and scale.
             </Typography>
           </Stack>
-          <Stack direction={"row"} gap={7}>
-            <Stack gap={2} width={"50%"}>
+          <Stack
+            direction={{
+              xs: "column",
+              lg: "row",
+            }}
+            gap={7}
+          >
+            <Stack
+              gap={2}
+              width={{
+                xs: "100%",
+                lg: "50%",
+              }}
+            >
               <Typography variant="h3" fontWeight={"bold"}>
                 The Challanges
               </Typography>
@@ -58,7 +89,10 @@ const Content = () => {
             </Stack>
 
             <Stack
-              width={"50%"}
+              width={{
+                xs: "100%",
+                lg: "50%",
+              }}
               justifyContent={"center"}
               alignItems={"center"}
             >
@@ -96,8 +130,20 @@ const Content = () => {
             </Typography>
           </Stack>
 
-          <Stack direction={"row"} gap={7}>
-            <Stack gap={2} width={"50%"}>
+          <Stack
+            direction={{
+              xs: "column",
+              lg: "row",
+            }}
+            gap={7}
+          >
+            <Stack
+              gap={2}
+              width={{
+                xs: "100%",
+                lg: "50%",
+              }}
+            >
               <Typography variant="h3" fontWeight={"bold"}>
                 The Solutions
               </Typography>
@@ -139,7 +185,10 @@ const Content = () => {
             </Stack>
 
             <Stack
-              width={"50%"}
+              width={{
+                xs: "100%",
+                lg: "50%",
+              }}
               justifyContent={"center"}
               alignItems={"center"}
             >
@@ -157,7 +206,10 @@ const Content = () => {
             </Typography>
             <Stack
               direction={"row"}
-              gap={10}
+              gap={{
+                xs: 3,
+                lg: 10,
+              }}
               width={"80%"}
               margin={"0 auto"}
               mt={7}

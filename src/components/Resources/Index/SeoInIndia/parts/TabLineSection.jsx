@@ -5,19 +5,25 @@ import Nav from "../../../../../utils/Navbar/Nav";
 const TabLineSection = () => {
   return (
     <>
-      <Stack bgcolor={"#6FA7FF"}>
+      <Stack bgcolor={"#172063"}>
         <Nav />
         <Stack zIndex={1}>
           <Stack
             margin={"0 auto"}
-            width={"80%"}
-            height={"40vh"}
+            width={{
+              xs: "95%",
+              lg: "80%",
+            }}
+            height={"50vh"}
             gap={3}
             justifyContent={"center"}
           >
             <Typography
               textAlign={"center"}
-              fontSize={"35px"}
+              fontSize={{
+                xs: "30px",
+                lg: "35px",
+              }}
               textTransform={"uppercase"}
               fontWeight={"bold"}
               color={"white"}
