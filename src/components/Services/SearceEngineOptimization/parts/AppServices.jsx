@@ -1,93 +1,100 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
-import AppStore from "../../../../assests/App-Store-Optimization.jpeg";
-import nearByPlaceImg from "../../../../assests/nearbyplace.webp";
-import mobileGraphImg from "../../../../assests/mobileGraph.webp";
-import mobileAppArtImg from "../../../../assests/mobileappArt.webp";
+import AppStore from "../../../../assests/seo1.webp";
+import nearByPlaceImg from "../../../../assests/seo2.webp";
+import mobileGraphImg from "../../../../assests/seo3.webp";
+import mobileAppArtImg from "../../../../assests/seo4.webp";
 const AppServices = () => {
   const lists = [
     {
       id: 1,
-      title: "1. App Store Optimization",
+      title: "1. E-commerce SEO",
       direction: "row",
-      Desc: "Crafting a strategic approach to elevate your app’s visibility and downloads. We delve into researching and recommending designs that not only capture attention on the App Store but also align with your brand, ensuring a seamless on-screen experience for potential users.",
+      Desc: "Incorporating our digital design expertise, we strategize and implement e-commerce SEO solutions tailored to your brand. By optimizing product pages, refining content, and enhancing user experience, we ensure your online store ranks higher, driving increased traffic and maximizing conversion opportunities.",
       How: [
         {
-          title: "Strategic Analysis:",
-          Description: "Understand your app’s market and audience.",
+          Description: "Keyword Optimization",
         },
         {
-          title: "Keyword Optimization:",
-          Description: "Boost discoverability with targeted keywords.",
+          Description: "Site Speed",
         },
         {
-          title: "Strategic Analysis:",
-          Description: "Understand your app’s market and audience.",
+          Description: "High-Quality Content",
+        },
+        {
+          Description: "Mobile-Friendliness",
         },
       ],
       src: AppStore,
     },
     {
       id: 2,
-      title: "2. Creatives & CVR Optimization",
+      title: "2. Local SEO",
       direction: "row-reverse",
-      Desc: "In the realm of digital design, we specialize in creating captivating visuals that not only enhance click-through rates but also optimize conversion rates. By strategically designing creatives, we ensure that your digital content speaks to your audience, driving higher engagement and conversions.",
+      Desc: "Taking your brand beyond the digital realm, our print and digital designs synergize to elevate your local presence through Local SEO strategies. By optimizing your business listings and implementing location-specific design elements, we ensure your brand stands out in local searches.",
       How: [
         {
-          title: "Audience-Centric Design:",
-          Description:
-            "Create resonant visuals for higher click-through rates.",
+          Description: "GMB Optimization",
         },
         {
-          title: "A/B Testing:",
-          Description: "Optimize creatives through rigorous A/B testing.",
+          Description: "NAP Consistency",
         },
         {
-          title: "Data-Driven Iteration:",
-          Description: "Continuously refine elements for maximum conversion.",
+          Description: "Local Citations",
+        },
+        {
+          Description: "Customer Reviews",
+        },
+        {
+          Description: "Local Content",
         },
       ],
       src: nearByPlaceImg,
     },
     {
       id: 3,
-      title: "3. User Acquisition & Media",
+      title: "3. B2B and B2C SEO",
       direction: "row",
-      Desc: "Our expertise extends beyond design; we strategically brainstorm and research user acquisition tactics, presenting comprehensive ideas to clients with detailed volume and budget considerations. From compelling visuals to targeted media strategies, we design the digital assets that power your user acquisition efforts.",
+      Desc: "For B2B and B2C strategies, our digital design approach is versatile. We tailor branding to suit the tone and style of your target audience, applying it seamlessly to websites, business cards, and digital resources. Elevate your SEO game with designs that capture the essence of your business, whether you’re reaching out to businesses or individual consumers.",
       How: [
         {
-          title: "Ideation and Planning:",
-          Description: "Brainstorm innovative acquisition strategies.",
+          Description: "Keyword Strategy",
         },
         {
-          title: "Budget Alignment: ",
-          Description: "Propose detailed budgets for impactful campaigns.",
+          Description: "Content Quality",
         },
         {
-          title: "Strategic Design: ",
-          Description:
-            "Craft visually appealing assets for effective user acquisition.",
+          Description: "Social Media Engagement",
+        },
+        {
+          Description: "Mobile Optimization",
+        },
+        {
+          Description: "Local SEO",
         },
       ],
       src: mobileGraphImg,
     },
     {
       id: 4,
-      title: "4. Retention",
+      title: "4. Voice SEO",
       direction: "row-reverse",
-      Desc: "Beyond the initial download, our design philosophy extends to user retention. We create visually appealing and engaging content that keeps users coming back. Whether through in-app visuals, notifications, or other retention-focused materials, we ensure that your app maintains a lasting impression on its users.",
+      Desc: "Craft conversational keywords, ace local searches, and ride the wave of structured data for an auditory SEO triumph. Prioritize mobile, seize snippets, and own user intent—your brand’s future in search is now! Level Up with Voice SEO Excellence. ",
       How: [
         {
-          title: "Engagement-Centric Design:",
-          Description: "Create visuals fostering ongoing engagement.",
+          Description: "Conversational Keywords",
         },
         {
-          title: "Feedback Loop: ",
-          Description: "Refine designs based on user interactions.",
+          Description: "Featured Snippets",
         },
         {
-          title: "Brand Consistency:",
-          Description: "Ensure consistent elements for long-term user loyalty.",
+          Description: "Local Optimization",
+        },
+        {
+          Description: "Mobile-Friendly Design",
+        },
+        {
+          Description: "Structured Data",
         },
       ],
       src: mobileAppArtImg,
@@ -105,7 +112,7 @@ const AppServices = () => {
             }}
             fontWeight={"bold"}
           >
-            App Marketing
+            Search engine optimization
           </Typography>
         </Stack>
         <Stack
@@ -165,7 +172,7 @@ const AppServices = () => {
                     <Stack key={idx}>
                       <li style={{ fontWeight: "bold" }}>
                         {item.title}
-                        <span style={{ fontWeight: 100, color: "grey" }}>
+                        <span style={{ fontWeight: 400, color: "grey" }}>
                           {" "}
                           {item.Description}
                         </span>

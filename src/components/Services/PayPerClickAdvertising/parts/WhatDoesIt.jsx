@@ -1,16 +1,16 @@
 import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import lock from "../../../../assests/ggd1.svg";
-import video from "../../../../assests/ggd2.svg";
-import bulb from "../../../../assests/ggd3.svg";
-import hand from "../../../../assests/ggd4.svg";
+import lock from "../../../../assests/pppc1.svg";
+import video from "../../../../assests/pppc2.svg";
+import bulb from "../../../../assests/pppc3.svg";
+import hand from "../../../../assests/pppc4.svg";
 
 const WhatDoesIt = () => {
   const stackData = [
-    { title: "Visual Identity", image: lock },
-    { title: "Consistency", image: video },
-    { title: "Communication", image: bulb },
-    { title: "Competitive Edge", image: hand },
+    { title: "Immediate Results", image: lock },
+    { title: "Highly Targeted", image: video },
+    { title: "Measurable ROI", image: bulb },
+    { title: "Competitive Advantage", image: hand },
   ];
 
   const stackComponents = stackData.map((item, index) => (
@@ -44,7 +44,7 @@ const WhatDoesIt = () => {
           textAlign={"center"}
           fontSize={{
             xs: "15px",
-            lg: "35px",
+            lg: "25px",
           }}
           fontWeight={"normal"}
         >
@@ -82,9 +82,9 @@ const WhatDoesIt = () => {
             What Does it bring to your brand?
           </Typography>
           <Typography textAlign={"center"} variant={"body1"}>
-            We are the Graphic designing team that you were looking for from a
-            long time. Filled with creativity and enthusiasm we are ready to
-            make your brand elevate.
+            We help business and e-commerce brands to generate more revenue by
+            launching result-oriented ads. Let’s take a look at what we have to
+            offer.
           </Typography>
         </Stack>
         <Stack

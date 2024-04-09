@@ -1,93 +1,91 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
-import AppStore from "../../../../assests/App-Store-Optimization.jpeg";
-import nearByPlaceImg from "../../../../assests/nearbyplace.webp";
-import mobileGraphImg from "../../../../assests/mobileGraph.webp";
-import mobileAppArtImg from "../../../../assests/mobileappArt.webp";
+import AppStore from "../../../../assests/av1.webp";
+import nearByPlaceImg from "../../../../assests/av2.webp";
+import mobileGraphImg from "../../../../assests/av3.webp";
+import mobileAppArtImg from "../../../../assests/av4.webp";
 const AppServices = () => {
   const lists = [
     {
       id: 1,
-      title: "1. App Store Optimization",
+      title: "1. 2D Animation",
       direction: "row",
-      Desc: "Crafting a strategic approach to elevate your app’s visibility and downloads. We delve into researching and recommending designs that not only capture attention on the App Store but also align with your brand, ensuring a seamless on-screen experience for potential users.",
+      Desc: "Harnessing the power of visual storytelling, our 2D animation services breathe life into characters and narratives. From lively cartoons to informative explainer videos, our team crafts compelling animations that captivate audiences and convey messages with a dynamic visual flair.",
       How: [
         {
-          title: "Strategic Analysis:",
-          Description: "Understand your app’s market and audience.",
+          Description: "Storyboarding",
         },
         {
-          title: "Keyword Optimization:",
-          Description: "Boost discoverability with targeted keywords.",
+          Description: "Character Design",
         },
         {
-          title: "Strategic Analysis:",
-          Description: "Understand your app’s market and audience.",
+          Description: "Animation Techniques",
+        },
+        {
+          Description: "Timing and Pacing",
         },
       ],
       src: AppStore,
     },
     {
       id: 2,
-      title: "2. Creatives & CVR Optimization",
+      title: "2. 3D Animation",
       direction: "row-reverse",
-      Desc: "In the realm of digital design, we specialize in creating captivating visuals that not only enhance click-through rates but also optimize conversion rates. By strategically designing creatives, we ensure that your digital content speaks to your audience, driving higher engagement and conversions.",
+      Desc: "In the realm of three-dimensional creativity, our expertise lies in crafting immersive experiences through 3D animation. We transform ideas into lifelike visuals, whether it’s for product visualization, architectural walkthroughs, or engaging entertainment content. Our 3D animation brings depth and realism to your concepts, leaving a lasting impression.",
       How: [
         {
-          title: "Audience-Centric Design:",
-          Description:
-            "Create resonant visuals for higher click-through rates.",
+          Description: "Modeling ",
         },
         {
-          title: "A/B Testing:",
-          Description: "Optimize creatives through rigorous A/B testing.",
+          Description: "Texturing and Shading ",
         },
         {
-          title: "Data-Driven Iteration:",
-          Description: "Continuously refine elements for maximum conversion.",
+          Description: "Rigging and Animation ",
+        },
+        {
+          Description: "Rendering ",
         },
       ],
       src: nearByPlaceImg,
     },
     {
       id: 3,
-      title: "3. User Acquisition & Media",
+      title: "3. E-learning Animation",
       direction: "row",
-      Desc: "Our expertise extends beyond design; we strategically brainstorm and research user acquisition tactics, presenting comprehensive ideas to clients with detailed volume and budget considerations. From compelling visuals to targeted media strategies, we design the digital assets that power your user acquisition efforts.",
+      Desc: "Education meets innovation with our E-learning Animation services. We blend educational content with captivating visuals, making learning an interactive and engaging experience. From animated courses to interactive modules, we tailor our E-learning animations to cater to diverse learning styles, ensuring information retention and a seamless educational journey.",
       How: [
         {
-          title: "Ideation and Planning:",
-          Description: "Brainstorm innovative acquisition strategies.",
+          Description: "Educational Content",
         },
         {
-          title: "Budget Alignment: ",
-          Description: "Propose detailed budgets for impactful campaigns.",
+          Description: "Interactivity",
         },
         {
-          title: "Strategic Design: ",
-          Description:
-            "Craft visually appealing assets for effective user acquisition.",
+          Description: "Accessibility",
+        },
+        {
+          Description: "Optimized File Formats",
         },
       ],
       src: mobileGraphImg,
     },
     {
       id: 4,
-      title: "4. Retention",
+      title: "4. Corporate Video Editing",
       direction: "row-reverse",
-      Desc: "Beyond the initial download, our design philosophy extends to user retention. We create visually appealing and engaging content that keeps users coming back. Whether through in-app visuals, notifications, or other retention-focused materials, we ensure that your app maintains a lasting impression on its users.",
+      Desc: "Our Corporate Video Editing services focus on refining your brand narrative. We meticulously edit and enhance corporate videos to convey professionalism and capture the essence of your message. From promotional videos to internal communications, our editing expertise ensures that your corporate content aligns seamlessly with your brand identity, leaving a lasting impact.",
       How: [
         {
-          title: "Engagement-Centric Design:",
-          Description: "Create visuals fostering ongoing engagement.",
+          Description: "Script and Storyline",
         },
         {
-          title: "Feedback Loop: ",
-          Description: "Refine designs based on user interactions.",
+          Description: "Professional Editing Software",
         },
         {
-          title: "Brand Consistency:",
-          Description: "Ensure consistent elements for long-term user loyalty.",
+          Description: "Branding Elements",
+        },
+        {
+          Description: "Engaging Visuals",
         },
       ],
       src: mobileAppArtImg,
@@ -105,7 +103,7 @@ const AppServices = () => {
             }}
             fontWeight={"bold"}
           >
-            App Marketing
+            Animation & Video Editing
           </Typography>
         </Stack>
         <Stack
@@ -165,7 +163,7 @@ const AppServices = () => {
                     <Stack key={idx}>
                       <li style={{ fontWeight: "bold" }}>
                         {item.title}
-                        <span style={{ fontWeight: 100, color: "grey" }}>
+                        <span style={{ fontWeight: 400, color: "grey" }}>
                           {" "}
                           {item.Description}
                         </span>

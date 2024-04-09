@@ -1,15 +1,15 @@
 import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import lock from "../../../../assests/ggd1.svg";
-import video from "../../../../assests/ggd2.svg";
-import bulb from "../../../../assests/ggd3.svg";
-import hand from "../../../../assests/ggd4.svg";
+import lock from "../../../../assests/wwd1.svg";
+import video from "../../../../assests/wwd2.svg";
+import bulb from "../../../../assests/wwd3.svg";
+import hand from "../../../../assests/wwd4.svg";
 
 const WhatDoesIt = () => {
   const stackData = [
-    { title: "Visual Identity", image: lock },
-    { title: "Consistency", image: video },
-    { title: "Communication", image: bulb },
+    { title: "Global Visibility", image: lock },
+    { title: "Credibility", image: video },
+    { title: "E-Commerce Opportunities", image: bulb },
     { title: "Competitive Edge", image: hand },
   ];
 
@@ -44,7 +44,7 @@ const WhatDoesIt = () => {
           textAlign={"center"}
           fontSize={{
             xs: "15px",
-            lg: "35px",
+            lg: "25px",
           }}
           fontWeight={"normal"}
         >
@@ -82,9 +82,10 @@ const WhatDoesIt = () => {
             What Does it bring to your brand?
           </Typography>
           <Typography textAlign={"center"} variant={"body1"}>
-            We are the Graphic designing team that you were looking for from a
-            long time. Filled with creativity and enthusiasm we are ready to
-            make your brand elevate.
+            Enter the realm of success through the unparalleled effectiveness of
+            professional website development. Brace yourself for a journey where
+            every pixel tells a story and every click opens a door to endless
+            possibilities!
           </Typography>
         </Stack>
         <Stack

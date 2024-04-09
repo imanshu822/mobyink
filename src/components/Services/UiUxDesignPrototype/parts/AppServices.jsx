@@ -1,94 +1,136 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
-import AppStore from "../../../../assests/App-Store-Optimization.jpeg";
-import nearByPlaceImg from "../../../../assests/nearbyplace.webp";
-import mobileGraphImg from "../../../../assests/mobileGraph.webp";
-import mobileAppArtImg from "../../../../assests/mobileappArt.webp";
+import AppStore from "../../../../assests/ui1.webp";
+import nearByPlaceImg from "../../../../assests/ui2.webp";
+import mobileGraphImg from "../../../../assests/ui3.webp";
+import mobileAppArtImg from "../../../../assests/ui4.webp";
 
 const AppServices = () => {
   const lists = [
     {
       id: 1,
-      title: "1. App Store Optimization",
+      title: "1. Custom Web Design",
       direction: "row",
-      Desc: "Crafting a strategic approach to elevate your app’s visibility and downloads. We delve into researching and recommending designs that not only capture attention on the App Store but also align with your brand, ensuring a seamless on-screen experience for potential users.",
+      Desc: "Crafting Digital Masterpieces for You! Our Custom Web Design services are all about bringing your vision to life. We blend creativity and functionality to create websites that don’t just meet your expectations – they exceed them.",
       How: [
         {
-          title: "Strategic Analysis:",
-          Description: "Understand your app’s market and audience.",
+          title: "Dream It:",
+          Description: "Share your goals.",
         },
         {
-          title: "Keyword Optimization:",
-          Description: "Boost discoverability with targeted keywords.",
+          title: "Design It:",
+          Description: "We create stunning designs.",
         },
         {
-          title: "Strategic Analysis:",
-          Description: "Understand your app’s market and audience.",
+          title: "Develop It:",
+          Description: "We build functional websites.",
+        },
+        {
+          title: "Test It:",
+          Description: "Ensuring it works everywhere.",
+        },
+        {
+          title: "Launch It:",
+          Description: "Your masterpiece goes live!",
         },
       ],
       src: AppStore,
     },
     {
       id: 2,
-      title: "2. Creatives & CVR Optimization",
+      title: "2. Mobile App Design",
       direction: "row-reverse",
-      Desc: "In the realm of digital design, we specialize in creating captivating visuals that not only enhance click-through rates but also optimize conversion rates. By strategically designing creatives, we ensure that your digital content speaks to your audience, driving higher engagement and conversions.",
+      Desc: "Apps That Delight, Designs That Shine! Our Mobile App Design service is all about creating user-friendly interfaces that captivate and engage your users.",
       How: [
         {
-          title: "Audience-Centric Design:",
-          Description:
-            "Create resonant visuals for higher click-through rates.",
+          title: "Discover It:",
+          Description: "Define your app’s purpose.",
         },
         {
-          title: "A/B Testing:",
-          Description: "Optimize creatives through rigorous A/B testing.",
+          title: "Sketch It:",
+          Description: "Layout and functionality.",
         },
         {
-          title: "Data-Driven Iteration:",
-          Description: "Continuously refine elements for maximum conversion.",
+          title: "Design It:",
+          Description: "We craft stunning interfaces.",
+        },
+        {
+          title: "Test It:",
+          Description: "User feedback refines it.",
+        },
+        {
+          title: "Build It:",
+          Description: "Developers make it real.",
+        },
+        {
+          title: "Launch It:",
+          Description: "User feedback refines it.",
         },
       ],
       src: nearByPlaceImg,
     },
     {
       id: 3,
-      title: "3. User Acquisition & Media",
+      title: "3. Product Design",
       direction: "row",
-      Desc: "Our expertise extends beyond design; we strategically brainstorm and research user acquisition tactics, presenting comprehensive ideas to clients with detailed volume and budget considerations. From compelling visuals to targeted media strategies, we design the digital assets that power your user acquisition efforts.",
+      Desc: "From Idea to Reality! Our Product Design service is where concepts turn into beautifully functional products that leave a lasting impression.",
       How: [
         {
-          title: "Ideation and Planning:",
-          Description: "Brainstorm innovative acquisition strategies.",
+          title: "Imagine It:",
+          Description: "Define your product’s purpose.",
         },
         {
-          title: "Budget Alignment: ",
-          Description: "Propose detailed budgets for impactful campaigns.",
+          title: "Create It: ",
+          Description: "Concepts take shape..",
         },
         {
-          title: "Strategic Design: ",
-          Description:
-            "Craft visually appealing assets for effective user acquisition.",
+          title: "Refine It: ",
+          Description: "Feedback leads to perfection.",
+        },
+        {
+          title: "Craft It: ",
+          Description: "Materials are selected.",
+        },
+        {
+          title: "Produce It:",
+          Description: "We ensure production quality.",
+        },
+        {
+          title: "Perfect It: ",
+          Description: "Quality checks guarantee excellence.",
         },
       ],
       src: mobileGraphImg,
     },
     {
       id: 4,
-      title: "4. Retention",
+      title: "4. Branding & Graphics",
       direction: "row-reverse",
-      Desc: "Beyond the initial download, our design philosophy extends to user retention. We create visually appealing and engaging content that keeps users coming back. Whether through in-app visuals, notifications, or other retention-focused materials, we ensure that your app maintains a lasting impression on its users.",
+      Desc: "Your Brand, Your Story! Our Branding and graphics services are all about creating visuals that not only speak to your audience but tell your unique brand story.",
       How: [
         {
-          title: "Engagement-Centric Design:",
-          Description: "Create visuals fostering ongoing engagement.",
+          title: "Assess It:",
+          Description: "Understand your brand.",
         },
         {
-          title: "Feedback Loop: ",
-          Description: "Refine designs based on user interactions.",
+          title: "Strategize It: ",
+          Description: "Plan a cohesive strategy.",
         },
         {
-          title: "Brand Consistency:",
-          Description: "Ensure consistent elements for long-term user loyalty.",
+          title: "Visualize It:",
+          Description: "Create logos and graphics.",
+        },
+        {
+          title: "Guide It:",
+          Description: "Provide branding guidelines.",
+        },
+        {
+          title: "Market It:",
+          Description: "Design materials aligned with your brand.",
+        },
+        {
+          title: "Support It:",
+          Description: "Maintain your brand’s presence.",
         },
       ],
       src: mobileAppArtImg,
@@ -106,7 +148,7 @@ const AppServices = () => {
             }}
             fontWeight={"bold"}
           >
-            App Marketing
+            UI/UX Design & Prototype
           </Typography>
         </Stack>
         <Stack
@@ -166,7 +208,7 @@ const AppServices = () => {
                     <Stack key={idx}>
                       <li style={{ fontWeight: "bold" }}>
                         {item.title}
-                        <span style={{ fontWeight: 100, color: "grey" }}>
+                        <span style={{ fontWeight: 300, color: "grey" }}>
                           {" "}
                           {item.Description}
                         </span>

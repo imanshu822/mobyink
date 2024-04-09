@@ -30,11 +30,9 @@ const AppMarketingBanner = () => {
             lg: "40px",
           }}
         >
-          Skyrocket Your App Now
+          Adapt Grow & Thrive
         </Typography>
-        <Typography color={"white"}>
-          Reach in-app audience programmatically
-        </Typography>
+        <Typography color={"white"}>With PPC result-driven agency</Typography>
         <Stack
           mt={2}
           justifyContent={"center"}

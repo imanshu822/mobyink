@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import lock from "../../../../assests/ggd1.svg";
-import video from "../../../../assests/ggd2.svg";
-import bulb from "../../../../assests/ggd3.svg";
-import hand from "../../../../assests/ggd4.svg";
+import lock from "../../../../assests/sseo1.svg";
+import video from "../../../../assests/sseo2.svg";
+import bulb from "../../../../assests/sseo3.svg";
+import hand from "../../../../assests/sseo4.svg";
 
 const WhatDoesIt = () => {
   const stackData = [
@@ -44,7 +44,7 @@ const WhatDoesIt = () => {
           textAlign={"center"}
           fontSize={{
             xs: "15px",
-            lg: "35px",
+            lg: "25px",
           }}
           fontWeight={"normal"}
         >
@@ -79,12 +79,10 @@ const WhatDoesIt = () => {
             }}
             fontWeight={"bold"}
           >
-            What Does it bring to your brand?
+            Are you ready to skyrocket your website ranking?
           </Typography>
           <Typography textAlign={"center"} variant={"body1"}>
-            We are the Graphic designing team that you were looking for from a
-            long time. Filled with creativity and enthusiasm we are ready to
-            make your brand elevate.
+            Follow the below process and let’s connect
           </Typography>
         </Stack>
         <Stack

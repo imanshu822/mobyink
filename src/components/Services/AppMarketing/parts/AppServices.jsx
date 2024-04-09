@@ -2,8 +2,8 @@ import { Stack, Typography } from "@mui/material";
 import React from "react";
 import AppStore from "../../../../assests/App-Store-Optimization.jpeg";
 import nearByPlaceImg from "../../../../assests/nearbyplace.webp";
-import mobileGraphImg from "../../../../assests/mobileGraph.webp";
-import mobileAppArtImg from "../../../../assests/mobileappArt.webp";
+import mobileAppArtImg from "../../../../assests/mobileGraph.webp";
+import mobileGraphImg from "../../../../assests/mobileappArt.webp";
 const AppServices = () => {
   const lists = [
     {
@@ -165,7 +165,7 @@ const AppServices = () => {
                     <Stack key={idx}>
                       <li style={{ fontWeight: "bold" }}>
                         {item.title}
-                        <span style={{ fontWeight: 100, color: "grey" }}>
+                        <span style={{ fontWeight: 300, color: "grey" }}>
                           {" "}
                           {item.Description}
                         </span>

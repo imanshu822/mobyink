@@ -27,7 +27,7 @@ const AppMarketingBanner = () => {
           fontWeight={"bold"}
           fontSize={{
             xs: "30px",
-            lg: "40px",
+            lg: "48px",
           }}
         >
           Skyrocket Your App Now

@@ -8,86 +8,84 @@ const AppServices = () => {
   const lists = [
     {
       id: 1,
-      title: "1. App Store Optimization",
+      title: "1. Strategy with Content Creation",
       direction: "row",
-      Desc: "Crafting a strategic approach to elevate your app’s visibility and downloads. We delve into researching and recommending designs that not only capture attention on the App Store but also align with your brand, ensuring a seamless on-screen experience for potential users.",
+      Desc: "Our strategy: clear goals aligned with marketing. Engaging content by our design team – graphics, videos, and writing – tailored to the audience. Metrics guide adaptability and active community engagement align with broader marketing for a dynamic online presence.",
       How: [
         {
-          title: "Strategic Analysis:",
-          Description: "Understand your app’s market and audience.",
+          Description: "AI-Infused Brand Insights ",
         },
         {
-          title: "Keyword Optimization:",
-          Description: "Boost discoverability with targeted keywords.",
+          Description: "Competitor Alignment ",
         },
         {
-          title: "Strategic Analysis:",
-          Description: "Understand your app’s market and audience.",
+          Description: "Creative and engaging content",
+        },
+        {
+          Description: "Turn the content into visuals",
         },
       ],
       src: AppStore,
     },
     {
       id: 2,
-      title: "2. Creatives & CVR Optimization",
+      title: "2. Social Media posting",
       direction: "row-reverse",
-      Desc: "In the realm of digital design, we specialize in creating captivating visuals that not only enhance click-through rates but also optimize conversion rates. By strategically designing creatives, we ensure that your digital content speaks to your audience, driving higher engagement and conversions.",
+      Desc: "After crafting top-notch content, we take charge of its social debut. We optimize for each platform, strategically timing posts for peak reach and engagement. Your content hits the right notes, exactly when and where it matters most.",
       How: [
         {
-          title: "Audience-Centric Design:",
-          Description:
-            "Create resonant visuals for higher click-through rates.",
+          Description: "Tailor content to your audience’s interests.",
         },
         {
-          title: "A/B Testing:",
-          Description: "Optimize creatives through rigorous A/B testing.",
+          Description: "Keep posts aligned with your brand and audience needs.",
         },
         {
-          title: "Data-Driven Iteration:",
-          Description: "Continuously refine elements for maximum conversion.",
+          Description: "Share content when your audience is most active.",
+        },
+        {
+          Description: "Use engaging visuals to boost post-performance.",
         },
       ],
       src: nearByPlaceImg,
     },
     {
       id: 3,
-      title: "3. User Acquisition & Media",
+      title: "3. Community Management",
       direction: "row",
-      Desc: "Our expertise extends beyond design; we strategically brainstorm and research user acquisition tactics, presenting comprehensive ideas to clients with detailed volume and budget considerations. From compelling visuals to targeted media strategies, we design the digital assets that power your user acquisition efforts.",
+      Desc: "We’re not just posting – we engage in real-time with your audience, building a vibrant community. Plus, we optimize campaigns using machine learning for maximum impact, providing insights and recommendations for business growth.",
       How: [
         {
-          title: "Ideation and Planning:",
-          Description: "Brainstorm innovative acquisition strategies.",
+          Description: "Engage with members",
         },
         {
-          title: "Budget Alignment: ",
-          Description: "Propose detailed budgets for impactful campaigns.",
+          Description: "Moderate content",
         },
         {
-          title: "Strategic Design: ",
-          Description:
-            "Craft visually appealing assets for effective user acquisition.",
+          Description: "Build a sense of belonging",
+        },
+        {
+          Description: "Gather feedback and analyze data",
         },
       ],
       src: mobileGraphImg,
     },
     {
       id: 4,
-      title: "4. Retention",
+      title: "4. Performance Optimization",
       direction: "row-reverse",
-      Desc: "Beyond the initial download, our design philosophy extends to user retention. We create visually appealing and engaging content that keeps users coming back. Whether through in-app visuals, notifications, or other retention-focused materials, we ensure that your app maintains a lasting impression on its users.",
+      Desc: "We track key metrics like engagement and reach through analytics, generating detailed reports for content optimization. Our social media management handles the entire process, creating tailored strategies, engaging content, and community management to help brands achieve their goals efficiently.",
       How: [
         {
-          title: "Engagement-Centric Design:",
-          Description: "Create visuals fostering ongoing engagement.",
+          Description: "Goal Setting",
         },
         {
-          title: "Feedback Loop: ",
-          Description: "Refine designs based on user interactions.",
+          Description: "Regular FeedBack",
         },
         {
-          title: "Brand Consistency:",
-          Description: "Ensure consistent elements for long-term user loyalty.",
+          Description: "Performance Feedback",
+        },
+        {
+          Description: "Development Plans",
         },
       ],
       src: mobileAppArtImg,
@@ -105,7 +103,7 @@ const AppServices = () => {
             }}
             fontWeight={"bold"}
           >
-            App Marketing
+            Social Media Management
           </Typography>
         </Stack>
         <Stack
@@ -165,7 +163,7 @@ const AppServices = () => {
                     <Stack key={idx}>
                       <li style={{ fontWeight: "bold" }}>
                         {item.title}
-                        <span style={{ fontWeight: 100, color: "grey" }}>
+                        <span style={{ fontWeight: 400, color: "grey" }}>
                           {" "}
                           {item.Description}
                         </span>

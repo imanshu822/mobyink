@@ -105,7 +105,7 @@ const AppServices = () => {
             }}
             fontWeight={"bold"}
           >
-            App Marketing
+            Graphic Designing
           </Typography>
         </Stack>
         <Stack
@@ -165,7 +165,7 @@ const AppServices = () => {
                     <Stack key={idx}>
                       <li style={{ fontWeight: "bold" }}>
                         {item.title}
-                        <span style={{ fontWeight: 100, color: "grey" }}>
+                        <span style={{ fontWeight: 300, color: "grey" }}>
                           {" "}
                           {item.Description}
                         </span>

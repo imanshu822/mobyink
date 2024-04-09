@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router";
 
 import Home from "./components/Home/Home";
 
-
 import AnnimationVideoEditing from "./components/Services/AnimationVideoEditing/AnimationVideoEditing";
 import AppDevlopment from "./components/Services/AppDevelopment/AppDevelopment";
 import AppMarketing from "./components/Services/AppMarketing/AppMarketing";
@@ -13,7 +12,6 @@ import SearceEngineOptimization from "./components/Services/SearceEngineOptimiza
 import SocialMediaManagement from "./components/Services/SocialMediaManagement/SocialMediaManagement";
 import UiUxDesignPrototype from "./components/Services/UiUxDesignPrototype/UiUxDesignPrototype";
 import WebsiteDevelopment from "./components/Services/WebsiteDevelopment/WebsiteDevelopment";
-
 
 import AboutUs from "./components/AboutUs/AboutUs";
 import Industries from "./components/Industries/Industries";
@@ -36,6 +34,7 @@ import SeoInMumbai from "./components/Resources/Index/SeoInMumbai/SeoInMumbai";
 import SeoInPune from "./components/Resources/Index/SeoInPune/SeoInPune";
 import SeoInSurat from "./components/Resources/Index/SeoInSurat/SeoInSurat";
 
+import FaQ from "./components/Resources/FaQ/FaQ";
 
 const Main = () => {
   return (
@@ -89,7 +88,6 @@ const Main = () => {
           element={<WebsiteDevelopment />}
         />
 
-
         <Route exact path="/about-us" element={<AboutUs />} />
         <Route exact path="/industries" element={<Industries />} />
         <Route exact path="/case-studies" element={<CaseStudies />} />
@@ -114,13 +112,13 @@ const Main = () => {
         <Route exact path="/Career" element={<Career />} />
         <Route exact path="/Blog" element={<Blogs />} />
         <Route exact path="/Blog/:id" element={<BlogsInnerPage />} />
+        <Route exact path="/FAQ" element={<FaQ />} />
         <Route
           exact
           path="/Services/app-marketing"
           element={<AppMarketing />}
         />
         <Route exact path="/dummy" element={<ScrollingSection />} />
-
       </Routes>
     </>
   );

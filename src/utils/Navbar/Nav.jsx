@@ -3,6 +3,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Link, useNavigate } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 import lo from "../../assests/LogoBlue.svg";
+import logoDarkImg from "../../assests/logo_dark.svg";
 import { Stack } from "@mui/material";
 import "./nav.css";
 import Button from "../Button";
@@ -15,7 +16,6 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const services = [
   {
-
     link: "/Services/App-Marketing",
 
     title: "App Marketing",
@@ -359,15 +359,12 @@ const Nav = () => {
     <>
       {/* for Desktop view */}
 
-
       <Stack
         position={"relative"}
         p={"0px 90px"}
         zIndex={5}
         backgroundColor={"transparent"}
       >
-
-
         <Stack
           mt={1}
           height={"80px"}
@@ -927,7 +924,7 @@ const Nav = () => {
             }}
           >
             {menuClick ? (
-              <RxCross2
+              <CgMenuRight
                 style={{ color: "white", width: "32px", height: "32px" }}
               />
             ) : (
@@ -945,7 +942,6 @@ const Nav = () => {
           position={"fixed"}
           overflow={"auto"}
           sx={{
-            top: 80,
             // bottom: 0,
             left: menuClick ? "0" : "-100%",
             // right: menuClick ? "0" : "-100%",
@@ -955,6 +951,51 @@ const Nav = () => {
             zIndex: "1000001",
           }}
         >
+          <Stack width={"100%"} bgcolor={"#0D6EFD"}>
+            <Stack
+              width={"90%"}
+              direction={"row"}
+              alignSelf={"center"}
+              justifyContent={"space-between"}
+              alignItems={"center"}
+              padding={"20px 0px"}
+            >
+              <Stack width={{ xs: "45%", md: "30%" }}>
+                <Link to={"/"}>
+                  <img
+                    src={logoDarkImg}
+                    alt=""
+                    width={"100%"}
+                    height={"100%"}
+                  />
+                </Link>
+              </Stack>
+              <Stack
+                onClick={handleClick}
+                width={"32px"}
+                height={"32px"}
+                sx={{
+                  display: {
+                    xs: "block",
+                    lg: "none",
+                  },
+                  "&:hover": {
+                    cursor: "pointer",
+                  },
+                }}
+              >
+                {menuClick ? (
+                  <RxCross2
+                    style={{ color: "white", width: "32px", height: "32px" }}
+                  />
+                ) : (
+                  <CgMenuRight
+                    style={{ color: "white", width: "32px", height: "32px" }}
+                  />
+                )}
+              </Stack>
+            </Stack>
+          </Stack>
           <Accordion
             disableGutters
             sx={{
@@ -1099,6 +1140,7 @@ const Nav = () => {
               </Typography>
             </AccordionSummary>
           </Accordion>
+
           <Accordion
             disableGutters
             sx={{
@@ -1200,6 +1242,7 @@ const Nav = () => {
               </Stack>
             </AccordionDetails>
           </Accordion>
+
           <Stack alignItems={"center"} margin={"10px auto"}>
             <Link to={"#"}>
               <Button

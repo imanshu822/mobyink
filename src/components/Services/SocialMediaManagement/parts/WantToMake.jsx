@@ -31,7 +31,7 @@ const WantToMake = () => {
               fontWeight={"500"}
               color={"white"}
             >
-              Want to make your App rank No.1?
+              Manage Your Social Presence Effectively!
             </Typography>
             <Stack
               border={"2px solid white"}

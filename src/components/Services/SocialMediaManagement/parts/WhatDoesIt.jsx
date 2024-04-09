@@ -1,16 +1,16 @@
 import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import lock from "../../../../assests/ggd1.svg";
-import video from "../../../../assests/ggd2.svg";
-import bulb from "../../../../assests/ggd3.svg";
-import hand from "../../../../assests/ggd4.svg";
+import lock from "../../../../assests/ssm1.svg";
+import video from "../../../../assests/ssm2.svg";
+import bulb from "../../../../assests/ssm3.svg";
+import hand from "../../../../assests/ssm4.svg";
 
 const WhatDoesIt = () => {
   const stackData = [
-    { title: "Visual Identity", image: lock },
-    { title: "Consistency", image: video },
-    { title: "Communication", image: bulb },
-    { title: "Competitive Edge", image: hand },
+    { title: "Increased Brand Awareness", image: lock },
+    { title: "Targeted Advertising", image: video },
+    { title: "Audience Engagement", image: bulb },
+    { title: "Valuable Customer Insights", image: hand },
   ];
 
   const stackComponents = stackData.map((item, index) => (
@@ -44,7 +44,7 @@ const WhatDoesIt = () => {
           textAlign={"center"}
           fontSize={{
             xs: "15px",
-            lg: "35px",
+            lg: "25px",
           }}
           fontWeight={"normal"}
         >
@@ -79,12 +79,11 @@ const WhatDoesIt = () => {
             }}
             fontWeight={"bold"}
           >
-            What Does it bring to your brand?
+            What does it bring to your Business?
           </Typography>
           <Typography textAlign={"center"} variant={"body1"}>
-            We are the Graphic designing team that you were looking for from a
-            long time. Filled with creativity and enthusiasm we are ready to
-            make your brand elevate.
+            You are just a step away from your exceptional marketing services
+            that add a pinch of spice to your business it deserves
           </Typography>
         </Stack>
         <Stack

@@ -58,6 +58,48 @@ const OurCulture = () => {
               brilliance!
             </Typography>
           </Stack>
+          <Stack
+            mt={3}
+            gap={3}
+            direction={{
+              xs: "column",
+              lg: "row",
+            }}
+            flexWrap={"wrap"}
+            justifyContent={"center"}
+          >
+            {Culture.map((benefit, index) => (
+              <Stack
+                key={index}
+                width={{
+                  xs: "100%",
+                  lg: "23%",
+                }}
+                height={{
+                  xs: "auto",
+                  lg: "270px",
+                }}
+                boxShadow={"rgba(0, 0, 0, 0.15) 0px 0px 10px 0px"}
+              >
+                <Stack padding={2} pt={5} gap={2}>
+                  <Typography
+                    textAlign={"center"}
+                    fontSize={"22px"}
+                    fontWeight={"bold"}
+                  >
+                    {benefit.title}
+                  </Typography>
+                  <Typography
+                    textAlign={"center"}
+                    fontSize={"16px"}
+                    fontWeight={"300"}
+                  >
+                    {benefit.description}
+                  </Typography>
+                </Stack>
+              </Stack>
+            ))}
+          </Stack>
         </Stack>
       </Stack>
     </>

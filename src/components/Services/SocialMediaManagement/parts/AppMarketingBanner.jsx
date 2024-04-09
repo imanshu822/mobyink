@@ -1,6 +1,6 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
-import App_marketing_banner from "../../../../assests/App-Marketing-banner.jpeg";
+import App_marketing_banner from "../../../../assests/sm.webp";
 import Nav from "../../../../utils/Navbar/Nav";
 const AppMarketingBanner = () => {
   return (
@@ -30,10 +30,10 @@ const AppMarketingBanner = () => {
             lg: "40px",
           }}
         >
-          Skyrocket Your App Now
+          Lets Spot-On Social Media
         </Typography>
         <Typography color={"white"}>
-          Reach in-app audience programmatically
+          Be Found and Become Memorable with SMM
         </Typography>
         <Stack
           mt={2}

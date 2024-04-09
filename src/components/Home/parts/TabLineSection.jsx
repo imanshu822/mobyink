@@ -39,7 +39,6 @@ const TabLineSection = () => {
 
         <Nav />
 
-
         <Stack zIndex={3}>
           <Stack
             zIndex={3}
@@ -55,7 +54,6 @@ const TabLineSection = () => {
               lg: "60%",
               sm: "90%",
             }}
-
             height={"90vh"}
             gap={3}
             justifyContent={"center"}

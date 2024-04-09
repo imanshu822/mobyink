@@ -38,13 +38,16 @@ const footerData1 = [
 ];
 
 const services = [
-  { text: "Services", to: "/services" },
-  { text: "UI/UX Design", to: "/ui-ux-design" },
-  { text: "Search Engine Optimization", to: "/search-engine-optimization" },
-  { text: "App Marketing", to: "/app-marketing" },
-  { text: "Website Development", to: "/website-development" },
-  { text: "Social Media Management", to: "/social-media-management" },
-  { text: "More......", to: "/more" },
+  { text: "Services", to: "#" },
+  { text: "UI/UX Design", to: "/Services/ui-ux-design-prototype" },
+  {
+    text: "Search Engine Optimization",
+    to: "/Services/search-engine-optimization",
+  },
+  { text: "App Marketing", to: "/Services/App-Marketing" },
+  { text: "Website Development", to: "/Services/website-development" },
+  { text: "Social Media Management", to: "/Services/social-media-management" },
+  { text: "More......", to: "#" },
 ];
 
 const technologies = [
@@ -54,7 +57,7 @@ const technologies = [
   { text: "AR and VR", to: "/ar-and-vr" },
   { text: "Cloud Computing", to: "/cloud-computing" },
   { text: "Internet of Things", to: "/internet-of-things" },
-  { text: "More......", to: "/more" },
+  { text: "More......", to: "#" },
 ];
 
 const industries = [
@@ -67,7 +70,7 @@ const industries = [
     to: "/real-estate-and-interior-designing",
   },
   { text: "Finance", to: "/finance" },
-  { text: "More......", to: "/more" },
+  { text: "More......", to: "#" },
 ];
 
 const portfolio = [
@@ -84,7 +87,7 @@ const portfolio = [
 const Resources = ["Resources", "Blog", "FAQ's"];
 
 const links = [
-  { to: "/services", text: "Services" },
+  { to: "#", text: "Services" },
   { to: "/about-us", text: "About Us" },
   { to: "/industries", text: "Industries" },
   { to: "/case-studies", text: "Case Studies" },
@@ -92,13 +95,19 @@ const links = [
 ];
 
 const socialMediaIcons = [
-  { icon: <LinkedInIcon />, to: "/linkedin" },
-  { icon: <FacebookIcon />, to: "/facebook" },
-  { icon: <TwitterIcon />, to: "/twitter" },
-  { icon: <InstagramIcon />, to: "/instagram" },
+  {
+    icon: <LinkedInIcon />,
+    to: "https://www.linkedin.com/company/mobyink/mycompany/",
+  },
+  { icon: <FacebookIcon />, to: "https://www.facebook.com/OfficialMobyink" },
+  { icon: <TwitterIcon />, to: "https://twitter.com/Mobyink_" },
+  { icon: <InstagramIcon />, to: "https://www.instagram.com/mobyink_/" },
 ];
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const handleClick = (e) => {
+    window.scrollTo(0, 0, "smooth");
+  };
   return (
     <Stack
       mt={{
@@ -166,52 +175,157 @@ const Footer = () => {
           boxSizing={"border-box"}
           flexWrap={"wrap"}
         >
-          {[services, technologies, industries, portfolio].map(
-            (category, index) => (
+          {[services].map((category, index) => (
+            <Stack
+              key={index}
+              width={{
+                xs: "100%",
+                md: "45%",
+                lg: "17%",
+              }}
+            >
               <Stack
-                key={index}
-                width={{
-                  xs: "100%",
-                  md: "45%",
-                  lg: "17%",
-                }}
+                fontSize={"25px"}
+                fontWeight={"600"}
+                pt={2}
+                pb={2}
+                boxSizing={"border-box"}
               >
-                <Stack
-                  fontSize={"25px"}
-                  fontWeight={"600"}
-                  pt={2}
-                  pb={2}
-                  boxSizing={"border-box"}
+                {category[0].text}
+              </Stack>
+              {category.slice(1).map((item, idx) => (
+                <Link
+                  key={idx}
+                  to={item.to}
+                  style={{
+                    textDecoration: "none",
+                    color: "#55595E",
+                  }}
                 >
-                  {category[0].text}
-                </Stack>
-                {category.slice(1).map((item, idx) => (
-                  <Link
-                    key={idx}
-                    to={item.to}
-                    style={{
-                      textDecoration: "none",
-                      color: "#55595E",
+                  <Typography
+                    onClick={handleClick}
+                    pt={1}
+                    pb={1}
+                    boxSizing={"border-box"}
+                    sx={{
+                      fontSize: "18px",
+                      "&:hover": {
+                        color: "#0D6EFD",
+                      },
                     }}
                   >
-                    <Typography
-                      pt={1}
-                      pb={1}
-                      boxSizing={"border-box"}
-                      sx={{
-                        fontSize: "18px",
-                        "&:hover": {
-                          color: "#0D6EFD",
-                        },
-                      }}
-                    >
-                      {item.text}
-                    </Typography>
-                  </Link>
-                ))}
+                    {item.text}
+                  </Typography>
+                </Link>
+              ))}
+            </Stack>
+          ))}
+
+          {[technologies].map((category, index) => (
+            <Stack
+              key={index}
+              width={{
+                xs: "100%",
+                md: "45%",
+                lg: "17%",
+              }}
+            >
+              <Stack
+                fontSize={"25px"}
+                fontWeight={"600"}
+                pt={2}
+                pb={2}
+                boxSizing={"border-box"}
+              >
+                {category[0].text}
               </Stack>
-            )
-          )}
+              {category.slice(1).map((item, idx) => (
+                <Typography
+                  pt={1}
+                  pb={1}
+                  boxSizing={"border-box"}
+                  sx={{
+                    fontSize: "18px",
+                    "&:hover": {
+                      color: "#0D6EFD",
+                    },
+                  }}
+                >
+                  {item.text}
+                </Typography>
+              ))}
+            </Stack>
+          ))}
+          {[industries].map((category, index) => (
+            <Stack
+              key={index}
+              width={{
+                xs: "100%",
+                md: "45%",
+                lg: "17%",
+              }}
+            >
+              <Stack
+                fontSize={"25px"}
+                fontWeight={"600"}
+                pt={2}
+                pb={2}
+                boxSizing={"border-box"}
+              >
+                {category[0].text}
+              </Stack>
+              {category.slice(1).map((item, idx) => (
+                <Typography
+                  pt={1}
+                  pb={1}
+                  boxSizing={"border-box"}
+                  sx={{
+                    fontSize: "18px",
+                    "&:hover": {
+                      color: "#0D6EFD",
+                    },
+                  }}
+                >
+                  {item.text}
+                </Typography>
+              ))}
+            </Stack>
+          ))}
+          {[portfolio].map((category, index) => (
+            <Stack
+              key={index}
+              width={{
+                xs: "100%",
+                md: "45%",
+                lg: "17%",
+              }}
+            >
+              <Stack
+                fontSize={"25px"}
+                fontWeight={"600"}
+                pt={2}
+                pb={2}
+                boxSizing={"border-box"}
+              >
+                {category[0].text}
+              </Stack>
+              {category.slice(1).map((item, idx) => (
+                <Typography
+                  pt={1}
+                  pb={1}
+                  boxSizing={"border-box"}
+                  sx={{
+                    fontSize: "18px",
+                    "&:hover": {
+                      color: "#0D6EFD",
+                    },
+                  }}
+                >
+                  {item.text}
+                </Typography>
+              ))}
+            </Stack>
+          ))}
 
           <Stack
             width={{
@@ -237,6 +351,7 @@ const Footer = () => {
               }}
             >
               <Typography
+                onClick={handleClick}
                 pt={1}
                 pb={1}
                 boxSizing={"border-box"}
@@ -258,6 +373,7 @@ const Footer = () => {
               }}
             >
               <Typography
+                onClick={handleClick}
                 pt={1}
                 pb={1}
                 boxSizing={"border-box"}
@@ -359,7 +475,7 @@ const Footer = () => {
                     textAlign: "center",
                   }}
                 >
-                  <Typography>{link.text}</Typography>
+                  <Typography onClick={handleClick}>{link.text}</Typography>
                 </Link>
               ))}
             </Stack>
@@ -377,10 +493,15 @@ const Footer = () => {
               }}
             >
               {socialMediaIcons.map((item, index) => (
-                <Link
+                <a
                   key={index}
-                  to={item.to}
-                  style={{ textDecoration: "none", textAlign: "center" }}
+                  href={item.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    textDecoration: "none",
+                    textAlign: "center",
+                  }}
                 >
                   <Stack
                     bgcolor={"#e4e7e9"}
@@ -396,7 +517,6 @@ const Footer = () => {
                         color: "white",
                         transform: "translateY(-8px)",
                         transition: "0.4s ease-out",
-                        transition: "0.4s ease-in",
                       },
                     }}
                   >
@@ -409,7 +529,7 @@ const Footer = () => {
                       {item.icon}
                     </Stack>
                   </Stack>
-                </Link>
+                </a>
               ))}
             </Stack>
           </Stack>

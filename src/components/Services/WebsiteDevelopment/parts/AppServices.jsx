@@ -1,9 +1,9 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
-import AppStore from "../../../../assests/App-Store-Optimization.jpeg";
-import nearByPlaceImg from "../../../../assests/nearbyplace.webp";
-import mobileGraphImg from "../../../../assests/mobileGraph.webp";
-import mobileAppArtImg from "../../../../assests/mobileappArt.webp";
+import AppStore from "../../../../assests/wd1.webp";
+import nearByPlaceImg from "../../../../assests/wd2.webp";
+import mobileGraphImg from "../../../../assests/wd3.webp";
+import mobileAppArtImg from "../../../../assests/wd4.webp";
 
 const AppServices = () => {
   const lists = [
@@ -106,7 +106,7 @@ const AppServices = () => {
             }}
             fontWeight={"bold"}
           >
-            App Marketing
+            Website Development
           </Typography>
         </Stack>
         <Stack
@@ -166,7 +166,7 @@ const AppServices = () => {
                     <Stack key={idx}>
                       <li style={{ fontWeight: "bold" }}>
                         {item.title}
-                        <span style={{ fontWeight: 100, color: "grey" }}>
+                        <span style={{ fontWeight: 300, color: "grey" }}>
                           {" "}
                           {item.Description}
                         </span>

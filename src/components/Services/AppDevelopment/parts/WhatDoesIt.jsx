@@ -7,10 +7,10 @@ import hand from "../../../../assests/aad4.svg";
 
 const WhatDoesIt = () => {
   const stackData = [
-    { title: "Private Marketplace", image: lock },
-    { title: "In-App Video Platform", image: video },
-    { title: "Data Solution", image: bulb },
-    { title: "Agency Partnerships", image: hand, fontWeight: "500" },
+    { title: "Revenue Generation", image: lock },
+    { title: "Innovative Brand Image", image: video },
+    { title: "Customer Loyalty and retention", image: bulb },
+    { title: "Competitiveness", image: hand, fontWeight: "500" },
   ];
 
   const stackComponents = stackData.map((item, index) => (
@@ -44,7 +44,7 @@ const WhatDoesIt = () => {
           textAlign={"center"}
           fontSize={{
             xs: "15px",
-            lg: "35px",
+            lg: "25px",
           }}
           fontWeight={"normal"}
         >
@@ -82,9 +82,9 @@ const WhatDoesIt = () => {
             What Does it bring to your brand?
           </Typography>
           <Typography textAlign={"center"} variant={"body1"}>
-            We are the Graphic designing team that you were looking for from a
-            long time. Filled with creativity and enthusiasm we are ready to
-            make your brand elevate.
+            App development amplifies brand effectiveness by offering a
+            seamless, engaging user experience, fostering brand loyalty, and
+            extending reach through digital innovation.
           </Typography>
         </Stack>
         <Stack

@@ -44,7 +44,7 @@ const WhatDoesIt = () => {
           textAlign={"center"}
           fontSize={{
             xs: "15px",
-            lg: "35px",
+            lg: "28px",
           }}
           fontWeight={"normal"}
         >
@@ -79,12 +79,12 @@ const WhatDoesIt = () => {
             }}
             fontWeight={"bold"}
           >
-            What Does it bring to your brand?
+            What Does it bring to your app?
           </Typography>
           <Typography textAlign={"center"} variant={"body1"}>
-            We are the Graphic designing team that you were looking for from a
-            long time. Filled with creativity and enthusiasm we are ready to
-            make your brand elevate.
+            Mobile App marketing brings maximum ROI for your applications. Our
+            Marketing campaigns will help you reach a quality audience with
+            Engaging creatives and activities.
           </Typography>
         </Stack>
         <Stack

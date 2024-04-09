@@ -1,93 +1,91 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
-import AppStore from "../../../../assests/App-Store-Optimization.jpeg";
-import nearByPlaceImg from "../../../../assests/nearbyplace.webp";
-import mobileGraphImg from "../../../../assests/mobileGraph.webp";
-import mobileAppArtImg from "../../../../assests/mobileappArt.webp";
+import AppStore from "../../../../assests/ppc1.webp";
+import nearByPlaceImg from "../../../../assests/ppc2.webp";
+import mobileGraphImg from "../../../../assests/ppc3.webp";
+import mobileAppArtImg from "../../../../assests/ppc4.webp";
 const AppServices = () => {
   const lists = [
     {
       id: 1,
-      title: "1. App Store Optimization",
+      title: "1. Google Ads",
       direction: "row",
-      Desc: "Crafting a strategic approach to elevate your app’s visibility and downloads. We delve into researching and recommending designs that not only capture attention on the App Store but also align with your brand, ensuring a seamless on-screen experience for potential users.",
+      Desc: "Fuel your business growth with the rocket fuel of the digital world! Our Google Ads services are your passport to online success. We turn clicks into customers, dreams into reality, and searches into sales. Ready to take the digital leap? Let’s skyrocket your business to new heights!",
       How: [
         {
-          title: "Strategic Analysis:",
-          Description: "Understand your app’s market and audience.",
+          Description: "Consultation and Goal Setting ",
         },
         {
-          title: "Keyword Optimization:",
-          Description: "Boost discoverability with targeted keywords.",
+          Description: "Strategic Keyword Selection ",
         },
         {
-          title: "Strategic Analysis:",
-          Description: "Understand your app’s market and audience.",
+          Description: "Compelling ad Creation",
+        },
+        {
+          Description: "Ongoing Optimization",
         },
       ],
       src: AppStore,
     },
     {
       id: 2,
-      title: "2. Creatives & CVR Optimization",
+      title: "2. Meta Ads",
       direction: "row-reverse",
-      Desc: "In the realm of digital design, we specialize in creating captivating visuals that not only enhance click-through rates but also optimize conversion rates. By strategically designing creatives, we ensure that your digital content speaks to your audience, driving higher engagement and conversions.",
+      Desc: "Welcome to the front row of the social media extravaganza! Our Meta Ads services are the VIP pass to a world where every scroll, like, and share turns into brand success. Say goodbye to the ordinary—let’s make your brand extraordinary on Meta Ads!",
       How: [
         {
-          title: "Audience-Centric Design:",
-          Description:
-            "Create resonant visuals for higher click-through rates.",
+          Description: "Identifying the Audience",
         },
         {
-          title: "A/B Testing:",
-          Description: "Optimize creatives through rigorous A/B testing.",
+          Description: "Visual Storytelling",
         },
         {
-          title: "Data-Driven Iteration:",
-          Description: "Continuously refine elements for maximum conversion.",
+          Description: "Strategic Campaign Management",
+        },
+        {
+          Description: "Budget Allocation",
         },
       ],
       src: nearByPlaceImg,
     },
     {
       id: 3,
-      title: "3. User Acquisition & Media",
+      title: "3. E-commerce Ads",
       direction: "row",
-      Desc: "Our expertise extends beyond design; we strategically brainstorm and research user acquisition tactics, presenting comprehensive ideas to clients with detailed volume and budget considerations. From compelling visuals to targeted media strategies, we design the digital assets that power your user acquisition efforts.",
+      Desc: "Unleash the sales powerhouse! Our e-commerce ads services are the secret sauce for turning casual browsers into enthusiastic buyers. From virtual window shopping to checkout triumphs, we’ve got your e-commerce success recipe ready!",
       How: [
         {
-          title: "Ideation and Planning:",
-          Description: "Brainstorm innovative acquisition strategies.",
+          Description: "Product Showcasing ",
         },
         {
-          title: "Budget Alignment: ",
-          Description: "Propose detailed budgets for impactful campaigns.",
+          Description: "Personalized Shopping experience",
         },
         {
-          title: "Strategic Design: ",
-          Description:
-            "Craft visually appealing assets for effective user acquisition.",
+          Description: "Strategic Shopping Campaigns ",
+        },
+        {
+          Description: "Continuous Conversion Refinement",
         },
       ],
       src: mobileGraphImg,
     },
     {
       id: 4,
-      title: "4. Retention",
+      title: "4. Remarketing Ads",
       direction: "row-reverse",
-      Desc: "Beyond the initial download, our design philosophy extends to user retention. We create visually appealing and engaging content that keeps users coming back. Whether through in-app visuals, notifications, or other retention-focused materials, we ensure that your app maintains a lasting impression on its users.",
+      Desc: "Ever feel like you’re missing out on customers who slipped through the cracks? Enter our Remarketing Ads services—a second chance to captivate and convert! It’s not just advertising; it’s rekindling the spark with potential customers who almost said ‘yes’!",
       How: [
         {
-          title: "Engagement-Centric Design:",
-          Description: "Create visuals fostering ongoing engagement.",
+          Description: "Segment Precision ",
         },
         {
-          title: "Feedback Loop: ",
-          Description: "Refine designs based on user interactions.",
+          Description: "Ad creatives that Wow",
         },
         {
-          title: "Brand Consistency:",
-          Description: "Ensure consistent elements for long-term user loyalty.",
+          Description: "Strategic Optimization ",
+        },
+        {
+          Description: "Conversion Tracking",
         },
       ],
       src: mobileAppArtImg,
@@ -105,7 +103,7 @@ const AppServices = () => {
             }}
             fontWeight={"bold"}
           >
-            App Marketing
+            Pay Per Click Advertising
           </Typography>
         </Stack>
         <Stack
@@ -165,7 +163,7 @@ const AppServices = () => {
                     <Stack key={idx}>
                       <li style={{ fontWeight: "bold" }}>
                         {item.title}
-                        <span style={{ fontWeight: 100, color: "grey" }}>
+                        <span style={{ fontWeight: 400, color: "grey" }}>
                           {" "}
                           {item.Description}
                         </span>
