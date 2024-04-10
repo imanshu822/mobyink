@@ -6,11 +6,24 @@ import bulb from "../../../../assests/wwd3.svg";
 import hand from "../../../../assests/wwd4.svg";
 
 const WhatDoesIt = () => {
+ 
   const stackData = [
-    { title: "Global Visibility", image: lock },
-    { title: "Credibility", image: video },
-    { title: "E-Commerce Opportunities", image: bulb },
-    { title: "Competitive Edge", image: hand },
+    {
+      title: "Global Visibility",
+      svg: "",
+    },
+    {
+      title: "Credibility",
+      svg: "",
+    },
+    {
+      title: "E-Commerce Opportunities",
+      svg: "",
+    },
+    {
+      title: "Competitive Edge",
+      svg: "",
+    },
   ];
 
   const stackComponents = stackData.map((item, index) => (

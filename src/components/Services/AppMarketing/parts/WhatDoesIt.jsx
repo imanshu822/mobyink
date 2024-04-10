@@ -12,6 +12,7 @@ const WhatDoesIt = () => {
     { title: "Data Solution", image: bulb },
     { title: "Agency Partnerships", image: hand, fontWeight: "500" }, // Adding fontWeight for the last item
   ];
+  
 
   const stackComponents = stackData.map((item, index) => (
     <Stack

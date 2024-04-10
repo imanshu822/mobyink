@@ -44,6 +44,7 @@ const ShappingTheFuture = () => {
           </Typography>
         </Stack>
         <Stack
+        justifyContent={"center"}
           width={{
             xs: "100%",
             lg: "50%",

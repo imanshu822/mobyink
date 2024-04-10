@@ -97,10 +97,10 @@ const AppServices = () => {
           Description: "Structured Data",
         },
       ],
-      src: mobileAppArtImg,
-    },
-  ];
+      src:""
+   },
 
+]
   return (
     <Stack>
       <Stack alignItems={"Center"} gap={1} p={"60px 0 80px 0 "}>

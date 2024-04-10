@@ -12,6 +12,7 @@ const WhatDoesIt = () => {
     { title: "Customer Loyalty and retention", image: bulb },
     { title: "Competitiveness", image: hand, fontWeight: "500" },
   ];
+  
 
   const stackComponents = stackData.map((item, index) => (
     <Stack

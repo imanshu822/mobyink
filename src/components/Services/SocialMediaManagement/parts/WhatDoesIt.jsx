@@ -6,11 +6,24 @@ import bulb from "../../../../assests/ssm3.svg";
 import hand from "../../../../assests/ssm4.svg";
 
 const WhatDoesIt = () => {
+
   const stackData = [
-    { title: "Increased Brand Awareness", image: lock },
-    { title: "Targeted Advertising", image: video },
-    { title: "Audience Engagement", image: bulb },
-    { title: "Valuable Customer Insights", image: hand },
+    {
+      title: "Increased Brand Awareness",
+      svg: "",
+    },
+    {
+      title: "Targeted Advertising",
+      svg: "",
+    },
+    {
+      title: "Audience Engagement",
+      svg: "",
+    },
+    {
+      title: "Valuable Customer Insights",
+      svg: "",
+    },
   ];
 
   const stackComponents = stackData.map((item, index) => (

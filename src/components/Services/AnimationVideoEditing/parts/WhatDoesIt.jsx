@@ -6,6 +6,7 @@ import bulb from "../../../../assests/aav3.svg";
 import hand from "../../../../assests/aav4.svg";
 
 const WhatDoesIt = () => {
+ 
   const stackData = [
     { title: "Better Engagement", image: lock },
     { title: "Clarity of Communication", image: video },

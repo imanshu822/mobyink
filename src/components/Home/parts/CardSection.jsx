@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const cardContent1 = [
   {
+    id:1,
     title: "Search Engine Optimization",
     Link: "/seo",
     features: [
@@ -17,6 +18,7 @@ const cardContent1 = [
     ],
   },
   {
+    id:2,
     title: "Website Development",
     Link: "/webdev",
     features: ["HTML", "React", "Nodejs", "MongoDB", "Laravel"],
@@ -24,6 +26,7 @@ const cardContent1 = [
 ];
 const cardContent2 = [
   {
+    id:1,
     title: "Social Media Marketing and Optimization",
     Link: "/smm",
     features: [
@@ -37,6 +40,7 @@ const cardContent2 = [
     ],
   },
   {
+    id:2,
     title: "Mobile App Marketing",
     Link: "/appmarketing",
     features: [
@@ -71,7 +75,7 @@ const CardSection = () => {
         <Stack
           width={{
             xs: "100%",
-            lg: "45%",
+            lg: "47%",
           }}
           gap={4}
         >
@@ -102,6 +106,7 @@ const CardSection = () => {
                         fontWeight: "bold",
                       },
                     }}
+                    width={content.id === 2 ? "100px" : "none"}
                   >
                     {content.title}
                   </Typography>
@@ -160,6 +165,7 @@ const CardSection = () => {
                         fontWeight: "bold",
                       },
                     }}
+                    width={content.id === 2 ? "300px" : "none"}
                   >
                     {content.title}
                   </Typography>

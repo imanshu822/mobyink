@@ -6,7 +6,7 @@ import Benefits from "./parts/Benefits";
 import Footer from "../../../utils/Footer";
 import HopAboard from "./parts/HopAboard";
 import GoToTop from "../../../utils/GoToTop";
-const Career = () => {
+const Careers = () => {
   return (
     <Stack width={"100%"} height={"100%"} bgcolor={"#F5F7FF"}>
       <TabLineSection />
@@ -19,4 +19,4 @@ const Career = () => {
   );
 };
 
-export default Career;
+export default Careers;

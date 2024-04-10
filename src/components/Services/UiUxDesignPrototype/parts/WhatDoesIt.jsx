@@ -6,11 +6,24 @@ import bulb from "../../../../assests/uui3.svg";
 import hand from "../../../../assests/uui4.svg";
 
 const WhatDoesIt = () => {
+
   const stackData = [
-    { title: "User-Centric", image: lock },
-    { title: "Brand Image", image: video },
-    { title: "Mobile Responsive", image: bulb },
-    { title: "Reduced Support Costs", image: hand },
+    {
+      title: "User-Centric",
+      svg: "",
+    },
+    {
+      title: "Brand Image",
+      svg: "",
+    },
+    {
+      title: "Mobile Responsive",
+      svg: "",
+    },
+    {
+      title: "Reduced Support Costs",
+      svg: "",
+    },
   ];
 
   const stackComponents = stackData.map((item, index) => (

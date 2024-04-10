@@ -6,137 +6,137 @@ import mobileGraphImg from "../../../../assests/ui3.webp";
 import mobileAppArtImg from "../../../../assests/ui4.webp";
 
 const AppServices = () => {
-  const lists = [
-    {
-      id: 1,
+  
+const lists= [
+
+   {
       title: "1. Custom Web Design",
-      direction: "row",
       Desc: "Crafting Digital Masterpieces for You! Our Custom Web Design services are all about bringing your vision to life. We blend creativity and functionality to create websites that don’t just meet your expectations – they exceed them.",
       How: [
-        {
-          title: "Dream It:",
-          Description: "Share your goals.",
-        },
-        {
-          title: "Design It:",
-          Description: "We create stunning designs.",
-        },
-        {
-          title: "Develop It:",
-          Description: "We build functional websites.",
-        },
-        {
-          title: "Test It:",
-          Description: "Ensuring it works everywhere.",
-        },
-        {
-          title: "Launch It:",
-          Description: "Your masterpiece goes live!",
-        },
+         {
+            title: "Dream It:",
+            Desc: "Share your goals",
+         },
+         {
+            title: "Design It:",
+            Desc: "We create stunning designs.",
+         },
+         {
+            title: "Develop It:",
+            Desc: "We build functional websites",
+         },
+         {
+            title: "Test It:",
+            Desc: "Ensuring it works everywhere.",
+         },
+         {
+            title: "Launch It:",
+            Desc: "Your masterpiece goes live!",
+         },
       ],
-      src: AppStore,
-    },
-    {
-      id: 2,
+      src:""
+   },
+
+
+   {
       title: "2. Mobile App Design",
-      direction: "row-reverse",
       Desc: "Apps That Delight, Designs That Shine! Our Mobile App Design service is all about creating user-friendly interfaces that captivate and engage your users.",
       How: [
-        {
-          title: "Discover It:",
-          Description: "Define your app’s purpose.",
-        },
-        {
-          title: "Sketch It:",
-          Description: "Layout and functionality.",
-        },
-        {
-          title: "Design It:",
-          Description: "We craft stunning interfaces.",
-        },
-        {
-          title: "Test It:",
-          Description: "User feedback refines it.",
-        },
-        {
-          title: "Build It:",
-          Description: "Developers make it real.",
-        },
-        {
-          title: "Launch It:",
-          Description: "User feedback refines it.",
-        },
+         {
+            title: "Discover It: ",
+            Desc: "Define your app’s purpose.",
+         },
+         {
+            title: "Sketch It:",
+            Desc: "Layout and functionality",
+         },
+         {
+            title: "Design It: ",
+            Desc: "We craft stunning interfaces.",
+         },
+         {
+            title: "Test It:",
+            Desc: "User feedback refines it",
+         },
+         {
+            title: "Build It:",
+            Desc: "Developers make it real.",
+         },
+         {
+            title: "Launch It:",
+            Desc: "Your app makes an impact!",
+         },
       ],
-      src: nearByPlaceImg,
-    },
-    {
-      id: 3,
+      src:""
+   },
+
+
+   {
       title: "3. Product Design",
-      direction: "row",
       Desc: "From Idea to Reality! Our Product Design service is where concepts turn into beautifully functional products that leave a lasting impression.",
       How: [
-        {
-          title: "Imagine It:",
-          Description: "Define your product’s purpose.",
-        },
-        {
-          title: "Create It: ",
-          Description: "Concepts take shape..",
-        },
-        {
-          title: "Refine It: ",
-          Description: "Feedback leads to perfection.",
-        },
-        {
-          title: "Craft It: ",
-          Description: "Materials are selected.",
-        },
-        {
-          title: "Produce It:",
-          Description: "We ensure production quality.",
-        },
-        {
-          title: "Perfect It: ",
-          Description: "Quality checks guarantee excellence.",
-        },
+         {
+            title: "Imagine It: ",
+            Desc: "Define your product’s purpose.",
+         },
+         {
+            title: "Create It:",
+            Desc: "Concepts take shape.",
+         },
+         {
+            title: "Refine It: ",
+            Desc: "Feedback leads to perfection.",
+         },
+         {
+            title: "Craft It:",
+            Desc: "Materials are selected.",
+         },
+         {
+            title: "Produce It:",
+            Desc: "We ensure production quality.",
+         },
+         {
+            title: "Perfect It:",
+            Desc: "Quality checks guarantee excellence.",
+         },
       ],
-      src: mobileGraphImg,
-    },
-    {
-      id: 4,
+      src:""
+   },
+
+
+   {
       title: "4. Branding & Graphics",
-      direction: "row-reverse",
       Desc: "Your Brand, Your Story! Our Branding and graphics services are all about creating visuals that not only speak to your audience but tell your unique brand story.",
       How: [
-        {
-          title: "Assess It:",
-          Description: "Understand your brand.",
-        },
-        {
-          title: "Strategize It: ",
-          Description: "Plan a cohesive strategy.",
-        },
-        {
-          title: "Visualize It:",
-          Description: "Create logos and graphics.",
-        },
-        {
-          title: "Guide It:",
-          Description: "Provide branding guidelines.",
-        },
-        {
-          title: "Market It:",
-          Description: "Design materials aligned with your brand.",
-        },
-        {
-          title: "Support It:",
-          Description: "Maintain your brand’s presence.",
-        },
+         {
+            title: "Assess It:",
+            Desc: "Understand your brand.",
+         },
+         {
+            title: "Strategize It:",
+            Desc: "Plan a cohesive strategy.",
+         },
+         {
+            title: "Visualize It:",
+            Desc: "Create logos and graphics.",
+         },
+         {
+            title: "Guide It:",
+            Desc: "Provide branding guidelines.",
+         },
+         {
+            title: "Market It:",
+            Desc: "Design materials aligned with your brand.",
+         },
+         {
+            title: "Support It:",
+            Desc: "Maintain your brand’s presence.",
+         },
       ],
-      src: mobileAppArtImg,
-    },
-  ];
+      src:""
+   },
 
+]
   return (
     <Stack>
       <Stack alignItems={"Center"} gap={1} p={"60px 0 80px 0 "}>
@@ -148,7 +148,7 @@ const AppServices = () => {
             }}
             fontWeight={"bold"}
           >
-            UI/UX Design & Prototype
+            UI/UX Design
           </Typography>
         </Stack>
         <Stack
@@ -210,7 +210,7 @@ const AppServices = () => {
                         {item.title}
                         <span style={{ fontWeight: 300, color: "grey" }}>
                           {" "}
-                          {item.Description}
+                          {item.Desc}
                         </span>
                       </li>
                     </Stack>

@@ -26,7 +26,7 @@ const Home = () => {
       <CardSection />
       <SharkTankClients />
 
-      {/* <ScrollingSection /> */}
+      <ScrollingSection />
       <ScrollingImages />
       <LatestInsights />
       {/* <ServiceType /> */}

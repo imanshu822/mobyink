@@ -1,4 +1,18 @@
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Adjust the z-index as needed */
+  /* Add any other styles you want for the fixed navbar */
+}
 
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Adjust z-index as necessary */
+}
 .navlink-link {
   text-decoration: none;
   color: black;
@@ -74,7 +88,6 @@
   }
 }
 
-
 #map-container {
   position: relative;
 }
@@ -149,9 +162,7 @@
   /* transform:translateX(10px) */
 }
 
-
 .content-box {
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,7 +172,6 @@
 
 /* Animation when the class 'show-animation' is applied */
 .content-box.show-animation {
-  
   animation: slideUp 2s ease forwards;
 }
 

@@ -391,7 +391,7 @@ const NavLight = () => {
                         Become A Partner
                       </Typography>
                     </Link>{" "}
-                    <Link to={"/Resources/Career"} className="popperLinks">
+                    <Link to={"/Resources/careers"} className="popperLinks">
                       <Typography
                         sx={{
                           "&:hover": {
@@ -783,7 +783,7 @@ const NavLight = () => {
                     Become A Partner
                   </Typography>
                 </Link>
-                <Link to="/Resources/Career" className="popperLinks">
+                <Link to="/Resources/careers" className="popperLinks">
                   <Typography fontFamily={"Work Sans"} sx={{}}>
                     Career
                   </Typography>

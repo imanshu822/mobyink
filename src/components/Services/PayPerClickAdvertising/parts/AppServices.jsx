@@ -88,9 +88,10 @@ const AppServices = () => {
           Description: "Conversion Tracking",
         },
       ],
-      src: mobileAppArtImg,
-    },
-  ];
+      src:""
+   },
+
+]
 
   return (
     <Stack>
@@ -165,7 +166,7 @@ const AppServices = () => {
                         {item.title}
                         <span style={{ fontWeight: 400, color: "grey" }}>
                           {" "}
-                          {item.Description}
+                          {item.Desc}
                         </span>
                       </li>
                     </Stack>

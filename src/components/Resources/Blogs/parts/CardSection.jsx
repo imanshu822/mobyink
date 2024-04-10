@@ -167,7 +167,7 @@ const CardSection = ({ data }) => {
       >
         <Stack>
           <Typography fontSize={"40px"} textAlign={"center"}>
-            Featured Case Studies
+            Blogs
           </Typography>
         </Stack>
         <Stack

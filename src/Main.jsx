@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Routes } from "react-router";
 
 import Home from "./components/Home/Home";
-
 import AnnimationVideoEditing from "./components/Services/AnimationVideoEditing/AnimationVideoEditing";
 import AppDevlopment from "./components/Services/AppDevelopment/AppDevelopment";
 import AppMarketing from "./components/Services/AppMarketing/AppMarketing";
@@ -12,7 +11,6 @@ import SearceEngineOptimization from "./components/Services/SearceEngineOptimiza
 import SocialMediaManagement from "./components/Services/SocialMediaManagement/SocialMediaManagement";
 import UiUxDesignPrototype from "./components/Services/UiUxDesignPrototype/UiUxDesignPrototype";
 import WebsiteDevelopment from "./components/Services/WebsiteDevelopment/WebsiteDevelopment";
-
 import AboutUs from "./components/AboutUs/AboutUs";
 import Industries from "./components/Industries/Industries";
 import RealEstate from "./components/Industries/RealEstate/RealEstate";
@@ -21,14 +19,11 @@ import Finance from "./components/Industries/Finance/Finance";
 import Others from "./components/Industries/Others/Others";
 import Portfolio from "./components/Resources/Portfolio/Portfolio";
 import CaseStudies from "./components/CaseStudy/CaseStudies";
-
 import CaseStudiesInnerPage from "./components/CaseStudy/CaseStudiesInnerPage";
 import SeoInIndia from "./components/Resources/Index/SeoInIndia/SeoInIndia";
-import Career from "./components/Resources/Career/Career";
 import ScrollingSection from "./components/Home/parts/ScrollingSection";
 import Blogs from "./components/Resources/Blogs/Blogs";
 import BlogsInnerPage from "./components/Resources/Blogs/BlogsInnerPage";
-
 import SeoInBangalore from "./components/Resources/Index/SeoInBangalore/SeoInBangalore";
 import SeoInNoida from "./components/Resources/Index/SeoInNoida/SeoInNoida";
 import SeoInDelhi from "./components/Resources/Index/SeoInDelhi/SeoInDelhi";
@@ -37,10 +32,14 @@ import SeoInGurgaon from "./components/Resources/Index/SeoInGurgaon/SeoInGurgaon
 import SeoInMumbai from "./components/Resources/Index/SeoInMumbai/SeoInMumbai";
 import SeoInPune from "./components/Resources/Index/SeoInPune/SeoInPune";
 import SeoInSurat from "./components/Resources/Index/SeoInSurat/SeoInSurat";
+import Faq from "./components/Faq/Faq";
+import Careers from "./components/Resources/Career/Career";
+import Cards from "./components/Home/parts/ScrollingSection";
 
 import FaQ from "./components/Resources/FaQ/FaQ";
 import Ecomerce from "./components/Industries/Ecomerce/Ecomerce";
 import Logistics from "./components/Industries/Logistics/Logistics";
+import GetInTouch from "./components/GetInTouch/GetInTouch";
 
 const Main = () => {
   return (
@@ -48,49 +47,37 @@ const Main = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
 
+        <Route exact path="/app-marketing" element={<AppMarketing />} />
         <Route
           exact
-          path="/Services/app-marketing"
-          element={<AppMarketing />}
-        />
-        <Route
-          exact
-          path="/Services/animation-video-editing"
+          path="/animation-video-editing"
           element={<AnnimationVideoEditing />}
         />
+        <Route exact path="/app-development" element={<AppDevlopment />} />
+        <Route exact path="/graphic-designing" element={<GraphicDesigning />} />
         <Route
           exact
-          path="/Services/app-development"
-          element={<AppDevlopment />}
-        />
-        <Route
-          exact
-          path="/Services/graphic-designing"
-          element={<GraphicDesigning />}
-        />
-        <Route
-          exact
-          path="/Services/pay-per-click-advertising"
+          path="/pay-per-click-advertising"
           element={<PayPerClickAdvertising />}
         />
         <Route
           exact
-          path="/Services/search-engine-optimization"
+          path="/search-engine-optimization"
           element={<SearceEngineOptimization />}
         />
         <Route
           exact
-          path="/Services/social-media-management"
+          path="/social-media-management"
           element={<SocialMediaManagement />}
         />
         <Route
           exact
-          path="/Services/ui-ux-design-prototype"
+          path="/ui-ux-design-prototype"
           element={<UiUxDesignPrototype />}
         />
         <Route
           exact
-          path="/Services/website-development"
+          path="/website-development"
           element={<WebsiteDevelopment />}
         />
 
@@ -115,27 +102,32 @@ const Main = () => {
         />
         <Route exact path="/portfolio" element={<Portfolio />} />
 
-        <Route exact path="/SEO/India" element={<SeoInIndia />} />
+        <Route exact path="/seo-company-india" element={<SeoInIndia />} />
 
-        <Route exact path="/SEO/Bangalore" element={<SeoInBangalore />} />
-        <Route exact path="/SEO/Noida" element={<SeoInNoida />} />
-        <Route exact path="/SEO/Delhi" element={<SeoInDelhi />} />
-        <Route exact path="/SEO/Jaipur" element={<SeoInJaipur />} />
-        <Route exact path="/SEO/Gurgaon" element={<SeoInGurgaon />} />
-        <Route exact path="/SEO/Mumbai" element={<SeoInMumbai />} />
-        <Route exact path="/SEO/Pune" element={<SeoInPune />} />
-        <Route exact path="/SEO/Surat" element={<SeoInSurat />} />
-
-        <Route exact path="/Career" element={<Career />} />
-        <Route exact path="/Blog" element={<Blogs />} />
-        <Route exact path="/Blogs/:id" element={<BlogsInnerPage />} />
-        <Route exact path="/FAQ" element={<FaQ />} />
         <Route
           exact
-          path="/Services/app-marketing"
-          element={<AppMarketing />}
+          path="/seo-company-in-bangalore"
+          element={<SeoInBangalore />}
         />
-        <Route exact path="/dummy" element={<ScrollingSection />} />
+        <Route exact path="/seo-company-in-noida" element={<SeoInNoida />} />
+        <Route exact path="/seo-company-in-delhi" element={<SeoInDelhi />} />
+        <Route exact path="/seo-company-in-jaipur" element={<SeoInJaipur />} />
+        <Route
+          exact
+          path="/seo-company-in-gurgaon"
+          element={<SeoInGurgaon />}
+        />
+        <Route exact path="/seo-company-in-mumbai" element={<SeoInMumbai />} />
+        <Route exact path="/seo-company-in-pune" element={<SeoInPune />} />
+        <Route exact path="/seo-company-in-surat" element={<SeoInSurat />} />
+
+        <Route exact path="/careers" element={<Careers />} />
+        <Route exact path="/faq" element={<Faq />} />
+        <Route exact path="/blog" element={<Blogs />} />
+        <Route exact path="/blog/:id" element={<BlogsInnerPage />} />
+        <Route exact path="/app-marketing" element={<AppMarketing />} />
+        <Route exact path="/dummy" element={<Cards />} />
+        <Route exact path="/get-in-touch" element={<GetInTouch />} />
       </Routes>
     </>
   );

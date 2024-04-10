@@ -4,7 +4,7 @@ import rightArrow from "../../../assests/asset 7.png";
 
 const Steps = () => {
   return (
-    <Stack margin={"0 auto"} pt={3} pb={3}>
+    <Stack margin={"0 auto"} pb={"50px"}>
       <Stack
         width={{
           xs: "90%",
@@ -27,7 +27,7 @@ const Steps = () => {
           }}
           height={"100%"}
         >
-          <Stack gap={3} p={2} boxSizing={"border-box"}>
+          <Stack gap={3} p={"25px 16px"} boxSizing={"border-box"}>
             <Typography
               variant="h3"
               fontWeight={"bold"}
@@ -80,7 +80,7 @@ const Steps = () => {
           }}
           height={"100%"}
         >
-          <Stack gap={3} p={2} boxSizing={"border-box"}>
+          <Stack gap={3} p={"25px 16px"} boxSizing={"border-box"}>
             <Typography
               variant="h3"
               fontWeight={"bold"}
@@ -132,7 +132,7 @@ const Steps = () => {
           }}
           height={"100%"}
         >
-          <Stack gap={3} p={2} boxSizing={"border-box"}>
+          <Stack gap={3} p={"25px 16px"} boxSizing={"border-box"}>
             <Typography
               variant="h3"
               fontWeight={"bold"}

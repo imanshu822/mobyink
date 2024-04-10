@@ -91,7 +91,7 @@ const links = [
   { to: "/about-us", text: "About Us" },
   { to: "/industries", text: "Industries" },
   { to: "/case-studies", text: "Case Studies" },
-  { to: "/career", text: "Career" },
+  { to: "/careers", text: "Career" },
 ];
 
 const socialMediaIcons = [

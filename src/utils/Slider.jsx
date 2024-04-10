@@ -69,7 +69,7 @@ const Slider = () => {
     },
   };
   return (
-    <Stack margin={"0 auto"} pt={8} pb={8} bgcolor={"#F5F7FF"}>
+    <Stack margin={"0 auto"} p={"110px 0"} bgcolor={"#F5F7FF"}>
       <Box
         sx={{
           width: {
@@ -110,12 +110,12 @@ const Slider = () => {
                 width: {
                   xs: "60px",
                   sm: "90px",
-                  md: "160px",
+                  md: "180px",
                 },
                 height: {
                   xs: "25px",
                   sm: "35px",
-                  md: "40px",
+                  md: "45px",
                 },
               }}
             >
