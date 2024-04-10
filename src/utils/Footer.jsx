@@ -61,16 +61,16 @@ const technologies = [
 ];
 
 const industries = [
-  { text: "Industries", to: "/industries" },
-  { text: "E-commerce", to: "/e-commerce" },
-  { text: "Logistics and Immigration", to: "/logistics-and-immigration" },
-  { text: "IT and Healthcare", to: "/it-and-healthcare" },
+  { text: "Industries", to: "#" },
+  { text: "E-commerce", to: "/industries/ecomerce" },
+  { text: "Logistics and Immigration", to: "/industries/logistics" },
+  { text: "IT and Healthcare", to: "/industries/it-healthcare" },
   {
     text: "Real Estate and Interior Designing",
-    to: "/real-estate-and-interior-designing",
+    to: "/industries/real-estate",
   },
-  { text: "Finance", to: "/finance" },
-  { text: "More......", to: "#" },
+  { text: "Finance", to: "/industries/finance" },
+  { text: "More......", to: "/industries/others" },
 ];
 
 const portfolio = [
@@ -87,7 +87,7 @@ const portfolio = [
 const Resources = ["Resources", "Blog", "FAQ's"];
 
 const links = [
-  { to: "#", text: "Services" },
+  { to: "", text: "Services" },
   { to: "/about-us", text: "About Us" },
   { to: "/industries", text: "Industries" },
   { to: "/case-studies", text: "Case Studies" },
@@ -208,7 +208,7 @@ const Footer = () => {
                     pb={1}
                     boxSizing={"border-box"}
                     sx={{
-                      fontSize: "18px",
+                      fontSize: "16px",
                       "&:hover": {
                         color: "#0D6EFD",
                       },
@@ -245,7 +245,7 @@ const Footer = () => {
                   pb={1}
                   boxSizing={"border-box"}
                   sx={{
-                    fontSize: "18px",
+                    fontSize: "16px",
                     "&:hover": {
                       color: "#0D6EFD",
                     },
@@ -275,19 +275,29 @@ const Footer = () => {
                 {category[0].text}
               </Stack>
               {category.slice(1).map((item, idx) => (
-                <Typography
-                  pt={1}
-                  pb={1}
-                  boxSizing={"border-box"}
-                  sx={{
-                    fontSize: "18px",
-                    "&:hover": {
-                      color: "#0D6EFD",
-                    },
+                <Link
+                  key={idx}
+                  to={item.to}
+                  style={{
+                    textDecoration: "none",
+                    color: "#55595E",
                   }}
                 >
-                  {item.text}
-                </Typography>
+                  <Typography
+                    onClick={handleClick}
+                    pt={1}
+                    pb={1}
+                    boxSizing={"border-box"}
+                    sx={{
+                      fontSize: "16px",
+                      "&:hover": {
+                        color: "#0D6EFD",
+                      },
+                    }}
+                  >
+                    {item.text}
+                  </Typography>
+                </Link>
               ))}
             </Stack>
           ))}
@@ -315,7 +325,7 @@ const Footer = () => {
                   pb={1}
                   boxSizing={"border-box"}
                   sx={{
-                    fontSize: "18px",
+                    fontSize: "16px",
                     "&:hover": {
                       color: "#0D6EFD",
                     },
@@ -356,7 +366,7 @@ const Footer = () => {
                 pb={1}
                 boxSizing={"border-box"}
                 sx={{
-                  fontSize: "18px",
+                  fontSize: "16px",
                   "&:hover": {
                     color: "#0D6EFD",
                   },
@@ -378,7 +388,7 @@ const Footer = () => {
                 pb={1}
                 boxSizing={"border-box"}
                 sx={{
-                  fontSize: "18px",
+                  fontSize: "16px",
                   "&:hover": {
                     color: "#0D6EFD",
                   },

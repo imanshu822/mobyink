@@ -2,7 +2,7 @@ import { Stack, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import Nav from "../../../../utils/Navbar/Nav";
-import CaseStudiesImg from "../../../../assests/blog_banner_img.webp";
+import CaseStudiesImg from "../../../../assests/Blog-Banner-scaled-1.jpg";
 
 const TabLineSection = () => {
   return (

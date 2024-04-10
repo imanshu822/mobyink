@@ -29,7 +29,7 @@ const Home = () => {
       {/* <ScrollingSection /> */}
       <ScrollingImages />
       <LatestInsights />
-      <ServiceType />
+      {/* <ServiceType /> */}
 
       <LetsConnect />
       <Footer />

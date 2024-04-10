@@ -1,9 +1,9 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
-import AppStore from "../../../../assests/App-Store-Optimization.jpeg";
-import nearByPlaceImg from "../../../../assests/nearbyplace.webp";
-import mobileGraphImg from "../../../../assests/mobileGraph.webp";
-import mobileAppArtImg from "../../../../assests/mobileappArt.webp";
+import AppStore from "../../../../assests/sm1.webp";
+import nearByPlaceImg from "../../../../assests/sm2.webp";
+import mobileGraphImg from "../../../../assests/sm3.webp";
+import mobileAppArtImg from "../../../../assests/sm4.webp";
 const AppServices = () => {
   const lists = [
     {

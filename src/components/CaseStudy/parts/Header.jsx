@@ -2,7 +2,7 @@ import { Stack, Typography } from "@mui/material";
 import React from "react";
 
 import Nav from "../../../utils/Navbar/Nav";
-const Header = () => {
+const Header = ({ data }) => {
   return (
     <Stack bgcolor={"#172063"} height={"300px"}>
       <Nav />
@@ -16,7 +16,7 @@ const Header = () => {
               justifyContent={"center"}
               fontWeight={"bold"}
             >
-              Case Study
+              {data.BlogContent.heading}
             </Typography>
           </Stack>
         </Stack>

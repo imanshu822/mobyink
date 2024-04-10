@@ -29,8 +29,8 @@ const ShappingTheFuture = () => {
           <Typography
             pb={3}
             fontSize={{
-              xs: "20px",
-              sm: "20px",
+              xs: "25px",
+              sm: "30px",
               lg: "42px",
             }}
             textAlign={{
@@ -50,11 +50,16 @@ const ShappingTheFuture = () => {
           }}
         >
           <Typography
-            variant="p"
+            fontSize={{
+              xs: "16px",
+              sm: "20px",
+              lg: "24px",
+            }}
             textAlign={{
               xs: "justify",
               lg: "left",
             }}
+            color={"#606060"}
             fontFamily={("Montserrat", "Sans - serif")}
           >
             Mobyink stands out in the digital marketing landscape with over 7

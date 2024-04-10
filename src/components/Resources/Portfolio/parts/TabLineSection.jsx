@@ -1,92 +1,22 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import bannerVideo from "../../../../assests/VideoBanner.mp4";
+import portfolioBanner from "../../../../assests/Portfolio_Banner.svg";
 import Nav from "../../../../utils/Navbar/Nav";
 
 const TabLineSection = () => {
   return (
     <>
-      <Stack position="relative">
-        {/* Blue overlay */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(13, 110, 253, 0.5)", // Semi-transparent blue
-            zIndex: 2, // Ensure it's above the video
-          }}
-        ></div>
-
-        {/* Video */}
-        <video
-          style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            zIndex: 1, // Ensure video is below the overlay
-          }}
-          autoPlay
-          loop
-          muted
-        >
-          <source src={bannerVideo} type="video/mp4" />
-        </video>
-
+      <Stack
+        sx={{
+          backgroundImage: `url(${portfolioBanner})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          width: "100%",
+          height: "100vh",
+        }}
+      >
         <Nav />
-
-        <Stack zIndex={3}>
-          <Stack
-            zIndex={3}
-            margin={{
-              xs: "0 auto",
-              lg: "0 97px",
-            }}
-            width={{
-              xs: "90%",
-              lg: "57%",
-            }}
-            height={"90vh"}
-            gap={3}
-            justifyContent={"center"}
-          >
-            <Typography variant="h3" fontWeight={"bold"} color={"white"}>
-              Pioneering The Digital Frontier For Market Leaders
-            </Typography>
-            <Typography variant="h6" color={"white"}>
-              Where advanced technology meets rapid innovation, transforming
-              challenges into strategic masterpieces.
-            </Typography>
-            <Link
-              to="#"
-              style={{
-                textDecoration: "none",
-              }}
-            >
-              <Stack
-                justifyContent={"center"}
-                alignItems={"center"}
-                width={"140px"}
-                height={"40px"}
-                border={"2px solid white"}
-                backgroundColor={"#0D6EFD"}
-                sx={{
-                  "&:hover": {
-                    color: "white",
-                    opacity: 0.8,
-                    fontWeight: "bold",
-                  },
-                }}
-              >
-                <Typography color={"white"}>Get In Touch</Typography>
-              </Stack>
-            </Link>
-          </Stack>
-        </Stack>
       </Stack>
     </>
   );

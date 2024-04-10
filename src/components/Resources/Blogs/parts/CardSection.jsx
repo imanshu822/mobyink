@@ -2,273 +2,162 @@ import { Stack, Typography, Button, Box } from "@mui/material";
 import React, { useState } from "react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { Link } from "react-router-dom";
-import service1 from "../../../../assests/service1.webp";
-import service2 from "../../../../assests/service2.webp";
-import service3 from "../../../../assests/service3.webp";
-import service4 from "../../../../assests/service4.webp";
-import service5 from "../../../../assests/service5.webp";
-import service6 from "../../../../assests/service6.webp";
-const CardSection = () => {
+
+import Insights1 from "../../../../assests/Insights1.webp";
+import Insights2 from "../../../../assests/Insights2.webp";
+import Insights3 from "../../../../assests/Insights3.webp";
+const blogData = [
+  {
+    id: 1,
+    img: Insights1,
+    category: "Blogs",
+    title: "Introduction to React",
+    content:
+      "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.",
+    BlogContent: {
+      heading: "Segmenting Your Customers for Greater Digital Marketing",
+      postedBy: "By mobyink",
+      date: "December 12, 2023",
+      about: "",
+      img: "",
+      H1: "Segmenting Your Customers for Greater Digital Marketing Success​",
+      P1: "Having a large number of customers feels good right? But sometimes we miss our mark and end up losing some of them as we aren’t able to deal with a large number of people altogether.",
+      P2: "To avoid this and have a successful digital marketing campaign, it is important to segment your customers. This will help you to target them more effectively with the right content and ads. There are many different ways to segment your customers, and the best way to do it depends on your business and your customers.",
+      q1: "What is customer segmentation, and why is it important for digital marketing success?",
+      a1: {
+        p1: "Customer segmentation is the process of dividing customers into groups, or segments, based on shared characteristics. This process can be used to improve the effectiveness of digital marketing campaigns by helping businesses target their advertising and marketing efforts to the most relevant groups of customers.Some factors can be used to segment customers, including demographics (age, gender, income, etc.), interests (hobbies, activities, etc.), and purchase behavior (frequency of purchases, type of products purchased, etc.).Customer segmentation is important for digital marketing success because it allows businesses to target their marketing efforts to the most relevant groups of customers. This can help businesses improve the effectiveness of their digital marketing campaigns, and ultimately achieve better results.",
+      },
+      q2: "How can you go about segmenting your customers?",
+      a2: {
+        p1: "There are a few different ways to segment your customers. One way is by their demographics, such as age, gender, and income. Another way to segment customers is by their needs and wants. You can also segment customers by how often they purchase from you or how much they spend. Segmenting your customers is important because it allows you to better understand them and cater to their needs.",
+      },
+      q3: "What are some tips for effective customer segmentation?",
+      a3: {
+        p1: "There are many different ways to segment customers, and the most effective approach depends on the business and the customers’ needs. However, there are a few general tips that can help businesses create effective customer segments:",
+        p2: "1. Start by understanding your customers. What needs or problems do they have that you can solve? What are their demographics (e.g. age, gender, income, location)? What are their behaviors (e.g. what magazines do they read, what websites do they visit)?",
+        p3: "2. Identify what criteria you can use to group your customers. This could be based on demographics, needs, behaviors, or any other factors that are important to your business.",
+        p4: "3. Experiment with different ways of grouping your customers to see what works best. You may find that customers who have the same needs don’t always have the same demographics, or that customers who share the same demographics don’t always have the same needs.",
+        p5: "4. Use customer segmentation to create targeted marketing campaigns. When you know who your customers are and what they want, you can create marketing campaigns that speak to their needs.",
+        p6: "5. Monitor the results of your campaigns and adjust your customer segments as needed. As your business changes and your customer’s needs evolve, you may need to update your customer segments.",
+      },
+      q4: "What are some common pitfalls to avoid when segmenting customers?",
+      a4: {
+        p1: "When segmenting customers, it is important to avoid certain pitfalls to create the most effective customer segments. One common pitfall is to group customers by their demographics alone. While demographics are an important factor to consider, they are not the only factor that should be taken into account. Customers' attitudes, lifestyles, and needs should also be considered to create segments that are truly representative of the customer base.",
+        p2: "Another common pitfall is using too many criteria when segmenting customers. This can lead to segments that are too small or too large, and that do not accurately reflect the customer base. It is important to use a limited number of criteria to create segments that are both meaningful and actionable.",
+        p3: "Finally, it is important to avoid the temptation to simply copy the competition's customer segments. While it may be tempting to use the competition's segments as a starting point, it is important to tailor them to fit the unique needs of your business. Doing so will help you to create segments that are more effective and that provide a greater competitive advantage.",
+        p4: "At Mobyink we ensure that your customers are segmented properly and ensure that the traffic on your website continues to grow and you don’t lose any.",
+        p5: "Give us a chance and see your website outshine your expectations.",
+      },
+    },
+  },
+  {
+    id: 2,
+    img: Insights2,
+    category: "Blogs",
+    title: "Exploring Europe",
+    content:
+      "Europe is a continent located entirely in the Northern Hemisphere and mostly in the Eastern Hemisphere. It comprises the westernmost part of Eurasia and is bordered by the Arctic Ocean to the north.",
+    BlogContent: {
+      heading: "How to Improve Your Site SEO Rankings ​",
+      postedBy: "By mobyink",
+      date: "December 12, 2023",
+      about: "",
+      img: "",
+      H1: "How to Improve Your Site SEO Rankings ​",
+      P1: "There are many things you can do to improve your site's SEO ranking. Some are easier than others, and some may require a little more time and effort. Here are a few tips to help you get started:",
+      q1: "1. Understand what SEO is and how it works.",
+      a1: {
+        p1: "SEO, or search engine optimization, is the process of improving the ranking of a website on search engines. The higher the ranking, the more likely people are to find the website. SEO is a complex and ever-evolving process, but there are a few basic concepts that are essential to understand.",
+        p2: "One of the most important aspects of SEO is the use of keywords. Keywords are the words or phrases that people are likely to type into a search engine when looking for information. It is important to include keywords in the text of a website, as well as in the titles and descriptions of pages.",
+        p3: "Another important factor in SEO is link building. In order to rank well, a website must have links from other websites. These links are like votes, indicating that the website is a valuable resource. There are many ways to build links, but the most effective method is to create high-quality content that other websites will want to link to.",
+        p4: "SEO is a complex and ever-changing process, but the basic concepts are essential to understand. By using keywords and building links, you can improve the ranking of your website and increase traffic to your site. ",
+      },
+      q2: "2. Identify what factors influence your site's SEO rankings.",
+      a2: {
+        p1: "Factors that influence a website's SEO ranking can be divided into three main categories: on-page factors, off-page factors, and technical factors. On-page factors are those that are within the website's control, such as the title tag, meta description, header tags, and the amount and quality of content on the site. Off-page factors are those that are outside of the website's control, such as the number of links to the site from other websites, the quality of those links, and the age of the website. Technical factors are those that are related to the website's technical setup, such as the speed of the website and the use of keywords in the website's URLs.",
+        p2: "All of these factors play a role in determining a website's SEO ranking. However, the most important factors are the on-page factors, as these are the factors that the website can control. The off-page and technical factors are important as well, but they are less important than the on-page factors.",
+        p3: "Website owners should focus on optimizing their websites for the on-page factors if they want to improve their SEO ranking. They should make sure that their titles are catchy and keyword-rich, that their meta descriptions are well written, that their header tags are used correctly, and that they have a lot of high-quality content on their site. They should also make sure that their website is fast and that their URLs are keyword-rich.",
+        p4: "By focusing on these factors, website owners can improve their SEO ranking and attract more visitors to their site. ",
+      },
+      q3: "3. Take steps to improve your site's SEO ranking.",
+      a3: {
+        p1: "There are a few things you can do to help improve your site's SEO ranking. One of the most important is to make sure your site is mobile-friendly. Google now ranks mobile-friendly sites higher in search results, so it's important to make sure your site looks good on all devices. You can also improve your ranking by adding keywords to your site's title and meta descriptions, and by publishing high-quality content that is relevant to your target audience. ",
+      },
+      q4: "4. Monitor your site's SEO ranking progress.",
+      a4: {
+        p1: "SEO ranking can be a tricky thing to monitor and track. It's important to stay on top of your site's ranking progress so you can make sure you're staying on track and doing everything you can to improve your site's ranking. There are a few different ways to monitor your site's SEO ranking progress.",
+        p2: "The first way is to use a tool like SEMrush or Moz Pro to track your site's ranking. These tools will track your site's ranking and give you a report of where your site is ranking compared to your competitors. They will also help you track your site's progress over time so you can see if your SEO efforts are making a difference.",
+        p3: "Another way to track your site's ranking progress is to use the Google Search Console. This tool will help you track your site's search engine traffic, your site's impressions and clicks, and your site's average position. It will also help you track any errors that Google is finding on your site.",
+        p4: "By tracking your site's SEO ranking progress, you can make sure that you're doing everything you can to improve your site's ranking and attract more traffic. ",
+      },
+      q5: "Celebrate your site's improved SEO ranking!",
+      a5: {
+        p1: "Now that you've completed your on-page SEO optimization, it's time to celebrate your site's improved ranking! Send out a press release to announce your achievement, post about it on social media, and tell your customers and partners. Enjoy your new ranking and continue to work on your SEO to maintain it!",
+      },
+    },
+  },
+  {
+    id: 3,
+    img: Insights3,
+    category: "Blogs",
+    title: "Delicious Italian Cuisine",
+    content:
+      "Italian cuisine is known for its regional diversity, abundance of difference in taste, and is one of the most popular in the world, with influences abroad.",
+    BlogContent: {
+      heading: "How to Secure and Optimize Your App's Online Visibility​ ​",
+      postedBy: "By mobyink",
+      date: "December 12, 2023",
+      about: "",
+      img: "",
+      H1: "How to Secure and Optimize Your App's Online Visibility​ ​",
+      P1: "One of the most important aspects of app development is ensuring that your app is accessible online. This means securing a good IP address and optimizing your app's online visibility. In this blog, we'll explain why your app needs a good IP address and how to go about securing one.",
+      q1: "1. Why is having a good IP address important for your app?",
+      a1: {
+        p1: "There are a few reasons why having a good IP address is important for your app. Firstly, a good IP address can help your app to load more quickly and smoothly for users. Additionally, it can also help to improve your app’s ranking in app stores. Having a good IP address can also help to improve your app’s security, as it can make it more difficult for hackers to access your app’s data. Finally, a good IP address can also help to improve your app’s customer service. By having a good IP address, you can ensure that your app is always accessible and running smoothly for your users.",
+      },
+      q2: "2. How can you secure and optimize your app's online visibility?",
+      a2: {
+        p1: "As an app developer, it is important to understand how to secure and optimize your app's online visibility. By following a few simple steps, you can help ensure that your app is easily found by potential users.",
+        p2: "First, be sure to register your app with app stores and other online directories. This will help ensure that your app is included in search results and that users can easily find it. In addition, be sure to include clear and accurate descriptions of your app, as well as relevant keywords.",
+        p3: "You can also help optimize your app's visibility by promoting it through social media and other online channels. Make sure to post about your app regularly, and engage with users who are talking about it online. By promoting your app in a variety of ways, you can help ensure that it reaches a larger audience.",
+      },
+      q3: "3. What are some tips for improving your app's IP address?",
+      a3: {
+        p1: "There are a few things you can do to improve your app's IP address: ",
+        p2: "1. Make sure your app is up to date. Apple regularly releases updates that include bug fixes and improvements, and many of these updates include enhancements to the app's IP address. ",
+        p3: "2. Use a static IP address. If your app is connected to the internet via a static IP address, its IP address will not change, which can help improve performance. ",
+        p4: "3. Use a VPN. A VPN (Virtual Private Network) can help improve your app's IP address by masking its real IP address with a proxy IP address. ",
+        p5: "4. Use a content delivery network (CDN). A CDN can help improve your app's IP address by caching static content (e.g. images, videos, etc.) on servers located around the world. This can help improve performance and reduce the load on your app's server. ",
+      },
+      q4: "4. How can you protect your app from online threats? ",
+      a4: {
+        p1: "There are a variety of ways to protect your app from online threats. One way is to use a secure coding standard, such as the OWASP Top 10. This standard identifies the most common attacks against web applications and guides how to protect against them. You can also use a web application firewall (WAF) to protect your app from attacks. A WAF is a security appliance that sits in front of your web application and detects and blocks malicious traffic. Finally, you can use HTTPS to encrypt your traffic and protect your app from man-in-the-middle attacks. ",
+      },
+      q5: "5. What are some ways to improve your app's performance?",
+      a5: {
+        p1: "There are many ways to improve your app's performance. One way is to reduce the number of network requests your app makes. You can do this by caching data locally or by using a library like Alamofire that handles caching for you.",
+        p2: "Another way to improve performance is to optimize your code. You can do this by using performance profiling tools to identify and fix bottlenecks in your code.",
+        p3: "You can also improve performance by using more efficient algorithms and data structures. For example, you can use a binary search algorithm instead of a linear search algorithm.",
+        p4: "Finally, you can improve performance by using a more efficient graphics library. For example, you can use SpriteKit or Core Animation instead of OpenGL.",
+      },
+    },
+  },
+];
+const CardSection = ({ data }) => {
   // Define an array of blog data objects
   const [showAllBlogs, setShowAllBlogs] = useState(false);
   const [blogsToShow, setBlogsToShow] = useState(9);
 
-  const blogData = [
-    {
-      id: 1,
-      img: service1,
-      category: "Technology",
-      title: "Introduction to React",
-      content:
-        "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.",
-    },
-    {
-      id: 2,
-      img: service2,
-      category: "Travel",
-      title: "Exploring Europe",
-      content:
-        "Europe is a continent located entirely in the Northern Hemisphere and mostly in the Eastern Hemisphere. It comprises the westernmost part of Eurasia and is bordered by the Arctic Ocean to the north.",
-    },
-    {
-      id: 3,
-      img: service3,
-      category: "Food",
-      title: "Delicious Italian Cuisine",
-      content:
-        "Italian cuisine is known for its regional diversity, abundance of difference in taste, and is one of the most popular in the world, with influences abroad.",
-    },
-    {
-      id: 4,
-      img: service4,
-      category: "Technology",
-      title: "The Future of Artificial Intelligence",
-      content:
-        "Artificial intelligence (AI) is intelligence demonstrated by machines, in contrast to the natural intelligence displayed by humans and animals.",
-    },
-    {
-      id: 5,
-      img: service5,
-      category: "Science",
-      title: "The Wonders of the Cosmos",
-      content:
-        "The cosmos is everything in existence, including the stars, planets, galaxies, the contents of intergalactic space, and all matter and energy.",
-    },
-    {
-      id: 6,
-      img: service6,
-      category: "Health",
-      title: "Staying Healthy in a Busy World",
-      content:
-        "Maintaining good health requires effort and discipline, especially in a fast-paced world filled with various distractions and stressors.",
-    },
-    {
-      id: 7,
-      img: service1,
-      category: "Technology",
-      title: "The Rise of Machine Learning",
-      content:
-        "Machine learning is a subset of artificial intelligence that focuses on the development of computer programs that can learn and improve from experience.",
-    },
-    {
-      id: 8,
-      img: service2,
-      category: "Travel",
-      title: "Discovering South America",
-      content:
-        "South America is a continent in the Western Hemisphere, mostly in the Southern Hemisphere, with a relatively small portion in the Northern Hemisphere.",
-    },
-    {
-      id: 9,
-      img: service3,
-      category: "Food",
-      title: "The Art of Sushi Making",
-      content:
-        "Sushi is a Japanese dish consisting of cooked vinegared rice combined with other ingredients, such as seafood, vegetables, and occasionally tropical fruits.",
-    },
-    {
-      id: 10,
-      img: service4,
-      category: "Technology",
-      title: "The Impact of Blockchain Technology",
-      content:
-        "Blockchain technology is a decentralized digital ledger system that records transactions across multiple computers in a way that ensures the security, transparency, and immutability of the data.",
-    },
-    {
-      id: 11,
-      img: service5,
-      category: "Science",
-      title: "Exploring the Depths of the Ocean",
-      content:
-        "The ocean is a vast and largely unexplored ecosystem that covers more than 70% of the Earth's surface and contains a rich diversity of marine life.",
-    },
-    {
-      id: 12,
-      img: service6,
-      category: "Health",
-      title: "The Importance of Mental Health",
-      content:
-        "Mental health is a state of well-being in which an individual realizes their own abilities, can cope with the normal stresses of life, can work productively, and is able to make a contribution to their community.",
-    },
-    {
-      id: 13,
-      img: service1,
-      category: "Technology",
-      title: "The Evolution of Mobile Technology",
-      content:
-        "Mobile technology has undergone rapid evolution over the past few decades, leading to the development of smartphones and other handheld devices that have transformed the way we communicate, work, and interact with the world.",
-    },
-    {
-      id: 14,
-      img: service2,
-      category: "Travel",
-      title: "Journey Through Southeast Asia",
-      content:
-        "Southeast Asia is a subregion of Asia, consisting of the countries that are geographically south of China, east of India, and north of Australia.",
-    },
-    {
-      id: 15,
-      img: service3,
-      category: "Food",
-      title: "Exploring Mediterranean Cuisine",
-      content:
-        "Mediterranean cuisine is the foods and methods of preparation by people of the Mediterranean Basin region. The cuisine varies by country and region, but is largely based on fresh, seasonal ingredients and simple cooking techniques.",
-    },
-    {
-      id: 16,
-      img: service4,
-      category: "Technology",
-      title: "The Future of Virtual Reality",
-      content:
-        "Virtual reality (VR) is a simulated experience that can be similar to or completely different from the real world. It immerses users in a three-dimensional environment and allows them to interact with the virtual environment in a realistic way.",
-    },
-    {
-      id: 17,
-      img: service5,
-      category: "Science",
-      title: "Unraveling the Mysteries of the Universe",
-      content:
-        "The universe is a vast expanse of space and time, filled with countless galaxies, stars, planets, and other celestial bodies. Scientists continue to explore and study the universe to understand its origins, evolution, and ultimate fate.",
-    },
-    {
-      id: 18,
-      img: service6,
-      category: "Health",
-      title: "The Benefits of Regular Exercise",
-      content:
-        "Regular exercise has numerous benefits for physical and mental health. It can improve cardiovascular health, strengthen muscles and bones, boost mood and mental well-being, and reduce the risk of chronic diseases such as heart disease, diabetes, and obesity.",
-    },
-    {
-      id: 19,
-      img: service1,
-      category: "Technology",
-      title: "The Role of Artificial Intelligence in Healthcare",
-      content:
-        "Artificial intelligence (AI) is increasingly being used in healthcare to improve patient outcomes, streamline administrative processes, and assist medical professionals in diagnosis and treatment planning.",
-    },
-    {
-      id: 20,
-      img: service2,
-      category: "Travel",
-      title: "Adventures in Africa",
-      content:
-        "Africa is the world's second-largest and second-most populous continent, covering more than 30 million square kilometers and home to a diverse array of cultures, landscapes, and wildlife.",
-    },
-    {
-      id: 21,
-      img: service3,
-      category: "Food",
-      title: "The Rich Flavors of Indian Cuisine",
-      content:
-        "Indian cuisine encompasses a wide variety of regional and traditional dishes known for their rich flavors, aromatic spices, and vibrant colors. From curry to tandoori, Indian food offers a culinary journey like no other.",
-    },
-    {
-      id: 22,
-      img: service4,
-      category: "Technology",
-      title: "Advancements in Renewable Energy",
-      content:
-        "Renewable energy technologies, such as solar, wind, and hydroelectric power, are increasingly being adopted as alternatives to fossil fuels to reduce greenhouse gas emissions and combat climate change.",
-    },
-    {
-      id: 23,
-      img: service5,
-      category: "Science",
-      title: "The Fascinating World of Genetics",
-      content:
-        "Genetics is the study of genes, heredity, and genetic variation in living organisms. It plays a crucial role in understanding human health and disease, as well as in fields such as agriculture, forensics, and evolutionary biology.",
-    },
-    {
-      id: 24,
-      img: service6,
-      category: "Health",
-      title: "The Importance of Sleep for Overall Well-being",
-      content:
-        "Adequate sleep is essential for overall health and well-being. It plays a critical role in various physiological processes, including brain function, hormone regulation, immune system function, and metabolism.",
-    },
-    {
-      id: 25,
-      img: service1,
-      category: "Technology",
-      title: "The Impact of 5G Technology on Communication",
-      content:
-        "5G technology promises faster data speeds, lower latency, and greater connectivity, revolutionizing the way we communicate, work, and interact with technology.",
-    },
-    {
-      id: 26,
-      img: service2,
-      category: "Travel",
-      title: "Exploring the Beauty of Australia",
-      content:
-        "Australia is a vast and diverse country known for its stunning natural landscapes, vibrant cities, and unique wildlife, making it a popular destination for travelers from around the world.",
-    },
-    {
-      id: 27,
-      img: service3,
-      category: "Food",
-      title: "Traditional Japanese Cuisine",
-      content:
-        "Japanese cuisine is renowned for its emphasis on fresh, seasonal ingredients, meticulous preparation techniques, and beautiful presentation. From sushi to ramen, Japanese food offers a culinary experience like no other.",
-    },
-    {
-      id: 28,
-      img: service4,
-      category: "Technology",
-      title: "The Rise of E-Commerce",
-      content:
-        "E-commerce has revolutionized the way we shop, allowing consumers to browse and purchase products online from the comfort of their homes. It has also transformed the retail industry, leading to the growth of online marketplaces and digital storefronts.",
-    },
-    {
-      id: 29,
-      img: service5,
-      category: "Science",
-      title: "The Exploration of Mars",
-      content:
-        "Mars has long captured the imagination of scientists and space enthusiasts alike. Exploration missions to the Red Planet have uncovered valuable insights into its geology, climate, and potential for supporting life.",
-    },
-    {
-      id: 30,
-      img: service6,
-      category: "Health",
-      title: "The Benefits of Meditation for Mental Health",
-      content:
-        "Meditation is a practice that has been used for centuries to promote relaxation, reduce stress, and enhance overall well-being. Research has shown that regular meditation can have profound effects on mental health, including reducing symptoms of anxiety and depression.",
-    },
-  ];
-
+  const handleClick = () => {
+    // Scroll to the top of the page
+    window.scrollTo({ top: 0, behavior: "instant" });
+  };
   const handleShowMoreBlogs = () => {
     setBlogsToShow((prevBlogsToShow) => prevBlogsToShow + 9);
   };
 
   return (
-    <Stack
-      width={"100%"}
-      mt={{
-        xs: 5,
-        lg: 10,
-      }}
-      boxSizing={"border-box"}
-    >
+    <Stack width={"100%"} mt={10} boxSizing={"border-box"}>
       <Stack
         width={{
           xs: "90%",
@@ -278,7 +167,7 @@ const CardSection = () => {
       >
         <Stack>
           <Typography fontSize={"40px"} textAlign={"center"}>
-            Blogs
+            Featured Case Studies
           </Typography>
         </Stack>
         <Stack
@@ -286,6 +175,7 @@ const CardSection = () => {
           direction={{
             xs: "column",
             md: "row",
+            lg: "row",
           }}
           flexWrap={"wrap"}
           justifyContent={"center"}
@@ -302,9 +192,10 @@ const CardSection = () => {
                 }}
               >
                 <Link
-                  key={blog.id} // Add key prop to the Link component
-                  to={`/blog/${blog.id}`}
+                  key={blog.id}
+                  to={`/Blogs/${blog.id}`}
                   style={{ textDecoration: "none" }}
+                  onClick={handleClick}
                 >
                   <Stack
                     boxShadow={"0 0 10px 0 rgba(0,0,0,.15)"}
@@ -338,16 +229,19 @@ const CardSection = () => {
                             {blog.category}
                           </Typography>
                           <Typography
-                            fontSize={"24px"}
+                            fontSize={{
+                              xs: "14px",
+                              lg: "16px",
+                            }}
                             fontWeight={"bold"}
                             color={"black"} // Move color style here
                           >
-                            {blog.title}
+                            {blog.BlogContent.heading}
                           </Typography>
                           <Typography color={"black"}>
-                            {blog.content.length > 150
-                              ? blog.content.slice(0, 150) + "..."
-                              : blog.content}
+                            {blog.BlogContent.about.length > 150
+                              ? blog.BlogContent.about.slice(0, 150) + "..."
+                              : blog.BlogContent.about}
                           </Typography>
                         </Stack>
                       </Stack>
@@ -388,7 +282,7 @@ const CardSection = () => {
               variant="contained"
               onClick={handleShowMoreBlogs}
             >
-              Show More Blogs
+              Show More Studies
             </Typography>
           </Stack>
         )}
