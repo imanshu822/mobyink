@@ -106,7 +106,10 @@ const LatestInsights = () => {
                 </Typography>
                 <Typography color={"lightgrey"}>{d.Des}</Typography>
                 <Link
-                  to="#"
+                  to="/get-in-touch"
+                  onClick={() => {
+                    window.scroll(0, 0);
+                  }}
                   style={{
                     textDecoration: "none",
                   }}

@@ -140,10 +140,11 @@ const Footer = () => {
             >
               <Stack p={1} width={"80%"} m={"0 auto"} boxSizing={"border-box"}>
                 <Box
+                  margin={"0 auto"}
                   color={"black"}
                   component="img"
-                  width={"100%"}
-                  height={"100%"}
+                  width={"160px"}
+                  height={"110px"}
                   src={item.img}
                   alt={item.title}
                   style={{ filter: "grayscale(100%)" }}
