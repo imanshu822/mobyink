@@ -56,7 +56,10 @@ const TabLineSection = () => {
               lg: "60%",
               sm: "80%",
             }}
-            height={"90vh"}
+            height={{
+              xs: "70vh",
+              lg: "90vh",
+            }}
             gap={3}
             justifyContent={"center"}
           >
@@ -67,9 +70,10 @@ const TabLineSection = () => {
                 md: "left",
               }}
               fontSize={{
-                xxl: "48px",
-                xl: "36px",
-                sm: "24px",
+                xxl: "52px",
+                xl: "48px",
+                lg: "44px",
+                sm: "34px",
               }}
               fontWeight={"bold"}
               color={"white"}
@@ -82,7 +86,11 @@ const TabLineSection = () => {
                 sm: "center",
                 md: "left",
               }}
-              variant="h6"
+              fontSize={{
+                xxl: "26px",
+                xl: "24px",
+                sm: "20px",
+              }}
               color={"white"}
             >
               Where advanced technology meets rapid innovation, transforming
