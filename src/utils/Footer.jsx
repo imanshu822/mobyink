@@ -11,7 +11,6 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Link } from "react-router-dom";
-import { Translate } from "@mui/icons-material";
 
 const footerData1 = [
   {
@@ -39,14 +38,14 @@ const footerData1 = [
 
 const services = [
   { text: "Services", to: "#" },
-  { text: "UI/UX Design", to: "/ui-ux-design-prototype" },
+  { text: "UI/UX Design", to: "/ui-ux-design-prototype/" },
   {
     text: "Search Engine Optimization",
-    to: "/search-engine-optimization",
+    to: "/search-engine-optimization/",
   },
-  { text: "App Marketing", to: "/App-Marketing" },
-  { text: "Website Development", to: "/website-development" },
-  { text: "Social Media Management", to: "/social-media-management" },
+  { text: "App Marketing", to: "/app-marketing/" },
+  { text: "Website Development", to: "/website-development/" },
+  { text: "Social Media Management", to: "/social-media-management/" },
   { text: "More......", to: "#" },
 ];
 
@@ -62,36 +61,34 @@ const technologies = [
 
 const industries = [
   { text: "Industries", to: "#" },
-  { text: "E-commerce", to: "/e-commerce" },
-  { text: "Logistics and Immigration", to: "/logistics-and-immigration" },
-  { text: "IT and Healthcare", to: "/it-and-healthcare" },
+  { text: "E-commerce", to: "/e-commerce/" },
+  { text: "Logistics and Immigration", to: "/logistics-and-immigration/" },
+  { text: "IT and Healthcare", to: "/it-and-healthcare/" },
   {
     text: "Real Estate and Interior Designing",
-    to: "/real-estate-and-interior-designing",
+    to: "/real-estate-and-interior-designing/",
   },
-  { text: "Finance", to: "/finance" },
-  { text: "More......", to: "/others" },
+  { text: "Finance", to: "/finance/" },
+  { text: "More......", to: "/others/" },
 ];
 
 const portfolio = [
-  { text: "Portfolio", to: "/portfolio" },
-  { text: "Dharan Jaipur", to: "/dharan-jaipur" },
-  { text: "Wooden Owl Design", to: "/wooden-owl-design" },
-  { text: "Silent Alley", to: "/silent-alley" },
-  { text: "Sanatan Seva Sansthan", to: "/sanatan-seva-sansthan" },
-  { text: "Northpark Florist", to: "/northpark-florist" },
-  { text: "Porter", to: "/porter" },
-  { text: "More......", to: "/more" },
+  { text: "Portfolio", to: "/portfolio/" },
+  { text: "Dharan Jaipur", to: "/dharan-jaipur/" },
+  { text: "Wooden Owl Design", to: "/wooden-owl-design/" },
+  { text: "Silent Alley", to: "/silent-alley/" },
+  { text: "Sanatan Seva Sansthan", to: "/sanatan-seva-sansthan/" },
+  { text: "Northpark Florist", to: "/northpark-florist/" },
+  { text: "Porter", to: "/porter/" },
+  { text: "More......", to: "/more/" },
 ];
-
-const Resources = ["Resources", "Blog", "FAQ's"];
 
 const links = [
   { to: "", text: "Services" },
-  { to: "/about-us", text: "About Us" },
-  { to: "/industries", text: "Industries" },
-  { to: "/case-studies", text: "Case Studies" },
-  { to: "/careers", text: "Career" },
+  { to: "/about-us/", text: "About Us" },
+  { to: "/industries/", text: "Industries" },
+  { to: "/case-studies/", text: "Case Studies" },
+  { to: "/careers/", text: "Career" },
 ];
 
 const socialMediaIcons = [
@@ -356,7 +353,7 @@ const Footer = () => {
               Resources
             </Stack>
             <Link
-              to="/blog"
+              to="/blog/"
               style={{
                 textDecoration: "none",
                 color: "#55595E",
@@ -378,7 +375,7 @@ const Footer = () => {
               </Typography>
             </Link>
             <Link
-              to="/faq"
+              to="/faq/"
               style={{
                 textDecoration: "none",
                 color: "#55595E",

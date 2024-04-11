@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import Footer from "../../utils/Footer";
 import GoToTop from "../../utils/GoToTop";
@@ -43,9 +43,9 @@ const blogData = [
         title2: "Approach",
         b1: "Social Media Optimization:",
         t1: "We optimized La Dihya's social media accounts to increase visibility and attract more customers",
-        b: "Strategic Reach Expansion:",
+        b2: "Strategic Reach Expansion:",
         t2: "Through targeted advertising and collaborations with influencers, we expanded La Dihya's reach to a wider customer base.",
-        b: "Compelling Content Creation:",
+        b3: "Compelling Content Creation:",
         t3: "Our team crafted engaging posts highlighting La Dihya's unique Arabian perfumes and their appeal to the target audience",
       },
       head3: {
@@ -374,8 +374,8 @@ const blogData = [
         t2: "Secured top 5 rankings for several targeted keywords.",
         b3: "User Engagement:",
         t3: "Reduced the website's bounce rate by 30%.",
-        b3: "Client Inquiry Growth:",
-        t3: "Saw a 50% increase in client inquiries through the website.",
+        b4: "Client Inquiry Growth:",
+        t4: "Saw a 50% increase in client inquiries through the website.",
       },
     },
   },
@@ -422,8 +422,8 @@ const blogData = [
         t2: "Social media followers grew by 50%, with a 40% increase in overall engagement rates.",
         b3: "Improved Online Visibility:",
         t3: "Website traffic surged by 60%, with a significant improvement in search engine rankings due to optimized content marketing.",
-        b3: "Positive Customer Feedback:",
-        t3: "Customer satisfaction scores rose by 25%, reflecting a stronger brand perception and service approval.",
+        b4: "Positive Customer Feedback:",
+        t4: "Customer satisfaction scores rose by 25%, reflecting a stronger brand perception and service approval.",
       },
     },
   },

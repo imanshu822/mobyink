@@ -1,13 +1,7 @@
-import { Stack, Typography, Button, Box } from "@mui/material";
+import { Stack, Typography, Box } from "@mui/material";
 import React, { useState } from "react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { Link } from "react-router-dom";
-import service1 from "../../../assests/service1.webp";
-import service2 from "../../../assests/service2.webp";
-import service3 from "../../../assests/service3.webp";
-import service4 from "../../../assests/service4.webp";
-import service5 from "../../../assests/service5.webp";
-import service6 from "../../../assests/service6.webp";
 
 import blogImg1 from "../../../assests/Logos_blogs Image_Case study image/Ladihya.jpg";
 import blogImg2 from "../../../assests/Logos_blogs Image_Case study image/Binoma.jpg";
@@ -54,9 +48,9 @@ const CardSection = () => {
           title2: "Approach",
           b1: "Social Media Optimization:",
           t1: "We optimized La Dihya's social media accounts to increase visibility and attract more customers",
-          b: "Strategic Reach Expansion:",
+          b2: "Strategic Reach Expansion:",
           t2: "Through targeted advertising and collaborations with influencers, we expanded La Dihya's reach to a wider customer base.",
-          b: "Compelling Content Creation:",
+          b3: "Compelling Content Creation:",
           t3: "Our team crafted engaging posts highlighting La Dihya's unique Arabian perfumes and their appeal to the target audience",
         },
         head3: {
@@ -385,8 +379,8 @@ const CardSection = () => {
           t2: "Secured top 5 rankings for several targeted keywords.",
           b3: "User Engagement:",
           t3: "Reduced the website's bounce rate by 30%.",
-          b3: "Client Inquiry Growth:",
-          t3: "Saw a 50% increase in client inquiries through the website.",
+          b4: "Client Inquiry Growth:",
+          t4: "Saw a 50% increase in client inquiries through the website.",
         },
       },
     },
@@ -433,8 +427,8 @@ const CardSection = () => {
           t2: "Social media followers grew by 50%, with a 40% increase in overall engagement rates.",
           b3: "Improved Online Visibility:",
           t3: "Website traffic surged by 60%, with a significant improvement in search engine rankings due to optimized content marketing.",
-          b3: "Positive Customer Feedback:",
-          t3: "Customer satisfaction scores rose by 25%, reflecting a stronger brand perception and service approval.",
+          b4: "Positive Customer Feedback:",
+          t4: "Customer satisfaction scores rose by 25%, reflecting a stronger brand perception and service approval.",
         },
       },
     },
@@ -686,7 +680,7 @@ const CardSection = () => {
               >
                 <Link
                   key={blog.id}
-                  to={`/${blog.slug}`}
+                  to={`/${blog.slug}/`}
                   style={{ textDecoration: "none" }}
                   onClick={handleClick}
                 >

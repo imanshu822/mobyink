@@ -3,7 +3,6 @@ import React from "react";
 import Insights1 from "../../../assests/Insights1.webp";
 import Insights2 from "../../../assests/Insights2.webp";
 import Insights3 from "../../../assests/Insights3.webp";
-import Button from "../../../utils/Button";
 import { Link } from "react-router-dom";
 const LatestInsights = () => {
   const lists = [

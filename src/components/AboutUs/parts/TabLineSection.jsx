@@ -1,7 +1,6 @@
 import { Stack, Typography, Box } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import bannerVideo from "../../../assests/VideoBanner.mp4";
 import Nav from "../../../utils/Navbar/Nav";
 import aboutBannerImg from "../../../assests/aboutBanner.webp";
 

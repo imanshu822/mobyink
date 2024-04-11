@@ -33,6 +33,7 @@ const TabLineSection = () => {
           autoPlay
           loop
           muted
+          controls={false}
         >
           <source src={bannerVideo} type="video/mp4" />
         </video>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 import lo from "../../assests/LogoBlue.svg";
 import logoDarkImg from "../../assests/logo_dark.svg";
@@ -16,7 +16,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const services = [
   {
-    link: "/app-marketing",
+    link: "/app-marketing/",
 
     title: "App Marketing",
     features: [
@@ -40,7 +40,7 @@ const services = [
   },
   {
     title: "App Development",
-    link: "/app-development",
+    link: "/app-development/",
     features: [
       {
         name: "iOS App Development Services",
@@ -55,7 +55,6 @@ const services = [
       {
         name: "Flutter App Development Services",
         to: "/Flutter App Development Services",
-        to: "/Flutter App Development Services",
         windowScrollAmount: 200,
       },
       {
@@ -67,7 +66,7 @@ const services = [
   },
   {
     title: "Graphic Designing",
-    link: "/graphic-designing",
+    link: "/graphic-designing/",
     features: [
       {
         name: "Banner Design and Logo Design",
@@ -93,7 +92,7 @@ const services = [
   },
   {
     title: "Website Development",
-    link: "/website-development",
+    link: "/website-development/",
     features: [
       {
         name: "CMS development using WordPress, Shopify, and Wix",
@@ -119,7 +118,7 @@ const services = [
   },
   {
     title: "Pay Per Click Advertising",
-    link: "/pay-per-click-advertising",
+    link: "/pay-per-click-advertising/",
     features: [
       {
         name: "Google Ads",
@@ -145,7 +144,7 @@ const services = [
   },
   {
     title: "UI/UX Design & Prototype",
-    link: "/ui-ux-design-prototype",
+    link: "/ui-ux-design-prototype/",
     features: [
       {
         name: "Custom Web Design",
@@ -171,7 +170,7 @@ const services = [
   },
   {
     title: "Social Media Management",
-    link: "/social-media-management",
+    link: "/social-media-management/",
     features: [
       {
         name: "Strategy with Content Creation",
@@ -197,7 +196,7 @@ const services = [
   },
   {
     title: "Animation & Video Editing",
-    link: "/animation-video-editing",
+    link: "/animation-video-editing/",
     features: [
       {
         name: "2D Animation",
@@ -223,7 +222,7 @@ const services = [
   },
   {
     title: "Search Engine Optimization",
-    link: "/search-engine-optimization",
+    link: "/search-engine-optimization/",
     features: [
       {
         name: "CMS development using WordPress, Shopify, and Wix",
@@ -251,69 +250,69 @@ const services = [
 const resources = [
   {
     title: "Portfolio",
-    to: "/portfolio",
+    to: "/portfolio/",
     windowScrollAmount: 100,
   },
   {
     title: "Careers",
-    to: "/careers",
+    to: "/careers/",
     windowScrollAmount: 200,
   },
   {
     title: "Blog",
-    to: "/blog",
+    to: "/blog/",
     windowScrollAmount: 300,
   },
   {
     title: "Faq",
-    to: "/Faq",
+    to: "/Faq/",
     windowScrollAmount: 400,
   },
 ];
 const index = [
   {
     title: "SEO Company INDIA",
-    to: "/seo-company-india",
+    to: "/seo-company-india/",
     windowScrollAmount: 100,
   },
   {
     title: "SEO Company Jaipur",
-    to: "/seo-company-in-jaipur",
+    to: "/seo-company-in-jaipur/",
     windowScrollAmount: 200,
   },
   {
     title: "SEO Company Delhi",
-    to: "/seo-company-in-delhi",
+    to: "/seo-company-in-delhi/",
     windowScrollAmount: 300,
   },
   {
     title: "SEO Company Bangalore",
-    to: "/seo-company-in-bangalore",
+    to: "/seo-company-in-bangalore/",
     windowScrollAmount: 400,
   },
   {
     title: "SEO Company Gurgaon",
-    to: "/seo-company-in-gurgaon",
+    to: "/seo-company-in-gurgaon/",
     windowScrollAmount: 500,
   },
   {
     title: "SEO Company Mumbai",
-    to: "/seo-company-in-mumbai",
+    to: "/seo-company-in-mumbai/",
     windowScrollAmount: 600,
   },
   {
     title: "SEO Company Noida",
-    to: "/seo-company-in-noida",
+    to: "/seo-company-in-noida/",
     windowScrollAmount: 700,
   },
   {
     title: "SEO Company Pune",
-    to: "/seo-company-in-pune",
+    to: "/seo-company-in-pune/",
     windowScrollAmount: 800,
   },
   {
     title: "SEO Company Surat",
-    to: "/seo-company-in-surat",
+    to: "/seo-company-in-surat/",
     windowScrollAmount: 900,
   },
 ];
@@ -672,7 +671,7 @@ const Nav = () => {
                 }}
               >
                 <Box>
-                  <Link to="/about-us" className="navlink-link">
+                  <Link to="/about-us/" className="navlink-link">
                     <Box
                       display={"flex"}
                       justifyContent="center"
@@ -701,7 +700,7 @@ const Nav = () => {
               {/* //!Industries */}
               <div style={{ display: "flex", alignItems: "center" }}>
                 <Box>
-                  <Link to="/industries" className="navlink-link">
+                  <Link to="/industries/" className="navlink-link">
                     <Box
                       display={"flex"}
                       justifyContent="center"
@@ -732,7 +731,7 @@ const Nav = () => {
                     position: "relative",
                   }}
                 >
-                  <Link to="/case-studies" className="navlink-link">
+                  <Link to="/case-studies/" className="navlink-link">
                     <Box
                       display={"flex"}
                       justifyContent="center"
@@ -1258,7 +1257,7 @@ const Nav = () => {
                 >
                   <Box>
                     <Link
-                      to="/about-us"
+                      to="/about-us/"
                       className="navlink-link"
                       onClick={() => {
                         window.scroll(0, 0);
@@ -1293,7 +1292,7 @@ const Nav = () => {
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <Box>
                     <Link
-                      to="/industries"
+                      to="/industries/"
                       className="navlink-link"
                       onClick={() => {
                         window.scroll(0, 0);
@@ -1330,7 +1329,7 @@ const Nav = () => {
                     }}
                   >
                     <Link
-                      to="/case-studies"
+                      to="/case-studies/"
                       className="navlink-link"
                       onClick={() => {
                         window.scroll(0, 0);
@@ -1769,7 +1768,7 @@ const Nav = () => {
               <Typography>
                 {" "}
                 <Link
-                  to="/about-us"
+                  to="/about-us/"
                   className="navlink-link"
                   onClick={() => {
                     window.scroll(0, 0);
@@ -1808,7 +1807,7 @@ const Nav = () => {
               <Typography>
                 {" "}
                 <Link
-                  to="/industries"
+                  to="/industries/"
                   className="navlink-link"
                   onClick={() => {
                     window.scroll(0, 0);
@@ -1847,7 +1846,7 @@ const Nav = () => {
               <Typography>
                 {" "}
                 <Link
-                  to="/case-studies"
+                  to="/case-studies/"
                   className="navlink-link"
                   onClick={() => {
                     window.scroll(0, 0);

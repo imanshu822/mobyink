@@ -1,6 +1,5 @@
-import { Stack, Tab } from "@mui/material";
+import { Stack } from "@mui/material";
 import React from "react";
-import Nav from "../../utils/Navbar/Nav";
 import TabLineSection from "../AboutUs/parts/TabLineSection";
 import WhoWeAre from "./parts/WhoWeAre";
 import OurCulture from "./parts/OurCulture";

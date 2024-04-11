@@ -1,4 +1,4 @@
-import { Stack, Typography, Button, Box } from "@mui/material";
+import { Stack, Typography, Box } from "@mui/material";
 import React, { useState } from "react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ import Insights3 from "../../../../assests/Insights3.webp";
 const blogData = [
   {
     id: 1,
-    to: "/segmenting-your-customers-for-greater-digital-marketing-success",
+    to: "/segmenting-your-customers-for-greater-digital-marketing-success/",
     blogSlug: "segmenting-your-customers-for-greater-digital-marketing-success",
     img: Insights1,
     category: "Blogs",
@@ -54,7 +54,7 @@ const blogData = [
   },
   {
     id: 2,
-    to: "/how-to-improve-your-site-seo-rankings",
+    to: "/how-to-improve-your-site-seo-rankings/",
     blogSlug: "how-to-improve-your-site-seo-rankings",
     img: Insights2,
     category: "Blogs",
@@ -102,7 +102,7 @@ const blogData = [
   },
   {
     id: 3,
-    to: "/how-to-secure-and-optimize-your-apps-online-visibility",
+    to: "/how-to-secure-and-optimize-your-apps-online-visibility/",
     blogSlug: "how-to-secure-and-optimize-your-apps-online-visibility",
     img: Insights3,
     category: "Blogs",

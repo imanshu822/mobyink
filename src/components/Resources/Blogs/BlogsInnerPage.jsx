@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Footer from "../../../utils/Footer";
 import GoToTop from "../../../utils/GoToTop";
 import Content from "./parts/Content";
@@ -152,8 +152,7 @@ const blogData = [
 
 const CaseStudies = () => {
   const location = useLocation();
-  const currentPath = location.pathname.slice(1); // Removing leading "/"
-
+  const currentPath = location.pathname.slice(1).slice(0, -1); // Removing leading "/" and trailing "/"
   const selectedBlog = blogData.find((blog) => blog.blogSlug === currentPath);
   return (
     <Stack width={"100%"} height={"100%"} bgcolor={"#F5F7FF"}>

@@ -11,9 +11,9 @@ import ScrollingImages from "./parts/ScrollingImages";
 import LatestInsights from "./parts/LatestInsights";
 import Footer from "../../utils/Footer";
 import LetsConnect from "./parts/LetsConnect";
-import ServiceType from "./parts/ParallaxEffect";
+// import ServiceType from "./parts/ParallaxEffect";
 
-import ScrollingSection from "./parts/ScrollingSection";
+// import ScrollingSection from "./parts/ScrollingSection";
 import GoToTop from "../../utils/GoToTop";
 
 const Home = () => {

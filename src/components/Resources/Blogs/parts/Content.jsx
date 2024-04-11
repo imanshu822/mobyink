@@ -1,9 +1,9 @@
 import React from "react";
 import { Stack, Typography, Box } from "@mui/material";
 
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import ArrowLeftAltIcon from "@mui/icons-material/ArrowRightAlt";
-import { Link } from "react-router-dom";
+// import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+// import ArrowLeftAltIcon from "@mui/icons-material/ArrowRightAlt";
+// import { Link } from "react-router-dom";
 
 const Content = ({ data, id }) => {
   return (
