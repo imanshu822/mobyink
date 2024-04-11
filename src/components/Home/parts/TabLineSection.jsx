@@ -74,7 +74,10 @@ const TabLineSection = () => {
               challenges into strategic masterpieces.
             </Typography>
             <Link
-              to="#"
+              to="/get-in-touch"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
               style={{
                 textDecoration: "none",
               }}

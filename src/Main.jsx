@@ -83,23 +83,27 @@ const Main = () => {
 
         <Route exact path="/about-us" element={<AboutUs />} />
         <Route exact path="/industries" element={<Industries />} />
-        <Route exact path="/industries/ecomerce" element={<Ecomerce />} />
-        <Route exact path="/industries/real-estate" element={<RealEstate />} />
+        <Route exact path="/e-commerce" element={<Ecomerce />} />
         <Route
           exact
-          path="/industries/it-healthcare"
-          element={<ItAndHealthcare />}
+          path="/real-estate-and-interior-designing"
+          element={<RealEstate />}
         />
-        <Route exact path="/industries/logistics" element={<Logistics />} />
-        <Route exact path="/industries/finance" element={<Finance />} />
-        <Route exact path="/industries/others" element={<Others />} />
+        <Route exact path="/it-and-healthcare" element={<ItAndHealthcare />} />
+        <Route
+          exact
+          path="/logistics-and-immigration"
+          element={<Logistics />}
+        />
+        <Route exact path="/finance" element={<Finance />} />
+        <Route exact path="/others" element={<Others />} />
 
+        {/* case study */}
         <Route exact path="/case-studies" element={<CaseStudies />} />
-        <Route
-          exact
-          path="/case-studies/:id"
-          element={<CaseStudiesInnerPage />}
-        />
+        <Route exact path="/:slug" element={<CaseStudiesInnerPage />} />
+
+        {/*  */}
+
         <Route exact path="/portfolio" element={<Portfolio />} />
 
         <Route exact path="/seo-company-india" element={<SeoInIndia />} />
@@ -123,8 +127,26 @@ const Main = () => {
 
         <Route exact path="/careers" element={<Careers />} />
         <Route exact path="/faq" element={<Faq />} />
+
+        {/* blogs */}
         <Route exact path="/blog" element={<Blogs />} />
-        <Route exact path="/blog/:id" element={<BlogsInnerPage />} />
+        <Route
+          exact
+          path="/segmenting-your-customers-for-greater-digital-marketing-success"
+          element={<BlogsInnerPage />}
+        />
+        <Route
+          exact
+          path="/how-to-improve-your-site-seo-rankings"
+          element={<BlogsInnerPage />}
+        />
+        <Route
+          exact
+          path="/how-to-secure-and-optimize-your-apps-online-visibility"
+          element={<BlogsInnerPage />}
+        />
+
+        {/* <Route exact path="/:blogSlug" element={<BlogsInnerPage />} /> */}
         <Route exact path="/app-marketing" element={<AppMarketing />} />
         <Route exact path="/dummy" element={<Cards />} />
         <Route exact path="/get-in-touch" element={<GetInTouch />} />

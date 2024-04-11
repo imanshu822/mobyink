@@ -6,23 +6,22 @@ import bulb from "../../../../assests/uui3.svg";
 import hand from "../../../../assests/uui4.svg";
 
 const WhatDoesIt = () => {
-
   const stackData = [
     {
       title: "User-Centric",
-      svg: "",
+      image: lock,
     },
     {
       title: "Brand Image",
-      svg: "",
+      image: video,
     },
     {
       title: "Mobile Responsive",
-      svg: "",
+      image: bulb,
     },
     {
       title: "Reduced Support Costs",
-      svg: "",
+      image: hand,
     },
   ];
 

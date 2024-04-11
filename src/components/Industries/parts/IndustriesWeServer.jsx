@@ -12,42 +12,42 @@ const services = [
   {
     image: service1,
     title: "E-commerce",
-    to: "/industries/ecomerce",
+    to: "/e-commerce",
     description:
       "Mobyink Is your strategic partner in navigating the dynamic landscape of e-commerce. Our digital marketing agency is dedicated to propelling e-commerce businesses to new heights through a specialized and results-driven approach",
   },
   {
     image: service2,
     title: "Logistics and Immigration",
-    to: "/industries/logistics",
+    to: "/logistics-and-immigration",
     description:
       "Our expertise lies in transforming both logistics and immigration services with cutting-edge digital marketing strategies. Our team, equipped with specialized knowledge in these sectors, leads the way in offering comprehensive digital solutions.",
   },
   {
     image: service3,
     title: "IT and Healthcare",
-    to: "/industries/it-healthcare",
+    to: "/it-and-healthcare",
     description:
       "Mobyink stands at the forefront of digital innovation, blending technological excellence with strategic marketing expertise. As a leading digital marketing agency, we specialize in elevating businesses within the IT and Healthcare sectors.",
   },
   {
     image: service4,
     title: "Real Estate and Interior Designing",
-    to: "/industries/real-estate",
+    to: "/real-estate-and-interior-designing",
     description:
       "At Mobyink, we blend the art of real estate with the creativity of interior design, all powered by digital marketing expertise. Our approach goes beyond mere property listings; we tell captivating stories that highlight the unique charm of each home and its interior potential.",
   },
   {
     image: service5,
     title: "Finance",
-    to: "/industries/finance",
+    to: "/finance",
     description:
       "We are your trusted partner in revolutionizing the way financial institutions navigate the digital landscape. In an era where the financial industry is rapidly evolving, our digital marketing expertise ensures that your brand stays ahead.",
   },
   {
     image: service6,
     title: "Others",
-    to: "/industries/others",
+    to: "/others",
     description:
       "We take pride in being the driving force behind businesses in every sector, utilizing our cutting-edge digital marketing solutions to propel brands to unprecedented success. Our journey is defined by a commitment to excellence, a passion for results.",
   },

@@ -42,7 +42,10 @@ const TabLineSection = () => {
               your business forward online.
             </Typography>
             <Link
-              to="#"
+              to="/get-in-touch"
+              onClick={() => {
+                window.scroll(0, 0);
+              }}
               style={{
                 textDecoration: "none",
               }}
@@ -53,15 +56,10 @@ const TabLineSection = () => {
                 width={"140px"}
                 height={"40px"}
                 border={"2px solid white"}
-                backgroundColor={"transparent"}
+                backgroundColor={"#0D6EFD"}
                 sx={{
                   "&:hover": {
                     color: "white",
-                    opacity: 0.8,
-                    fontWeight: "bold",
-                    backgroundColor: "#0D6EFD",
-                    transform: "translateY(-5px)",
-                    transition: "all 0.7s ease",
                   },
                 }}
               >

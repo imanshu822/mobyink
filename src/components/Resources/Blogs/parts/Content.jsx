@@ -6,8 +6,6 @@ import ArrowLeftAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { Link } from "react-router-dom";
 
 const Content = ({ data, id }) => {
-  const prev = id - 1;
-  const next = id + 1;
   return (
     <Stack
       mt={{
@@ -426,6 +424,7 @@ const Content = ({ data, id }) => {
                   {data.BlogContent.H1}
                 </Typography>
               )}
+
               {data.BlogContent.P1 && (
                 <Typography color={"gray"} textAlign={"justify"}>
                   <span

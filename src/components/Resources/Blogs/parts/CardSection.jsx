@@ -9,6 +9,8 @@ import Insights3 from "../../../../assests/Insights3.webp";
 const blogData = [
   {
     id: 1,
+    to: "/segmenting-your-customers-for-greater-digital-marketing-success",
+    blogSlug: "segmenting-your-customers-for-greater-digital-marketing-success",
     img: Insights1,
     category: "Blogs",
     title: "Introduction to React",
@@ -52,6 +54,8 @@ const blogData = [
   },
   {
     id: 2,
+    to: "/how-to-improve-your-site-seo-rankings",
+    blogSlug: "how-to-improve-your-site-seo-rankings",
     img: Insights2,
     category: "Blogs",
     title: "Exploring Europe",
@@ -98,6 +102,8 @@ const blogData = [
   },
   {
     id: 3,
+    to: "/how-to-secure-and-optimize-your-apps-online-visibility",
+    blogSlug: "how-to-secure-and-optimize-your-apps-online-visibility",
     img: Insights3,
     category: "Blogs",
     title: "Delicious Italian Cuisine",
@@ -193,7 +199,7 @@ const CardSection = ({ data }) => {
               >
                 <Link
                   key={blog.id}
-                  to={`/Blogs/${blog.id}`}
+                  to={blog.to}
                   style={{ textDecoration: "none" }}
                   onClick={handleClick}
                 >

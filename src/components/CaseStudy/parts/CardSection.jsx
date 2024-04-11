@@ -35,6 +35,7 @@ const CardSection = () => {
   const blogData = [
     {
       id: 1,
+      slug: "lahdiya",
       img: blogImg1,
       category: "Others",
       BlogContent: {
@@ -78,6 +79,7 @@ const CardSection = () => {
     },
     {
       id: 2,
+      slug: "binomo",
       img: blogImg2,
       category: "Finance",
       BlogContent: {
@@ -124,6 +126,7 @@ const CardSection = () => {
     },
     {
       id: 3,
+      slug: "xm-trading",
       img: blogImg3,
       category: "Finance",
       BlogContent: {
@@ -165,6 +168,7 @@ const CardSection = () => {
     },
     {
       id: 4,
+      slug: "octafx",
       img: blogImg4,
       category: "Finance",
       BlogContent: {
@@ -206,6 +210,7 @@ const CardSection = () => {
     },
     {
       id: 5,
+      slug: "iroomit",
       img: blogImg5,
       category: "Real Estate & Interior Designing",
       BlogContent: {
@@ -249,6 +254,7 @@ const CardSection = () => {
     },
     {
       id: 6,
+      slug: "creative-homes",
       img: blogImg6,
       category: "Real Estate & Interior Designing",
       BlogContent: {
@@ -292,6 +298,7 @@ const CardSection = () => {
     },
     {
       id: 7,
+      slug: "wooden-owl-design",
       img: blogImg7,
       category: "Real Estate & Interior Designing",
       BlogContent: {
@@ -337,6 +344,7 @@ const CardSection = () => {
     },
     {
       id: 8,
+      slug: "my-global-citizen-ship",
       img: blogImg8,
       category: "	Logistics & Immigration",
       BlogContent: {
@@ -384,6 +392,7 @@ const CardSection = () => {
     },
     {
       id: 9,
+      slug: "carry-fast",
       img: blogImg9,
       category: "	Logistics & Immigration",
       BlogContent: {
@@ -431,6 +440,7 @@ const CardSection = () => {
     },
     {
       id: 10,
+      slug: "tranont",
       img: blogImg10,
       category: "	IT & Healthcare",
       BlogContent: {
@@ -467,6 +477,7 @@ const CardSection = () => {
     },
     {
       id: 11,
+      slug: "smart-diet-planner",
       img: blogImg11,
       category: "	IT & Healthcare",
       BlogContent: {
@@ -505,6 +516,7 @@ const CardSection = () => {
     },
     {
       id: 12,
+      slug: "web-md-symptom-checker",
       img: blogImg12,
       category: "	IT & Healthcare",
       BlogContent: {
@@ -543,6 +555,7 @@ const CardSection = () => {
     },
     {
       id: 13,
+      slug: "mood-store",
       img: blogImg13,
       category: "E-Commerce",
       BlogContent: {
@@ -586,6 +599,7 @@ const CardSection = () => {
 
     {
       id: 14,
+      slug: "elisa-fashion",
       img: blogImg14,
       category: "	E-Commerce",
       BlogContent: {
@@ -672,7 +686,7 @@ const CardSection = () => {
               >
                 <Link
                   key={blog.id}
-                  to={`/case-studies/${blog.id}`}
+                  to={`/${blog.slug}`}
                   style={{ textDecoration: "none" }}
                   onClick={handleClick}
                 >

@@ -261,7 +261,7 @@ const resources = [
   },
   {
     title: "Blog",
-    to: "/Blog",
+    to: "/blog",
     windowScrollAmount: 300,
   },
   {
@@ -324,7 +324,6 @@ const Nav = () => {
   }, []);
   const [popoverState, setPopoverState] = useState({});
   const [menuClick, setMenuClick] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(false);
 
   const handleClick = () => {
     setMenuClick(!menuClick);
@@ -342,14 +341,21 @@ const Nav = () => {
     };
   }, [menuClick]);
 
+  const [showNavbar, setShowNavbar] = useState(false);
+  const [prevScrollPosition, setPrevScrollPosition] = useState(0);
+
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      if (scrollPosition > 110) {
+      const currentScrollPosition = window.scrollY;
+      if (
+        currentScrollPosition > 1000 &&
+        currentScrollPosition < prevScrollPosition
+      ) {
         setShowNavbar(true);
       } else {
         setShowNavbar(false);
       }
+      setPrevScrollPosition(currentScrollPosition);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -357,7 +363,7 @@ const Nav = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [prevScrollPosition]);
 
   const handleMouseEnter = (linkId) => {
     setPopoverState((prevState) => ({
@@ -399,7 +405,12 @@ const Nav = () => {
           backgroundColor={"transparent"}
         >
           <Stack width={{ xxl: "10%", xl: "13%", md: "20%", sm: "25%" }}>
-            <Link to={"/"}>
+            <Link
+              to={"/"}
+              onClick={() => {
+                window.scroll(0, 0);
+              }}
+            >
               <img src={lo} alt="" style={{ width: "100%", height: "100%" }} />
             </Link>
           </Stack>
@@ -584,7 +595,7 @@ const Nav = () => {
                               onClick={() => {
                                 window.scroll(0, 0);
                               }}
-                              to="/Blogs/1"
+                              to="/segmenting-your-customers-for-greater-digital-marketing-success"
                               style={{
                                 textDecoration: "none",
                                 color: "black",
@@ -607,7 +618,7 @@ const Nav = () => {
                               onClick={() => {
                                 window.scroll(0, 0);
                               }}
-                              to="/Blogs/2"
+                              to="/how-to-improve-your-site-seo-rankings"
                               style={{
                                 textDecoration: "none",
                                 color: "black",
@@ -629,7 +640,7 @@ const Nav = () => {
                               onClick={() => {
                                 window.scroll(0, 0);
                               }}
-                              to="/Blogs/3"
+                              to="/how-to-secure-and-optimize-your-apps-online-visibility"
                               style={{
                                 textDecoration: "none",
                                 color: "black",
@@ -918,9 +929,12 @@ const Nav = () => {
             </Stack>
           </Stack>
           <Link
-            to="#"
+            to="/get-in-touch"
             style={{
               textDecoration: "none",
+            }}
+            onClick={() => {
+              window.scrollTo(0, 0);
             }}
           >
             <Stack
@@ -941,20 +955,22 @@ const Nav = () => {
           </Link>
         </Stack>
       </Stack>
+
       {/* when desktop is scroll downward then the navbar should be fixed at the top of the page and the background color should be white and the text color should be black */}
       {showNavbar && (
         <Stack
           position={"fixed"}
           p={"0px 90px"}
+          left={0}
+          right={0}
           zIndex={5}
           backgroundColor={"#0D6EFD"}
-          width={"100%"}
-          top={showNavbar ? 0 : "-110px"}
-          transition={"top 0.3s ease-in-out"}
+          top={0}
+          transition={"all 0.3s ease-in-out"} // Apply transition here
         >
           <Stack
             mt={1}
-            height={"80px"}
+            height={"60px"}
             zIndex={11}
             sx={{
               display: {
@@ -1007,6 +1023,9 @@ const Nav = () => {
                         display={"flex"}
                         justifyContent="center"
                         alignItems={"center"}
+                        onClick={() => {
+                          window.scroll(0, 0);
+                        }}
                       >
                         <Typography
                           color={"white"}
@@ -1081,6 +1100,9 @@ const Nav = () => {
                                     style={{
                                       textDecoration: "none",
                                       color: "black",
+                                    }}
+                                    onClick={() => {
+                                      window.scroll(0, 0);
                                     }}
                                   >
                                     <Typography
@@ -1158,7 +1180,7 @@ const Nav = () => {
                                 onClick={() => {
                                   window.scroll(0, 0);
                                 }}
-                                to="/Blogs/1"
+                                to="/segmenting-your-customers-for-greater-digital-marketing-success"
                                 style={{
                                   textDecoration: "none",
                                   color: "black",
@@ -1181,7 +1203,7 @@ const Nav = () => {
                                 onClick={() => {
                                   window.scroll(0, 0);
                                 }}
-                                to="/Blogs/2"
+                                to="/how-to-improve-your-site-seo-rankings"
                                 style={{
                                   textDecoration: "none",
                                   color: "black",
@@ -1203,7 +1225,7 @@ const Nav = () => {
                                 onClick={() => {
                                   window.scroll(0, 0);
                                 }}
-                                to="/Blogs/3"
+                                to="/how-to-secure-and-optimize-your-apps-online-visibility"
                                 style={{
                                   textDecoration: "none",
                                   color: "black",
@@ -1235,7 +1257,13 @@ const Nav = () => {
                   }}
                 >
                   <Box>
-                    <Link to="/about-us" className="navlink-link">
+                    <Link
+                      to="/about-us"
+                      className="navlink-link"
+                      onClick={() => {
+                        window.scroll(0, 0);
+                      }}
+                    >
                       <Box
                         display={"flex"}
                         justifyContent="center"
@@ -1264,7 +1292,13 @@ const Nav = () => {
                 {/* //!Industries */}
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <Box>
-                    <Link to="/industries" className="navlink-link">
+                    <Link
+                      to="/industries"
+                      className="navlink-link"
+                      onClick={() => {
+                        window.scroll(0, 0);
+                      }}
+                    >
                       <Box
                         display={"flex"}
                         justifyContent="center"
@@ -1295,7 +1329,13 @@ const Nav = () => {
                       position: "relative",
                     }}
                   >
-                    <Link to="/case-studies" className="navlink-link">
+                    <Link
+                      to="/case-studies"
+                      className="navlink-link"
+                      onClick={() => {
+                        window.scroll(0, 0);
+                      }}
+                    >
                       <Box
                         display={"flex"}
                         justifyContent="center"
@@ -1329,7 +1369,13 @@ const Nav = () => {
                       position: "relative",
                     }}
                   >
-                    <Link to="#" className="navlink-link">
+                    <Link
+                      to="#"
+                      className="navlink-link"
+                      onClick={() => {
+                        window.scroll(0, 0);
+                      }}
+                    >
                       <Box
                         display={"flex"}
                         justifyContent="center"
@@ -1385,7 +1431,13 @@ const Nav = () => {
                           backgroundColor={"#F4F4F4"}
                           boxShadow={"0 10px 30px 0 rgba(45,45,45,.2)"}
                         >
-                          <Link to="#" style={{ textDecoration: "none" }}>
+                          <Link
+                            to="#"
+                            style={{ textDecoration: "none" }}
+                            onClick={() => {
+                              window.scroll(0, 0);
+                            }}
+                          >
                             <Stack
                               onMouseEnter={() => handleMouseEnter(5)}
                               onMouseLeave={() => handleMouseLeave(5)}
@@ -1442,6 +1494,9 @@ const Nav = () => {
                                     key={index}
                                     to={resource.to}
                                     style={{ textDecoration: "none" }}
+                                    onClick={() => {
+                                      window.scroll(0, 0);
+                                    }}
                                   >
                                     <Typography
                                       fontSize={"14px"}
@@ -1467,6 +1522,9 @@ const Nav = () => {
                               key={index}
                               to={resource.to}
                               style={{ textDecoration: "none" }}
+                              onClick={() => {
+                                window.scroll(0, 0);
+                              }}
                             >
                               <Typography
                                 fontSize={"14px"}
@@ -1492,7 +1550,10 @@ const Nav = () => {
               </Stack>
             </Stack>
             <Link
-              to="#"
+              to="/get-in-touch"
+              onClick={() => {
+                window.scroll(0, 0);
+              }}
               style={{
                 textDecoration: "none",
               }}
@@ -1538,7 +1599,12 @@ const Nav = () => {
           padding={"20px 0px"}
         >
           <Stack width={{ xs: "45%", md: "30%" }}>
-            <Link to={"/"}>
+            <Link
+              to={"/"}
+              onClick={() => {
+                window.scroll(0, 0);
+              }}
+            >
               <img src={lo} alt="" width={"100%"} height={"100%"} />
             </Link>
           </Stack>
@@ -1594,7 +1660,12 @@ const Nav = () => {
               padding={"20px 0px"}
             >
               <Stack width={{ xs: "45%", md: "30%" }}>
-                <Link to={"/"}>
+                <Link
+                  to={"/"}
+                  onClick={() => {
+                    window.scroll(0, 0);
+                  }}
+                >
                   <img
                     src={logoDarkImg}
                     alt=""
@@ -1639,7 +1710,13 @@ const Nav = () => {
             <AccordionSummary expandIcon={<ArrowDropDownIcon />}>
               <Typography>
                 {" "}
-                <Link to="/" className="navlink-link">
+                <Link
+                  to="/"
+                  className="navlink-link"
+                  onClick={() => {
+                    window.scroll(0, 0);
+                  }}
+                >
                   <Box
                     display={"flex"}
                     justifyContent="center"
@@ -1664,7 +1741,13 @@ const Nav = () => {
               <Stack gap={1}>
                 {services.map((service, index) => (
                   <Stack justifyContent={"center"} gap={1} marginLeft={"20px"}>
-                    <Link to={service.link} className="popperLinks">
+                    <Link
+                      to={service.link}
+                      className="popperLinks"
+                      onClick={() => {
+                        window.scroll(0, 0);
+                      }}
+                    >
                       <Typography className="popperLinks" sx={{}}>
                         {service.title}
                       </Typography>
@@ -1685,7 +1768,13 @@ const Nav = () => {
             <AccordionSummary aria-controls="panel2-content" id="panel2-header">
               <Typography>
                 {" "}
-                <Link to="/about-us" className="navlink-link">
+                <Link
+                  to="/about-us"
+                  className="navlink-link"
+                  onClick={() => {
+                    window.scroll(0, 0);
+                  }}
+                >
                   <Box
                     display={"flex"}
                     justifyContent="center"
@@ -1718,7 +1807,13 @@ const Nav = () => {
             <AccordionSummary aria-controls="panel2-content" id="panel2-header">
               <Typography>
                 {" "}
-                <Link to="/industries" className="navlink-link">
+                <Link
+                  to="/industries"
+                  className="navlink-link"
+                  onClick={() => {
+                    window.scroll(0, 0);
+                  }}
+                >
                   <Box
                     display={"flex"}
                     justifyContent="center"
@@ -1751,7 +1846,13 @@ const Nav = () => {
             <AccordionSummary aria-controls="panel2-content" id="panel2-header">
               <Typography>
                 {" "}
-                <Link to="/case-studies" className="navlink-link">
+                <Link
+                  to="/case-studies"
+                  className="navlink-link"
+                  onClick={() => {
+                    window.scroll(0, 0);
+                  }}
+                >
                   <Box
                     display={"flex"}
                     justifyContent="center"
@@ -1785,7 +1886,13 @@ const Nav = () => {
             <AccordionSummary sx={{ mt: 0 }} expandIcon={<ArrowDropDownIcon />}>
               <Typography>
                 {" "}
-                <Link to="/" className="navlink-link">
+                <Link
+                  to="/"
+                  className="navlink-link"
+                  onClick={() => {
+                    window.scroll(0, 0);
+                  }}
+                >
                   <Box
                     display={"flex"}
                     justifyContent="center"
@@ -1824,7 +1931,13 @@ const Nav = () => {
                   >
                     <Typography>
                       {" "}
-                      <Link to="/" className="navlink-link">
+                      <Link
+                        to="/"
+                        className="navlink-link"
+                        onClick={() => {
+                          window.scroll(0, 0);
+                        }}
+                      >
                         <Box
                           display={"flex"}
                           justifyContent="center"
@@ -1853,7 +1966,13 @@ const Nav = () => {
                           gap={1}
                           marginLeft={"20px"}
                         >
-                          <Link to={service.to} className="popperLinks">
+                          <Link
+                            to={service.to}
+                            className="popperLinks"
+                            onClick={() => {
+                              window.scroll(0, 0);
+                            }}
+                          >
                             <Typography className="popperLinks" sx={{}}>
                               {service.title}
                             </Typography>
@@ -1865,7 +1984,13 @@ const Nav = () => {
                 </Accordion>
                 {resources.map((resource, index) => (
                   <Stack justifyContent={"center"} gap={1} marginLeft={"20px"}>
-                    <Link to={resource.to} className="popperLinks">
+                    <Link
+                      to={resource.to}
+                      className="popperLinks"
+                      onClick={() => {
+                        window.scroll(0, 0);
+                      }}
+                    >
                       <Typography className="popperLinks" sx={{}}>
                         {resource.title}
                       </Typography>
@@ -1877,7 +2002,12 @@ const Nav = () => {
           </Accordion>
 
           <Stack alignItems={"center"} margin={"10px auto"}>
-            <Link to={"#"}>
+            <Link
+              to={"/get-in-touch"}
+              onClick={() => {
+                window.scroll(0, 0);
+              }}
+            >
               <Button
                 sx={{
                   width: "120px",

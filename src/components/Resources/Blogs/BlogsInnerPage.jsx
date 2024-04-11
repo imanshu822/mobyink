@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Footer from "../../../utils/Footer";
 import GoToTop from "../../../utils/GoToTop";
 import Content from "./parts/Content";
@@ -12,6 +12,7 @@ import Insights3 from "../../../assests/Insights3.webp";
 const blogData = [
   {
     id: 1,
+    blogSlug: "segmenting-your-customers-for-greater-digital-marketing-success",
     img: Insights1,
     category: "Blogs",
     title: "Introduction to React",
@@ -55,6 +56,7 @@ const blogData = [
   },
   {
     id: 2,
+    blogSlug: "how-to-improve-your-site-seo-rankings",
     img: Insights2,
     category: "Blogs",
     title: "Exploring Europe",
@@ -101,6 +103,7 @@ const blogData = [
   },
   {
     id: 3,
+    blogSlug: "how-to-secure-and-optimize-your-apps-online-visibility",
     img: Insights3,
     category: "Blogs",
     title: "Delicious Italian Cuisine",
@@ -148,8 +151,10 @@ const blogData = [
 ];
 
 const CaseStudies = () => {
-  const { id } = useParams();
-  const selectedBlog = blogData.find((blog) => blog.id === parseInt(id));
+  const location = useLocation();
+  const currentPath = location.pathname.slice(1); // Removing leading "/"
+
+  const selectedBlog = blogData.find((blog) => blog.blogSlug === currentPath);
   return (
     <Stack width={"100%"} height={"100%"} bgcolor={"#F5F7FF"}>
       <Header data={selectedBlog} />

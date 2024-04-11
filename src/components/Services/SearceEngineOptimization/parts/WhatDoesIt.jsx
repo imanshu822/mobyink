@@ -6,25 +6,24 @@ import bulb from "../../../../assests/sseo3.svg";
 import hand from "../../../../assests/sseo4.svg";
 
 const WhatDoesIt = () => {
- 
-const stackData = [
-  {
-    title: "Book a call",
-    svg: "",
-  },
-  {
-    title: "Let’s chat",
-    svg: "",
-  },
-  {
-    title: "We run SEO analysis",
-    svg: "",
-  },
-  {
-    title: "Your SEO plan is ready!",
-    svg: "",
-  },
-];
+  const stackData = [
+    {
+      title: "Book a call",
+      svg: lock,
+    },
+    {
+      title: "Let’s chat",
+      svg: video,
+    },
+    {
+      title: "We run SEO analysis",
+      svg: bulb,
+    },
+    {
+      title: "Your SEO plan is ready!",
+      svg: hand,
+    },
+  ];
   const stackComponents = stackData.map((item, index) => (
     <Stack
       key={index}
@@ -51,7 +50,7 @@ const stackData = [
         gap={3}
         height={"100%"}
       >
-        <Box width={"40px"} height={"40px"} src={item.image} component="img" />{" "}
+        <Box width={"40px"} height={"40px"} src={item.svg} component="img" />{" "}
         <Typography
           textAlign={"center"}
           fontSize={{

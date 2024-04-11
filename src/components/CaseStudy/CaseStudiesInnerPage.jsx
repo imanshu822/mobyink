@@ -24,6 +24,7 @@ import blogImg14 from "../../assests/Logos_blogs Image_Case study image/Elisa.jp
 const blogData = [
   {
     id: 1,
+    slug: "lahdiya",
     img: blogImg1,
     category: "Others",
     BlogContent: {
@@ -67,6 +68,7 @@ const blogData = [
   },
   {
     id: 2,
+    slug: "binomo",
     img: blogImg2,
     category: "Finance",
     BlogContent: {
@@ -113,6 +115,7 @@ const blogData = [
   },
   {
     id: 3,
+    slug: "xm-trading",
     img: blogImg3,
     category: "Finance",
     BlogContent: {
@@ -154,6 +157,7 @@ const blogData = [
   },
   {
     id: 4,
+    slug: "octafx",
     img: blogImg4,
     category: "Finance",
     BlogContent: {
@@ -195,6 +199,7 @@ const blogData = [
   },
   {
     id: 5,
+    slug: "iroomit",
     img: blogImg5,
     category: "Real Estate & Interior Designing",
     BlogContent: {
@@ -238,6 +243,7 @@ const blogData = [
   },
   {
     id: 6,
+    slug: "creative-homes",
     img: blogImg6,
     category: "Real Estate & Interior Designing",
     BlogContent: {
@@ -281,6 +287,7 @@ const blogData = [
   },
   {
     id: 7,
+    slug: "wooden-owl-design",
     img: blogImg7,
     category: "Real Estate & Interior Designing",
     BlogContent: {
@@ -326,6 +333,7 @@ const blogData = [
   },
   {
     id: 8,
+    slug: "my-global-citizen-ship",
     img: blogImg8,
     category: "	Logistics & Immigration",
     BlogContent: {
@@ -373,6 +381,7 @@ const blogData = [
   },
   {
     id: 9,
+    slug: "carry-fast",
     img: blogImg9,
     category: "	Logistics & Immigration",
     BlogContent: {
@@ -420,6 +429,7 @@ const blogData = [
   },
   {
     id: 10,
+    slug: "tranont",
     img: blogImg10,
     category: "	IT & Healthcare",
     BlogContent: {
@@ -456,6 +466,7 @@ const blogData = [
   },
   {
     id: 11,
+    slug: "smart-diet-planner",
     img: blogImg11,
     category: "	IT & Healthcare",
     BlogContent: {
@@ -494,6 +505,7 @@ const blogData = [
   },
   {
     id: 12,
+    slug: "web-md-symptom-checker",
     img: blogImg12,
     category: "	IT & Healthcare",
     BlogContent: {
@@ -532,6 +544,7 @@ const blogData = [
   },
   {
     id: 13,
+    slug: "mood-store",
     img: blogImg13,
     category: "E-Commerce",
     BlogContent: {
@@ -575,6 +588,7 @@ const blogData = [
 
   {
     id: 14,
+    slug: "elisa-fashion",
     img: blogImg14,
     category: "	E-Commerce",
     BlogContent: {
@@ -621,12 +635,12 @@ const blogData = [
 ];
 
 const CaseStudies = () => {
-  const { id } = useParams();
-  const selectedBlog = blogData.find((blog) => blog.id === parseInt(id));
+  const { slug } = useParams();
+  const selectedBlog = blogData.find((blog) => blog.slug === slug);
   return (
     <Stack width={"100%"} height={"100%"} bgcolor={"#F5F7FF"}>
       <Header data={selectedBlog} />
-      <Content data={selectedBlog} id={id} />
+      <Content data={selectedBlog} />
       <Footer />
       <GoToTop />
     </Stack>

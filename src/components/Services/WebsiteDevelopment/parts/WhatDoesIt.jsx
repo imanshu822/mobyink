@@ -6,23 +6,22 @@ import bulb from "../../../../assests/wwd3.svg";
 import hand from "../../../../assests/wwd4.svg";
 
 const WhatDoesIt = () => {
- 
   const stackData = [
     {
       title: "Global Visibility",
-      svg: "",
+      svg: lock,
     },
     {
       title: "Credibility",
-      svg: "",
+      svg: video,
     },
     {
       title: "E-Commerce Opportunities",
-      svg: "",
+      svg: bulb,
     },
     {
       title: "Competitive Edge",
-      svg: "",
+      svg: hand,
     },
   ];
 
@@ -52,7 +51,7 @@ const WhatDoesIt = () => {
         gap={3}
         height={"100%"}
       >
-        <Box width={"40px"} height={"40px"} src={item.image} component="img" />{" "}
+        <Box width={"40px"} height={"40px"} src={item.svg} component="img" />{" "}
         <Typography
           textAlign={"center"}
           fontSize={{

@@ -5,93 +5,93 @@ import nearByPlaceImg from "../../../../assests/sm2.webp";
 import mobileGraphImg from "../../../../assests/sm3.webp";
 import mobileAppArtImg from "../../../../assests/sm4.webp";
 const AppServices = () => {
-
-const lists= [
-
-   {
+  const lists = [
+    {
+      id: 1,
       title: "1. Strategy with Content Creation",
-      Desc: "Our strategy: clear goals aligned with marketing. Engaging content by our design team – graphics, videos, and writing – tailored to the audience. Metrics guide adaptability and active community engagement align with broader marketing for a dynamic online presence",
+      direction: "row",
+      Desc: "Our strategy: clear goals aligned with marketing. Engaging content by our design team – graphics, videos, and writing – tailored to the audience. Metrics guide adaptability and active community engagement align with broader marketing for a dynamic online presence.",
       How: [
-         {
-            title: "AI-Infused Brand Insights ",
-         },
-         {
-            title: "Competitor Alignment",
-         },
-         {
-            title: "Creative and engaging content",
-         },
-         {
-            title: "Turn the content into visuals",
-         },
+        {
+          Description: "AI-Infused Brand Insights ",
+        },
+        {
+          Description: "Competitor Alignment ",
+        },
+        {
+          Description: "Creative and engaging content",
+        },
+        {
+          Description: "Turn the content into visuals",
+        },
       ],
-      src:""
-   },
-
-
-   {
+      src: AppStore,
+    },
+    {
+      id: 2,
       title: "2. Social Media posting",
+      direction: "row-reverse",
       Desc: "After crafting top-notch content, we take charge of its social debut. We optimize for each platform, strategically timing posts for peak reach and engagement. Your content hits the right notes, exactly when and where it matters most.",
       How: [
-         {
-            title: "Tailor content to your audience’s interests.",
-         },
-         {
-            title: "Keep posts aligned with your brand and audience needs.",
-         },
-         {
-            title: "Share content when your audience is most active.",
-         },
-         {
-            title: "Use engaging visuals to boost post-performance.",
-         },
+        {
+          Description: "Tailor content to your audience’s interests.",
+        },
+        {
+          Description: "Keep posts aligned with your brand and audience needs.",
+        },
+        {
+          Description: "Share content when your audience is most active.",
+        },
+        {
+          Description: "Use engaging visuals to boost post-performance.",
+        },
       ],
-      src:""
-   },
-
-
-   {
+      src: nearByPlaceImg,
+    },
+    {
+      id: 3,
       title: "3. Community Management",
+      direction: "row",
       Desc: "We’re not just posting – we engage in real-time with your audience, building a vibrant community. Plus, we optimize campaigns using machine learning for maximum impact, providing insights and recommendations for business growth.",
       How: [
-         {
-            title: "Engage with members",
-         },
-         {
-            title: "Moderate content",
-         },
-         {
-            title: "Build a sense of belonging",
-         },
-         {
-            title: "Gather feedback and analyze data",
-         },
+        {
+          Description: "Engage with members",
+        },
+        {
+          Description: "Moderate content",
+        },
+        {
+          Description: "Build a sense of belonging",
+        },
+        {
+          Description: "Gather feedback and analyze data",
+        },
       ],
-      src:""
-   },
-
-
-   {
+      src: mobileGraphImg,
+    },
+    {
+      id: 4,
       title: "4. Performance Optimization",
+      direction: "row-reverse",
       Desc: "We track key metrics like engagement and reach through analytics, generating detailed reports for content optimization. Our social media management handles the entire process, creating tailored strategies, engaging content, and community management to help brands achieve their goals efficiently.",
       How: [
-         {
-            title: "Goal Setting",
-         },
-         {
-            title: "Regular FeedBack",
-         },
-         {
-            title: "Performance Feedback",
-         },
-         {
-            title: "Development Plans",
-         },
+        {
+          Description: "Goal Setting",
+        },
+        {
+          Description: "Regular FeedBack",
+        },
+        {
+          Description: "Performance Feedback",
+        },
+        {
+          Description: "Development Plans",
+        },
       ],
-      src:""
-   },
+      src: mobileAppArtImg,
+    },
+  ];
 
-]
   return (
     <Stack>
       <Stack alignItems={"Center"} gap={1} p={"60px 0 80px 0 "}>
@@ -103,7 +103,7 @@ const lists= [
             }}
             fontWeight={"bold"}
           >
-            Social Media Optimasation
+            Social Media Management
           </Typography>
         </Stack>
         <Stack

@@ -59,7 +59,6 @@ const ContactForm = () => {
         xs: 3,
         lg: 10,
       }}
-      bgcolor={"#172063"}
       pb={{
         xs: 3,
         lg: 10,
@@ -68,8 +67,9 @@ const ContactForm = () => {
       <Stack
         width={"85%"}
         margin={"0 auto"}
-        bgcolor={""}
+        borderRadius={"10px"}
         border={"1px solid white"}
+        bgcolor={"#172063"}
       >
         <Stack
           margin={"40px auto"}

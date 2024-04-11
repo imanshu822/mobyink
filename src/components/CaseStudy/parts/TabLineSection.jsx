@@ -46,26 +46,27 @@ const TabLineSection = () => {
               Untold the Chapters of our Digital Success Stories
             </Typography>
             <Link
-              to="#"
+              to="/get-in-touch"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
               style={{
                 textDecoration: "none",
               }}
             >
               <Stack
+                mt={2}
                 justifyContent={"center"}
                 alignItems={"center"}
                 width={"140px"}
                 height={"40px"}
                 border={"2px solid white"}
-                backgroundColor={"transparent"}
+                backgroundColor={"#0D6EFD"}
                 sx={{
                   "&:hover": {
                     color: "white",
                     opacity: 0.8,
                     fontWeight: "bold",
-                    backgroundColor: "#0D6EFD",
-                    transform: "translateY(-5px)",
-                    transition: "all 0.7s ease",
                   },
                 }}
               >

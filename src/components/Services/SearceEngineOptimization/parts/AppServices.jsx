@@ -97,10 +97,9 @@ const AppServices = () => {
           Description: "Structured Data",
         },
       ],
-      src:""
-   },
-
-]
+      src: mobileAppArtImg,
+    },
+  ];
   return (
     <Stack>
       <Stack alignItems={"Center"} gap={1} p={"60px 0 80px 0 "}>
@@ -172,7 +171,7 @@ const AppServices = () => {
                     <Stack key={idx}>
                       <li style={{ fontWeight: "bold" }}>
                         {item.title}
-                        <span style={{ fontWeight: 400, color: "grey" }}>
+                        <span style={{ fontWeight: 300, color: "grey" }}>
                           {" "}
                           {item.Description}
                         </span>

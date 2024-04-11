@@ -39,8 +39,8 @@ const GoToTop = () => {
             bgcolor={"white"}
             style={{
               position: "fixed",
-              bottom: "80px",
-              right: "30px",
+              bottom: "15px",
+              right: "70px",
               fontSize: "2em",
               color: "#000",
               cursor: "pointer",
@@ -55,7 +55,7 @@ const GoToTop = () => {
             style={{
               position: "fixed",
               bottom: "20px",
-              right: "35px",
+              right: "20px",
               fontSize: "2em",
               color: "#000",
               cursor: "pointer",

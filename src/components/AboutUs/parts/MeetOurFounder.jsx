@@ -70,16 +70,21 @@ const MeetOurFounder = () => {
               tangible results in the digital marketing sphere.
             </Typography>
             <Link
-              to="#"
+              to="/get-in-touch"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
               style={{
                 textDecoration: "none",
               }}
             >
               <Stack
+                mt={2}
                 justifyContent={"center"}
                 alignItems={"center"}
                 width={"140px"}
                 height={"40px"}
+                border={"2px solid white"}
                 backgroundColor={"#0D6EFD"}
                 sx={{
                   "&:hover": {
@@ -154,16 +159,21 @@ const MeetOurFounder = () => {
               excellence!
             </Typography>
             <Link
-              to="#"
+              to="/get-in-touch"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
               style={{
                 textDecoration: "none",
               }}
             >
               <Stack
+                mt={2}
                 justifyContent={"center"}
                 alignItems={"center"}
                 width={"140px"}
                 height={"40px"}
+                border={"2px solid white"}
                 backgroundColor={"#0D6EFD"}
                 sx={{
                   "&:hover": {

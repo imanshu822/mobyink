@@ -2,6 +2,7 @@ import { Stack, Typography } from "@mui/material";
 import React from "react";
 import App_marketing_banner from "../../../../assests/App-Marketing-banner.jpeg";
 import Nav from "../../../../utils/Navbar/Nav";
+import { Link } from "react-router-dom";
 const AppMarketingBanner = () => {
   return (
     <Stack
@@ -33,24 +34,34 @@ const AppMarketingBanner = () => {
           Adapt Grow & Thrive
         </Typography>
         <Typography color={"white"}>With PPC result-driven agency</Typography>
-        <Stack
-          mt={2}
-          justifyContent={"center"}
-          alignItems={"center"}
-          width={"140px"}
-          height={"40px"}
-          border={"2px solid white"}
-          backgroundColor={"#0D6EFD"}
-          sx={{
-            "&:hover": {
-              color: "white",
-              opacity: 0.8,
-              fontWeight: "bold",
-            },
+        <Link
+          to="/get-in-touch"
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+          style={{
+            textDecoration: "none",
           }}
         >
-          <Typography color={"white"}>Get In Touch</Typography>
-        </Stack>
+          <Stack
+            mt={2}
+            justifyContent={"center"}
+            alignItems={"center"}
+            width={"140px"}
+            height={"40px"}
+            border={"2px solid white"}
+            backgroundColor={"#0D6EFD"}
+            sx={{
+              "&:hover": {
+                color: "white",
+                opacity: 0.8,
+                fontWeight: "bold",
+              },
+            }}
+          >
+            <Typography color={"white"}>Get In Touch</Typography>
+          </Stack>
+        </Link>
       </Stack>
     </Stack>
   );
