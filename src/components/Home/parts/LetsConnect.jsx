@@ -24,7 +24,7 @@ const LetsConnect = () => {
     e.preventDefault();
     const formDatab = new FormData(e.target);
     fetch(
-      "https://script.google.com/macros/s/AKfycbyMr8veKnjMwXB_vJJ1zaOvw7EEePfkd53-_Vq7-j6-sdHAOytPsto7nVLRNH2nuNjE/exec",
+      "https://script.google.com/macros/s/AKfycbx-f8xAyBWizjCDqXNJMDTc3mV18V-Onq--YYeHW0aIM9PEHIydNtEdAoSDg_gSQO9M/exec",
       {
         method: "POST",
         body: formDatab,

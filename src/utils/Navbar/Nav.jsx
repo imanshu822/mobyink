@@ -594,7 +594,7 @@ const Nav = () => {
                               onClick={() => {
                                 window.scroll(0, 0);
                               }}
-                              to="/segmenting-your-customers-for-greater-digital-marketing-success"
+                              to="/segmenting-your-customers-for-greater-digital-marketing-success/"
                               style={{
                                 textDecoration: "none",
                                 color: "black",
@@ -617,7 +617,7 @@ const Nav = () => {
                               onClick={() => {
                                 window.scroll(0, 0);
                               }}
-                              to="/how-to-improve-your-site-seo-rankings"
+                              to="/how-to-improve-your-site-seo-rankings/"
                               style={{
                                 textDecoration: "none",
                                 color: "black",
@@ -639,7 +639,7 @@ const Nav = () => {
                               onClick={() => {
                                 window.scroll(0, 0);
                               }}
-                              to="/how-to-secure-and-optimize-your-apps-online-visibility"
+                              to="/how-to-secure-and-optimize-your-apps-online-visibility/"
                               style={{
                                 textDecoration: "none",
                                 color: "black",

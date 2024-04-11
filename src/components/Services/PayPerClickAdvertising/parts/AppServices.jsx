@@ -165,7 +165,7 @@ const AppServices = () => {
                         {item.title}
                         <span style={{ fontWeight: 400, color: "grey" }}>
                           {" "}
-                          {item.Desc}
+                          {item.Description}
                         </span>
                       </li>
                     </Stack>
