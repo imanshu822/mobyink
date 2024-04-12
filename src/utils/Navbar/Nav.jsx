@@ -936,7 +936,6 @@ const Nav = () => {
           <Stack direction={"row"} gap={2}>
             <Stack direction={"row"} gap={1}>
               <Link
-                to=""
                 style={{
                   textDecoration: "none",
                 }}
@@ -963,7 +962,6 @@ const Nav = () => {
                 </Stack>
               </Link>
               <Link
-                to="/get-in-touch/"
                 style={{
                   textDecoration: "none",
                 }}
@@ -1616,7 +1614,6 @@ const Nav = () => {
             <Stack direction={"row"} gap={2}>
               <Stack direction={"row"} gap={1}>
                 <Link
-                  to=""
                   style={{
                     textDecoration: "none",
                   }}
@@ -1643,7 +1640,6 @@ const Nav = () => {
                   </Stack>
                 </Link>
                 <Link
-                  to="/get-in-touch/"
                   style={{
                     textDecoration: "none",
                   }}
@@ -1771,7 +1767,6 @@ const Nav = () => {
                 </Stack>
               </Link>
               <Link
-                to="/get-in-touch/"
                 style={{
                   textDecoration: "none",
                 }}
