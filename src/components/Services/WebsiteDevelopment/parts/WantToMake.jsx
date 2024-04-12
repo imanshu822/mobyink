@@ -1,6 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 import portfolioLadyImg from "../../../../assests/portfolioLadyImg.png";
+import { Link } from "react-router-dom";
 
 const WantToMake = () => {
   return (
@@ -33,34 +34,44 @@ const WantToMake = () => {
             >
               Create Jaw-Dropping Website Today!
             </Typography>
-            <Stack
-              border={"2px solid white"}
-              borderRadius={"8px"}
-              width={{
-                xs: "150px",
-                lg: "250px",
+            <Link
+              to="/get-in-touch/"
+              style={{
+                textDecoration: "none",
               }}
-              justifyContent={"center"}
-              alignItems={"center"}
-              sx={{
-                "&:hover": {
-                  cursor: "pointer",
-                  opacity: 0.8,
-                },
+              onClick={() => {
+                window.scrollTo(0, 0);
               }}
             >
-              <Typography
-                color={"white"}
-                fontSize={{
-                  xs: "15px",
-                  lg: "20px",
+              <Stack
+                border={"2px solid white"}
+                borderRadius={"8px"}
+                width={{
+                  xs: "150px",
+                  lg: "250px",
                 }}
-                padding={"10px 5px"}
-                boxSizing={"border-box"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                sx={{
+                  "&:hover": {
+                    cursor: "pointer",
+                    opacity: 0.8,
+                  },
+                }}
               >
-                Book A Free Call Now
-              </Typography>
-            </Stack>
+                <Typography
+                  color={"white"}
+                  fontSize={{
+                    xs: "15px",
+                    lg: "20px",
+                  }}
+                  padding={"10px 5px"}
+                  boxSizing={"border-box"}
+                >
+                  Book A Free Call Now
+                </Typography>
+              </Stack>
+            </Link>
           </Stack>
           <Stack width={"60%"} position={"relative"}>
             <Box

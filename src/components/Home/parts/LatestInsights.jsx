@@ -8,19 +8,19 @@ const LatestInsights = () => {
   const lists = [
     {
       src: Insights1,
-      to: "/segmenting-your-customers-for-greater-digital-marketing-success",
+      to: "/segmenting-your-customers-for-greater-digital-marketing-success/",
       title: "Segmenting Your Customers for Greater Digital Marketing",
       Des: "Having a large number of customers feels good right? But sometimes we miss our mark and so on…",
     },
     {
       src: Insights2,
-      to: "/how-to-improve-your-site-seo-rankings",
+      to: "/how-to-improve-your-site-seo-rankings/",
       title: "How to Improve Your Site SEO Rankings",
       Des: "There are many things you can do to improve your site’s SEO ranking. Some are easier than others.",
     },
     {
       src: Insights3,
-      to: "/how-to-secure-and-optimize-your-apps-online-visibility",
+      to: "/how-to-secure-and-optimize-your-apps-online-visibility/",
       title: "How to Secure and Optimize Your App’s Online Visibility",
       Des: "One of the most important aspects of app development is ensuring that your app is accessible online.",
     },

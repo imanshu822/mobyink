@@ -13,6 +13,8 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import { RxCross2 } from "react-icons/rx";
 import { CgMenuRight } from "react-icons/cg";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
 
 const services = [
   {
@@ -317,6 +319,10 @@ const index = [
   },
 ];
 const Nav = () => {
+  const phoneNumber = "+91-9001386001";
+
+  const email = "info@mobyink.com";
+
   const [hoveredTitle, setHoveredTitle] = useState(null);
   useEffect(() => {
     setHoveredTitle(services[0]?.title);
@@ -927,31 +933,90 @@ const Nav = () => {
               </div>
             </Stack>
           </Stack>
-          <Link
-            to="/get-in-touch"
-            style={{
-              textDecoration: "none",
-            }}
-            onClick={() => {
-              window.scrollTo(0, 0);
-            }}
-          >
-            <Stack
-              justifyContent={"center"}
-              alignItems={"center"}
-              width={"140px"}
-              height={"40px"}
-              border={"2px solid white"}
-              backgroundColor={"#0D6EFD"}
-              sx={{
-                "&:hover": {
-                  color: "white",
-                },
+          <Stack direction={"row"} gap={2}>
+            <Stack direction={"row"} gap={1}>
+              <Link
+                to=""
+                style={{
+                  textDecoration: "none",
+                }}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  window.location.href = `mailto:${email}?subject=${"Company Inquiry"}&body=${"Hello, I am interested in your services. Please contact me at this email addres "}`;
+                }}
+              >
+                <Stack
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  p={1.1}
+                  pt={1.5}
+                >
+                  <EmailIcon
+                    sx={{
+                      color: "white",
+                      "&:hover": {
+                        transform: "scale(1.3)", // Scale the icon
+                        transition: "all 0.3s ease", // Apply transition here
+                      },
+                    }}
+                  />
+                </Stack>
+              </Link>
+              <Link
+                to="/get-in-touch/"
+                style={{
+                  textDecoration: "none",
+                }}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+
+                  window.location.href = `tel:${phoneNumber}`;
+                }}
+              >
+                <Stack
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  p={1.1}
+                  pt={1.5}
+                >
+                  <PhoneIcon
+                    sx={{
+                      color: "white",
+                      "&:hover": {
+                        transform: "scale(1.3)", // Scale the icon
+                        transition: "all 0.3s ease", // Apply transition here
+                      },
+                    }}
+                  />
+                </Stack>
+              </Link>
+            </Stack>
+            <Link
+              to="/get-in-touch/"
+              style={{
+                textDecoration: "none",
+              }}
+              onClick={() => {
+                window.scrollTo(0, 0);
               }}
             >
-              <Typography color={"white"}>Get In Touch</Typography>
-            </Stack>
-          </Link>
+              <Stack
+                justifyContent={"center"}
+                alignItems={"center"}
+                width={"140px"}
+                height={"40px"}
+                border={"2px solid white"}
+                backgroundColor={"#0D6EFD"}
+                sx={{
+                  "&:hover": {
+                    color: "white",
+                  },
+                }}
+              >
+                <Typography color={"white"}>Get In Touch</Typography>
+              </Stack>
+            </Link>
+          </Stack>
         </Stack>
       </Stack>
 
@@ -1202,7 +1267,7 @@ const Nav = () => {
                                 onClick={() => {
                                   window.scroll(0, 0);
                                 }}
-                                to="/how-to-improve-your-site-seo-rankings"
+                                to="/how-to-improve-your-site-seo-rankings/"
                                 style={{
                                   textDecoration: "none",
                                   color: "black",
@@ -1224,7 +1289,7 @@ const Nav = () => {
                                 onClick={() => {
                                   window.scroll(0, 0);
                                 }}
-                                to="/how-to-secure-and-optimize-your-apps-online-visibility"
+                                to="/how-to-secure-and-optimize-your-apps-online-visibility/"
                                 style={{
                                   textDecoration: "none",
                                   color: "black",
@@ -1548,31 +1613,90 @@ const Nav = () => {
                 </div>
               </Stack>
             </Stack>
-            <Link
-              to="/get-in-touch"
-              onClick={() => {
-                window.scroll(0, 0);
-              }}
-              style={{
-                textDecoration: "none",
-              }}
-            >
-              <Stack
-                justifyContent={"center"}
-                alignItems={"center"}
-                width={"140px"}
-                height={"40px"}
-                border={"2px solid white"}
-                backgroundColor={"#0D6EFD"}
-                sx={{
-                  "&:hover": {
-                    color: "white",
-                  },
+            <Stack direction={"row"} gap={2}>
+              <Stack direction={"row"} gap={1}>
+                <Link
+                  to=""
+                  style={{
+                    textDecoration: "none",
+                  }}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                    window.location.href = `mailto:${email}?subject=${"Company Inquiry"}&body=${"Hello, I am interested in your services. Please contact me at this email addres "}`;
+                  }}
+                >
+                  <Stack
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                    p={1.1}
+                    pt={1.5}
+                  >
+                    <EmailIcon
+                      sx={{
+                        color: "white",
+                        "&:hover": {
+                          transform: "scale(1.3)", // Scale the icon
+                          transition: "all 0.3s ease", // Apply transition here
+                        },
+                      }}
+                    />
+                  </Stack>
+                </Link>
+                <Link
+                  to="/get-in-touch/"
+                  style={{
+                    textDecoration: "none",
+                  }}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+
+                    window.location.href = `tel:${phoneNumber}`;
+                  }}
+                >
+                  <Stack
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                    p={1.1}
+                    pt={1.5}
+                  >
+                    <PhoneIcon
+                      sx={{
+                        color: "white",
+                        "&:hover": {
+                          transform: "scale(1.3)", // Scale the icon
+                          transition: "all 0.3s ease", // Apply transition here
+                        },
+                      }}
+                    />
+                  </Stack>
+                </Link>
+              </Stack>
+              <Link
+                to="/get-in-touch/"
+                style={{
+                  textDecoration: "none",
+                }}
+                onClick={() => {
+                  window.scrollTo(0, 0);
                 }}
               >
-                <Typography color={"white"}>Get In Touch</Typography>
-              </Stack>
-            </Link>
+                <Stack
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  width={"140px"}
+                  height={"40px"}
+                  border={"2px solid white"}
+                  backgroundColor={"#0D6EFD"}
+                  sx={{
+                    "&:hover": {
+                      color: "white",
+                    },
+                  }}
+                >
+                  <Typography color={"white"}>Get In Touch</Typography>
+                </Stack>
+              </Link>
+            </Stack>
           </Stack>
         </Stack>
       )}
@@ -1596,18 +1720,90 @@ const Nav = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
           padding={"20px 0px"}
+          gap={{
+            xs: 1,
+            sm: 2,
+          }}
         >
-          <Stack width={{ xs: "45%", md: "30%" }}>
+          <Stack
+            width={{ xs: "100%", md: "100%" }}
+            direction={"row"}
+            justifyContent={"space-between"}
+            alignItems={"center"}
+          >
             <Link
               to={"/"}
               onClick={() => {
                 window.scroll(0, 0);
               }}
             >
-              <img src={lo} alt="" width={"100%"} height={"100%"} />
+              <Stack width={{ xs: "70%", sm: "55%", md: "60%" }}>
+                <img src={lo} alt="" width={"100%"} height={"100%"} />
+              </Stack>
             </Link>
+            <Stack direction={"row"} gap={1}>
+              <Link
+                to=""
+                style={{
+                  textDecoration: "none",
+                }}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  window.location.href = `mailto:${email}?subject=${"Company Inquiry"}&body=${"Hello, I am interested in your services. Please contact me at this email addres "}`;
+                }}
+              >
+                <Stack
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  p={1.1}
+                  pt={1.5}
+                >
+                  <EmailIcon
+                    sx={{
+                      fontSize: "25px",
+                      color: "white",
+                      "&:hover": {
+                        transform: "scale(1.3)", // Scale the icon
+                        transition: "all 0.3s ease", // Apply transition here
+                      },
+                    }}
+                  />
+                </Stack>
+              </Link>
+              <Link
+                to="/get-in-touch/"
+                style={{
+                  textDecoration: "none",
+                }}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+
+                  window.location.href = `tel:${phoneNumber}`;
+                }}
+              >
+                <Stack
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  p={1.1}
+                  pt={1.5}
+                >
+                  <PhoneIcon
+                    sx={{
+                      color: "white",
+                      "&:hover": {
+                        fontSize: "15px",
+                        transform: "scale(1.3)", // Scale the icon
+                        transition: "all 0.3s ease", // Apply transition here
+                      },
+                    }}
+                  />
+                </Stack>
+              </Link>
+            </Stack>
           </Stack>
+
           <Stack
+            direction={"row"}
             onClick={handleClick}
             width={"32px"}
             height={"32px"}
@@ -1622,13 +1818,17 @@ const Nav = () => {
             }}
           >
             {menuClick ? (
-              <CgMenuRight
-                style={{ color: "white", width: "32px", height: "32px" }}
-              />
+              <>
+                <CgMenuRight
+                  style={{ color: "white", width: "32px", height: "32px" }}
+                />
+              </>
             ) : (
-              <CgMenuRight
-                style={{ color: "white", width: "32px", height: "32px" }}
-              />
+              <>
+                <CgMenuRight
+                  style={{ color: "white", width: "32px", height: "32px" }}
+                />
+              </>
             )}
           </Stack>
         </Stack>
@@ -2002,7 +2202,7 @@ const Nav = () => {
 
           <Stack alignItems={"center"} margin={"10px auto"}>
             <Link
-              to={"/get-in-touch"}
+              to={"/get-in-touch/"}
               onClick={() => {
                 window.scroll(0, 0);
               }}
